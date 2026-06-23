@@ -1,5 +1,4 @@
 ---
-title: "BF550 — Applied Statistics & Machine Learning for the Life Sciences"
 link-citations: true
 ---
 
