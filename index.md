@@ -37,7 +37,7 @@ link-citations: true
   does what was intended.
 - Apply all of the above to real **molecular-biology and genomics** problems.
 
-See the full [learning objectives]({{ site.baseurl }}/design/learning-objectives/).
+See the full [learning objectives]({{ site.baseurl }}/learning-objectives/).
 
 ## Course Description
 
@@ -60,7 +60,7 @@ mathematical theory. Work is grounded in real molecular-biology and genomics pro
 
 Assignments use a **design → spec → test → implementation** framework with four exercise
 types (A–D); see the
-[assignment framework]({{ site.baseurl }}/design/assignment-framework/).
+[assignment framework]({{ site.baseurl }}/assignments/).
 
 ## Prerequisites
 
@@ -89,11 +89,11 @@ to make AI policy transparent and consistent. Each component carries an explicit
 Most labs and the synthesis project are **Level 4**. What protects the learning goal is
 not restricting the tool but requiring the design, specification, hand-calculated tests,
 and critique — the artifacts an agent cannot author on your behalf. Full policy:
-[Assessment & AI Policy]({{ site.baseurl }}/design/assessment-and-ai-policy/).
+[Assessment & AI Policy]({{ site.baseurl }}/assessment/).
 
 ## Assessment
 
-> **Draft — weights to be confirmed.**
+> *Weights are provisional and will be confirmed before the term begins.*
 
 | Component | Measures | AIAS | Draft weight |
 |---|---|:--:|--:|
@@ -105,9 +105,7 @@ and critique — the artifacts an agent cannot author on your behalf. Full polic
 
 ## Course Schedule
 
-> **Draft** — biological anchors are candidates; week boundaries are not yet aligned to
-> the Fall academic calendar. Discussion: [issue #1](https://github.com/bu-bioinfo/bf550/issues/1),
-> [issue #4](https://github.com/bu-bioinfo/bf550/issues/4).
+> *Schedule is subject to change; biological topics and exact dates will be finalized before the term begins.*
 
 | Wk | Lecture theme | ML/stats focus | Biological anchor (candidate) |
 |---:|---|---|---|
@@ -125,7 +123,3 @@ and critique — the artifacts an agent cannot author on your behalf. Full polic
 | [12]({{ site.baseurl }}/lectures/week-12/) | Choosing a method in practice | Matching algorithm to problem; pipelines; data leakage | End-to-end mini case |
 | [13]({{ site.baseurl }}/lectures/week-13/) | Synthesis & frontiers | Intro to neural nets/DL; limits, ethics | Synthesis project presentations |
 
----
-
-*This site mirrors the structure and styling of the
-[BF528](https://bu-bioinfo.github.io/bf528) course site.*

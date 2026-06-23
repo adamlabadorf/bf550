@@ -1,79 +1,70 @@
 ---
 title: "Assessment & AI Policy"
-permalink: /design/assessment-and-ai-policy/
+permalink: /assessment/
 toc: true
 toc_sticky: true
 ---
 
-## Philosophy
+Your grade in BF550 reflects the two things the course is really about: **statistical and
+machine-learning judgment**, and **code literacy**. It does not reward typing code from
+memory. Because you're encouraged to use coding agents, every assessment is labeled with a
+clear AI-use level so you always know what's expected.
 
-Assessment in BF550 measures the course's actual learning goals: **statistical/ML judgment**
-and **code literacy** — not the ability to produce syntax. Because students are *provided
-coding agents and expected to use them*, each assessment states an explicit
-[AIAS](https://aiassessmentscale.com/) level so AI expectations are unambiguous, and the
-graded product is chosen so that AI cannot do the thinking for the student.
+## What you'll be graded on
 
-## Assessment components
+> *Weights are provisional and will be confirmed before the term begins.*
 
-> **DECISION:** weights below are placeholders — confirm the grade breakdown.
-
-| Component | What it measures | AIAS level | Draft weight |
+| Component | What it measures | AI level | Weight |
 |---|---|:--:|--:|
-| Weekly labs (design → spec → test → impl, types A–D) | applied ML + code literacy + agent use | **4** (most) | 35% |
-| Weekly check-in quizzes (code reading) | local code comprehension | **1** | 10% |
-| Written midterm (code reading) | code comprehension under exam conditions | **1** | 20% |
-| Synthesis project (design + spec + tests + impl) | end-to-end judgment on a real problem | **4** | 30% |
-| Participation / labs engagement | — | — | 5% |
+| Weekly labs (design → spec → test → impl) | applied ML + code literacy + agent use | 4 | 35% |
+| Weekly check-in quizzes (code reading) | reading and explaining code | 1 | 10% |
+| Written midterm (code reading) | code comprehension under exam conditions | 1 | 20% |
+| Synthesis project (design + spec + tests + impl) | end-to-end judgment on a real problem | 4 | 30% |
+| Participation | engagement in lab and lecture | — | 5% |
 
 ### Weekly check-in quizzes
 
-Short, low-stakes. Students are given **a provided code snippet and asked to describe what
-it does** — behavior, edge cases, and (later in the term) design intent. This is deliberate,
-repeated practice for the midterm skill, and a formative signal of who is keeping up.
+Short and low-stakes. You're given a code snippet and asked to describe what it does — its
+behavior, its edge cases, and (later in the term) its design intent. These are direct
+practice for the midterm, and they're **AI level 1 (no AI)** because the whole point is your
+own reading.
 
-- **AIAS Level 1 (No AI)** — the whole point is the student's own reading.
-- Keep them short (≈10–15 min) and frequent (most weeks).
+### Written midterm
 
-### Written midterm — code reading
-
-The midterm is a **written, closed-book code-reading exam (AIAS Level 1)**: students read
-provided snippets and describe behavior, recover intent, and identify edge cases or bugs —
-the same skill the check-ins rehearse, assessed cumulatively.
-
-> **DECISION:** in-class vs. take-home-but-closed-AI; length; whether students may bring a
-> language reference sheet.
+A **closed-book, no-AI code-reading exam (level 1)**: you'll read provided snippets and
+describe their behavior, recover their intent, and spot edge cases or bugs — the same skill
+the check-ins rehearse, assessed all at once.
 
 ### Synthesis project
 
-The capstone: produce **design + spec + tests + implementation** for a real method on a real
-molecular-biology problem (e.g. Naive Bayes rRNA classifier; scRNA-seq clustering pipeline),
-with every design decision justified mathematically or biologically. AIAS Level 4 — agents
-welcome; the design, tests, verification, and critique are the student's product.
+The capstone: produce a complete **design, specification, tests, and implementation** for a
+real method on a real molecular-biology problem, with every design decision justified
+mathematically or biologically. It's **AI level 4** — use the agent freely; your design,
+tests, verification, and critique are what's graded.
 
-## AIAS level reference (this course)
+## AI use levels
 
-| Level | Name | Meaning here |
+This course uses the [AI Assessment Scale (AIAS)](https://aiassessmentscale.com/). Each
+assignment names a level so the expectations are explicit:
+
+| Level | Name | What it means for you |
 |------:|------|---|
-| 1 | No AI | Closed-book code reading (check-ins, midterm). |
-| 2 | AI Planning | AI for brainstorming/outlining only; student develops ideas independently. |
-| 3 | AI Collaboration | AI drafts/feedback; student must critically evaluate & modify. |
-| 4 | Full AI | Agent generates code throughout; student directs, annotates, verifies, critiques. |
-| 5 | AI Exploration | Open-ended creative/co-design use. |
+| 1 | No AI | Work on your own — check-in quizzes and the midterm. |
+| 2 | AI Planning | Use AI to brainstorm or outline; develop the ideas yourself. |
+| 3 | AI Collaboration | AI helps draft; you critically evaluate and revise its output. |
+| 4 | Full AI | Use the agent throughout; you direct it, verify it, and own the result. |
+| 5 | AI Exploration | Open-ended, creative use. |
 
-**Default for labs and the project is Level 4.** What protects the learning goal is not
-restricting the tool but requiring the **design, specification, hand-calculated tests,
-failure log, and critique** — the artifacts an agent cannot author on the student's behalf.
+**Most labs and the project are level 4.** Using a coding agent there is expected, not a
+shortcut — what's graded is your design, specification, hand-calculated tests, and critique,
+the parts an agent can't produce for you.
 
-## Integrity in an agent-positive course
+## Academic integrity in an AI-positive course
 
-- Using a coding agent on a Level-4 task is **expected**, not a violation.
-- What *is* a violation: submitting the agent's work as comprehension you don't have —
-  e.g. an annotation log that doesn't match the code, hand-calculated test values that
-  weren't actually computed, or a critique that misreads the implementation. These surface
-  naturally because the deliverables require demonstrated understanding.
-- Check-ins and the midterm (Level 1) provide an AI-free baseline of each student's code
-  literacy to triangulate against agent-assisted work.
-
-> **GAP:** write the syllabus academic-integrity statement in BU/program-approved language;
-> confirm which coding agent is provided and the access/setup students get; define late /
-> regrade / accommodation policies.
+- Using a coding agent on a level-4 assignment is **expected** — it's not a violation.
+- What *is* a problem is presenting an agent's work as understanding you don't have: an
+  annotation that doesn't match the code, "hand-calculated" test values you didn't actually
+  work out, or a critique that misreads the implementation. These show up naturally, because
+  the deliverables require you to demonstrate that you understand.
+- The level-1 check-ins and midterm give an AI-free picture of your own code literacy
+  alongside your agent-assisted work.

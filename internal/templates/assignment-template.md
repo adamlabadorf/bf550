@@ -1,10 +1,3 @@
----
-title: "TILT Assignment Template"
-permalink: /design/templates/assignment-template/
-toc: true
-toc_sticky: true
----
-
 <!--
 BF550 assignment template — TILT (Transparent Assignment: Purpose / Task / Criteria).
 Copy this file for each lab/assignment. Fill every section; delete the HTML comments.
@@ -23,7 +16,7 @@ Pair with the exercise type (A–D) from ../assignment-framework.md.
 ## Purpose  <!-- TILT: WHY -->
 
 - **Why this matters:** _how this connects to research / real practice the student will do._
-- **Skills practiced:** _which course [learning objectives](https://bu-bioinfo.github.io/bf550/design/learning-objectives/) (by
+- **Skills practiced:** _which course [learning objectives](https://bu-bioinfo.github.io/bf550/learning-objectives/) (by
   number) this builds — e.g. code literacy (6–9), verification (11)._
 - **How it fits the course:** _what came before, what it sets up._
 
