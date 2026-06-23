@@ -83,5 +83,4 @@ exclude:
   - vendor
   - README.md
   - .gitignore
-  - docs/
   - Dockerfile

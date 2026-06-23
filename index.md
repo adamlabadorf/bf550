@@ -37,7 +37,7 @@ link-citations: true
   does what was intended.
 - Apply all of the above to real **molecular-biology and genomics** problems.
 
-See the full [learning objectives](https://github.com/bu-bioinfo/bf550/blob/main/docs/learning-objectives.md).
+See the full [learning objectives]({{ site.baseurl }}/design/learning-objectives/).
 
 ## Course Description
 
@@ -60,7 +60,7 @@ mathematical theory. Work is grounded in real molecular-biology and genomics pro
 
 Assignments use a **design → spec → test → implementation** framework with four exercise
 types (A–D); see the
-[assignment framework](https://github.com/bu-bioinfo/bf550/blob/main/docs/assignment-framework.md).
+[assignment framework]({{ site.baseurl }}/design/assignment-framework/).
 
 ## Prerequisites
 
@@ -89,7 +89,7 @@ to make AI policy transparent and consistent. Each component carries an explicit
 Most labs and the synthesis project are **Level 4**. What protects the learning goal is
 not restricting the tool but requiring the design, specification, hand-calculated tests,
 and critique — the artifacts an agent cannot author on your behalf. Full policy:
-[Assessment & AI Policy](https://github.com/bu-bioinfo/bf550/blob/main/docs/assessment-and-ai-policy.md).
+[Assessment & AI Policy]({{ site.baseurl }}/design/assessment-and-ai-policy/).
 
 ## Assessment
 

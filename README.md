@@ -22,18 +22,18 @@ agents. The course makes a deliberate bet: the primary coding learning objective
 
 ## Course documents
 
-- **[Course design & philosophy](docs/course-design.md)** — why code *literacy*, the
+- **[Course design & philosophy](https://bu-bioinfo.github.io/bf550/design/course-design/)** — why code *literacy*, the
   reading-over-authoring bet, and how the pieces fit together.
-- **[Learning objectives](docs/learning-objectives.md)** — what students will be able to do.
-- **[Syllabus (draft)](docs/syllabus.md)** — the TILT-framed course syllabus.
-- **[13-week schedule](docs/schedule.md)** — lecture + lab topic progression.
-- **[Assignment framework](docs/assignment-framework.md)** — the design → spec → test →
+- **[Learning objectives](https://bu-bioinfo.github.io/bf550/design/learning-objectives/)** — what students will be able to do.
+- **[Syllabus (draft)](https://bu-bioinfo.github.io/bf550/design/syllabus/)** — the TILT-framed course syllabus.
+- **[13-week schedule](https://bu-bioinfo.github.io/bf550/design/schedule/)** — lecture + lab topic progression.
+- **[Assignment framework](https://bu-bioinfo.github.io/bf550/design/assignment-framework/)** — the design → spec → test →
   implementation scheme and the four exercise types (A–D), adapted from the
   [bf550-brainstorming](https://github.com/bu-bioinfo/bf550-brainstorming) repo.
-- **[Assessment & AI policy](docs/assessment-and-ai-policy.md)** — check-in quizzes, the
+- **[Assessment & AI policy](https://bu-bioinfo.github.io/bf550/design/assessment-and-ai-policy/)** — check-in quizzes, the
   written midterm, grading, and the per-assessment AIAS mapping.
-- **Templates** — [TILT assignment template](docs/templates/assignment-template.md) ·
-  [check-in quiz template](docs/templates/checkin-quiz-template.md)
+- **Templates** — [TILT assignment template](https://bu-bioinfo.github.io/bf550/design/templates/assignment-template/) ·
+  [check-in quiz template](https://bu-bioinfo.github.io/bf550/design/templates/checkin-quiz-template/)
 
 ## Planning board
 

@@ -1,8 +1,13 @@
-# BF550 Syllabus (Draft)
+---
+title: "BF550 Syllabus (Draft)"
+permalink: /design/syllabus/
+toc: true
+toc_sticky: true
+---
 
 > **Status: draft.** Administrative fields (instructors, room, dates, BU-required policy
 > statements) are placeholders. Pedagogy and structure reflect the
-> [course design](course-design.md).
+> [course design](https://bu-bioinfo.github.io/bf550/design/course-design/).
 
 ## Course information
 
@@ -30,7 +35,7 @@ genomics problems.
 
 - **Code literacy over code authorship.** You will be assessed on your ability to *read,
   specify, test, and critique* code — not to type it from a blank page. See
-  [course design](course-design.md).
+  [course design](https://bu-bioinfo.github.io/bf550/design/course-design/).
 - **Coding agents are provided and expected.** Most assignments are
   [AIAS](https://aiassessmentscale.com/) **Level 4**: use the agent freely; your design,
   specifications, tests, and critique are what's graded.
@@ -39,18 +44,18 @@ genomics problems.
 
 ## Learning objectives
 
-See [learning-objectives.md](learning-objectives.md). In brief, you will be able to: frame a
+See [learning-objectives.md](https://bu-bioinfo.github.io/bf550/design/learning-objectives/). In brief, you will be able to: frame a
 biological question as a stats/ML problem; distinguish and select among ML algorithm
 classes; reason about generalization and evaluation; **read code and say precisely what it
 does**; recover specs, find gaps, and critique designs; and direct & verify a coding agent.
 
 ## Schedule
 
-See [schedule.md](schedule.md) for the 13-week lecture + lab progression.
+See [schedule.md](https://bu-bioinfo.github.io/bf550/design/schedule/) for the 13-week lecture + lab progression.
 
 ## Assessment
 
-See [assessment-and-ai-policy.md](assessment-and-ai-policy.md). Components: weekly labs
+See [assessment-and-ai-policy.md](https://bu-bioinfo.github.io/bf550/design/assessment-and-ai-policy/). Components: weekly labs
 (design → spec → test → implementation), weekly code-reading check-in quizzes, a written
 code-reading midterm (AIAS Level 1), and a synthesis project.
 

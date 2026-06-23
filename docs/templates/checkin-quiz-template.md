@@ -1,10 +1,15 @@
+---
+title: "Check-in Quiz Template"
+permalink: /design/templates/checkin-quiz-template/
+toc: true
+toc_sticky: true
+---
+
 <!--
 BF550 weekly check-in quiz template — code reading (AIAS Level 1, No AI).
 Short (~10–15 min). Goal: student reads a snippet and describes what it does.
 Copy per week; keep the snippet small and biologically grounded.
 -->
-
-# Week N Check-in — Code Reading
 
 **AIAS Level 1 (No AI).** Closed book. ~10–15 minutes. Answer in your own words.
 

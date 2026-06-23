@@ -1,4 +1,9 @@
-# Course Design & Philosophy
+---
+title: "Course Design & Philosophy"
+permalink: /design/course-design/
+toc: true
+toc_sticky: true
+---
 
 ## What this course is
 
@@ -60,7 +65,7 @@ because the graded intellectual product is the part an agent cannot do *for* you
 The aim is to model what a professional does: constrain the problem first (design → spec →
 tests), *then* generate code to satisfy those constraints, then verify. A student who
 generates code first and retrofits a rationale has inverted the process and produced
-nothing verifiable. See [assignment-framework.md](assignment-framework.md).
+nothing verifiable. See [assignment-framework.md](https://bu-bioinfo.github.io/bf550/design/assignment-framework/).
 
 ## Borrowed engineering practices
 
@@ -89,7 +94,7 @@ Every assignment is written in the **Transparent Assignment** structure of
 
 Transparency is associated with gains in student confidence, belonging, persistence, and
 metacognitive awareness — especially valuable given our wide range of incoming skill.
-See the [assignment template](templates/assignment-template.md).
+See the [assignment template](https://bu-bioinfo.github.io/bf550/design/templates/assignment-template/).
 
 ### AIAS — AI Assessment Scale
 
@@ -107,7 +112,7 @@ are unambiguous:
 Most labs and coding assignments sit at **Level 4** (full agent use, with the design,
 spec, tests, verification, and critique as the student's accountable product). The
 code-reading **midterm sits at Level 1**. See
-[assessment-and-ai-policy.md](assessment-and-ai-policy.md).
+[assessment-and-ai-policy.md](https://bu-bioinfo.github.io/bf550/design/assessment-and-ai-policy/).
 
 ## How the pieces fit together
 

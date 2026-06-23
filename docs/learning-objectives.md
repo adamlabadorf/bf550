@@ -1,4 +1,9 @@
-# Learning Objectives
+---
+title: "Learning Objectives"
+permalink: /design/learning-objectives/
+toc: true
+toc_sticky: true
+---
 
 By the end of BF550, students will be able to:
 
@@ -51,5 +56,5 @@ By the end of BF550, students will be able to:
 ---
 
 > **GAP:** map each numbered objective to specific weeks and assessments once the
-> [schedule](schedule.md) and [assessment plan](assessment-and-ai-policy.md) are finalized,
+> [schedule](https://bu-bioinfo.github.io/bf550/design/schedule/) and [assessment plan](https://bu-bioinfo.github.io/bf550/design/assessment-and-ai-policy/) are finalized,
 > and align with any **program-level** MS learning outcomes for accreditation/reporting.

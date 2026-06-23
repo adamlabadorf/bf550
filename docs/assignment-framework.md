@@ -1,4 +1,9 @@
-# Assignment Framework: Design → Spec → Test → Implementation
+---
+title: "Assignment Framework: Design → Spec → Test → Implementation"
+permalink: /design/assignment-framework/
+toc: true
+toc_sticky: true
+---
 
 Every coding assignment and lab in BF550 is built on a four-component view of a problem:
 
@@ -111,7 +116,7 @@ framework to students whose primary background is biology.
 
 The rule of thumb: *constrain first (design → spec → tests), then generate, then verify.*
 Generating code first and retrofitting a rationale inverts the process and produces nothing
-verifiable. Full policy and AIAS mapping: [assessment-and-ai-policy.md](assessment-and-ai-policy.md).
+verifiable. Full policy and AIAS mapping: [assessment-and-ai-policy.md](https://bu-bioinfo.github.io/bf550/design/assessment-and-ai-policy/).
 
 > **GAP:** define the standard deliverable bundle and file layout per lab (e.g.
 > `spec.md`, `test_*.py`, `impl.py`, `annotation.md`, `failure-log.md`), a rubric per type,

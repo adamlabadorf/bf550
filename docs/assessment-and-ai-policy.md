@@ -1,4 +1,9 @@
-# Assessment & AI Policy
+---
+title: "Assessment & AI Policy"
+permalink: /design/assessment-and-ai-policy/
+toc: true
+toc_sticky: true
+---
 
 ## Philosophy
 

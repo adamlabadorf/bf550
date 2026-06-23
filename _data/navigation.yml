@@ -12,15 +12,17 @@ sidebar:
   - title: "Course Design"
     children:
       - title: "Design & Philosophy"
-        url: "https://github.com/bu-bioinfo/bf550/blob/main/docs/course-design.md"
+        url: "/design/course-design/"
       - title: "Learning Objectives"
-        url: "https://github.com/bu-bioinfo/bf550/blob/main/docs/learning-objectives.md"
+        url: "/design/learning-objectives/"
       - title: "Syllabus (draft)"
-        url: "https://github.com/bu-bioinfo/bf550/blob/main/docs/syllabus.md"
+        url: "/design/syllabus/"
+      - title: "13-Week Schedule"
+        url: "/design/schedule/"
       - title: "Assignment Framework"
-        url: "https://github.com/bu-bioinfo/bf550/blob/main/docs/assignment-framework.md"
+        url: "/design/assignment-framework/"
       - title: "Assessment & AI Policy"
-        url: "https://github.com/bu-bioinfo/bf550/blob/main/docs/assessment-and-ai-policy.md"
+        url: "/design/assessment-and-ai-policy/"
 
   - title: "Course Lectures"
     children:

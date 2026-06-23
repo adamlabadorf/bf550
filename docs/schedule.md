@@ -1,8 +1,13 @@
-# 13-Week Schedule (Draft)
+---
+title: "13-Week Schedule (Draft)"
+permalink: /design/schedule/
+toc: true
+toc_sticky: true
+---
 
 Each week: **two 75-minute lectures** + **one 1–2 hour lab**. Most weeks carry a low-stakes
 **check-in quiz** (read a code snippet, describe what it does) and a **lab deliverable**
-built on the [design → spec → test → implementation framework](assignment-framework.md)
+built on the [design → spec → test → implementation framework](https://bu-bioinfo.github.io/bf550/design/assignment-framework/)
 (exercise types A–D).
 
 The arc moves: **statistical foundations → supervised learning & classification →
@@ -34,7 +39,7 @@ practice → synthesis**.
 ## Lab-type rotation rationale
 
 The four exercise types are sequenced to build code literacy progressively (see the
-[framework doc](assignment-framework.md)):
+[framework doc](https://bu-bioinfo.github.io/bf550/design/assignment-framework/)):
 
 - **Type A (spec + tests → code)** early — get oriented; lean on agents for implementation.
 - **Type B (spec + code → tests)** next — verification, requires real understanding to write
