@@ -6,7 +6,7 @@
 | Decision | Where it surfaces | Tracking |
 |---|---|---|
 | Finalize biological anchor problems for each week | schedule | [#1](https://github.com/bu-bioinfo/bf550/issues/1) |
-| Confirm grade weights; final exam vs. synthesis project | assessment, syllabus | [#2](https://github.com/bu-bioinfo/bf550/issues/2) |
+| ~~Confirm grade weights; final exam vs. synthesis project~~ | assessment, syllabus | ✅ Resolved ([#2](https://github.com/bu-bioinfo/bf550/issues/2)) — weights confirmed; project replaces a final exam |
 | Select & provision the student coding agent | syllabus, /about/ | [#3](https://github.com/bu-bioinfo/bf550/issues/3) |
 | Align the 13-week schedule to the Fall calendar | schedule | [#4](https://github.com/bu-bioinfo/bf550/issues/4) |
 | Per-type deliverable bundles, rubrics, toolchain | assignments | [#5](https://github.com/bu-bioinfo/bf550/issues/5) |

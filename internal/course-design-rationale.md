@@ -52,12 +52,12 @@ inverted the process and produced nothing verifiable. The structure forces "cons
   agent-positive without compromising the No-AI baseline (check-ins, midterm) that
   triangulates each student's unaided code literacy.
 
-## Open decisions / gaps (instructor team)
+## Resolved decisions
 
-- **DECISION:** confirm credit-hour expectations and whether there is a final project *and* a
-  final exam, or a project in lieu of a final. Current draft assumes a synthesis project
-  rather than a cumulative final exam. (Tracked in
-  [issue #2](https://github.com/bu-bioinfo/bf550/issues/2).)
+- **Final assessment & weights** — *resolved ([#2](https://github.com/bu-bioinfo/bf550/issues/2)).*
+  The **synthesis project is the culminating assessment; there is no separate final exam.**
+  The 4-credit structure imposes no required assessment minimums. Grade weights confirmed:
+  labs 35% / check-in quizzes 10% / midterm 20% / synthesis project 30% / participation 5%.
 
 > Other open decisions live in the relevant internal docs and in the
 > [discussion issues](https://github.com/bu-bioinfo/bf550/issues).

@@ -12,7 +12,7 @@ clear AI-use level so you always know what's expected.
 
 ## What you'll be graded on
 
-> *Weights are provisional and will be confirmed before the term begins.*
+There is **no final exam** — the synthesis project is the course's culminating assessment.
 
 | Component | What it measures | AI level | Weight |
 |---|---|:--:|--:|
@@ -37,10 +37,11 @@ the check-ins rehearse, assessed all at once.
 
 ### Synthesis project
 
-The capstone: produce a complete **design, specification, tests, and implementation** for a
-real method on a real molecular-biology problem, with every design decision justified
-mathematically or biologically. It's **AI level 4** — use the agent freely; your design,
-tests, verification, and critique are what's graded.
+The capstone, and the course's **culminating assessment in place of a final exam**: produce
+a complete **design, specification, tests, and implementation** for a real method on a real
+molecular-biology problem, with every design decision justified mathematically or
+biologically. It's **AI level 4** — use the agent freely; your design, tests, verification,
+and critique are what's graded.
 
 ## AI use levels
 

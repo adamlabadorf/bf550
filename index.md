@@ -93,9 +93,9 @@ and critique — the artifacts an agent cannot author on your behalf. Full polic
 
 ## Assessment
 
-> *Weights are provisional and will be confirmed before the term begins.*
+There is **no final exam** — the synthesis project is the culminating assessment.
 
-| Component | Measures | AIAS | Draft weight |
+| Component | Measures | AIAS | Weight |
 |---|---|:--:|--:|
 | Weekly labs (design → spec → test → impl) | applied ML + code literacy + agent use | 4 | 35% |
 | Weekly check-in quizzes (code reading) | local code comprehension | 1 | 10% |
