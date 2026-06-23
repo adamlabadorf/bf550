@@ -89,3 +89,7 @@ are responsible for the final content.
 We share this for the same reason we ask you to be transparent about your own AI use: being
 open about where these tools help, and keeping human judgment accountable for the result, is
 exactly the practice this course is trying to teach.
+
+The full account — who did what, the workflow, and what it means for the materials — is in
+[`AI_DISCLOSURE.md`](https://github.com/bu-bioinfo/bf550/blob/main/AI_DISCLOSURE.md) in the
+course repository.

@@ -82,6 +82,7 @@ exclude:
   - node_modules
   - vendor
   - README.md
+  - AI_DISCLOSURE.md
   - .gitignore
   - Dockerfile
   - internal/

@@ -12,6 +12,9 @@ agents. The course makes a deliberate bet: the primary coding learning objective
 > site; instructor-only rationale and open decisions live in [`internal/`](internal/)
 > (excluded from the site) — see [`internal/open-decisions.md`](internal/open-decisions.md)
 > and the [discussion issues](https://github.com/bu-bioinfo/bf550/issues).
+>
+> **AI use:** how these materials were built is documented in
+> [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md).
 
 ## At a glance
 
