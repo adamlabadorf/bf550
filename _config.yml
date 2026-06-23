@@ -84,3 +84,4 @@ exclude:
   - README.md
   - .gitignore
   - Dockerfile
+  - internal/

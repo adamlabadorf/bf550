@@ -9,10 +9,10 @@ main:
 
 # Sidebar navigation
 sidebar:
-  - title: "Course Design"
+  - title: "About the Course"
     children:
-      - title: "Design & Philosophy"
-        url: "/design/course-design/"
+      - title: "How This Course Works"
+        url: "/about/"
       - title: "Learning Objectives"
         url: "/design/learning-objectives/"
       - title: "Syllabus (draft)"

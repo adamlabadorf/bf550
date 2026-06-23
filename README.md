@@ -22,8 +22,9 @@ agents. The course makes a deliberate bet: the primary coding learning objective
 
 ## Course documents
 
-- **[Course design & philosophy](https://bu-bioinfo.github.io/bf550/design/course-design/)** — why code *literacy*, the
-  reading-over-authoring bet, and how the pieces fit together.
+- **[How this course works](https://bu-bioinfo.github.io/bf550/about/)** — student-facing
+  overview: what you'll learn, the reading-over-authoring focus, and how the pieces fit.
+  *(Instructor rationale lives in [`internal/course-design-rationale.md`](internal/course-design-rationale.md).)*
 - **[Learning objectives](https://bu-bioinfo.github.io/bf550/design/learning-objectives/)** — what students will be able to do.
 - **[Syllabus (draft)](https://bu-bioinfo.github.io/bf550/design/syllabus/)** — the TILT-framed course syllabus.
 - **[13-week schedule](https://bu-bioinfo.github.io/bf550/design/schedule/)** — lecture + lab topic progression.
