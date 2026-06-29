@@ -1,0 +1,17 @@
+<!-- Custom additions to <head>. Override of the minimal-mistakes default. -->
+
+{% if page.mathjax %}
+  <!-- MathJax 2.7: renders kramdown's `math/tex` script output (use $$...$$ for both
+       inline and display math). Loaded only on pages with `mathjax: true` front matter. -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+{% endif %}
