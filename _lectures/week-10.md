@@ -1,12 +1,13 @@
 ---
-title: "Week 10 — Clustering II"
+title: "Week 10 — Clustering I"
 ---
 
 > **Under construction.** Lecture materials for Week 10 will be posted here.
 
 ## Topic
 
-Clustering II
+Clustering I: unsupervised grouping with k-means and hierarchical clustering, and how the
+choice of distance metric shapes the results.
 
 ## Materials
 

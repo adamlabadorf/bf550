@@ -1,12 +1,14 @@
 ---
-title: "Week 12 — Choosing a method in practice"
+title: "Week 12 — Regression & regularization"
 ---
 
 > **Under construction.** Lecture materials for Week 12 will be posted here.
 
 ## Topic
 
-Choosing a method in practice
+Regression & regularization: linear regression and regularized variants. We use
+cross-validation to trace the regularization path, revisiting model selection one more time
+in a continuous-prediction setting.
 
 ## Materials
 

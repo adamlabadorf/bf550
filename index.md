@@ -112,14 +112,14 @@ There is **no final exam** — the synthesis project is the culminating assessme
 | [1]({{ site.baseurl }}/lectures/week-01/) | Course intro & code literacy | What ML is/isn't; design→spec→test→impl; agents; AIAS | GC-content sliding window |
 | [2]({{ site.baseurl }}/lectures/week-02/) | Applied statistics foundations | Distributions, estimation, hypothesis testing | RNA-seq count data, multiple testing |
 | [3]({{ site.baseurl }}/lectures/week-03/) | Probability for ML | Bayes, MLE, Laplace smoothing | k-mer frequencies |
-| [4]({{ site.baseurl }}/lectures/week-04/) | Classification I: Naive Bayes | Generative classifiers; priors; likelihood | **rRNA read classification (RDP)** |
-| [5]({{ site.baseurl }}/lectures/week-05/) | Classification II & evaluation | Logistic regression; precision/recall, ROC/AUC | Variant pathogenicity / gene classification |
-| [6]({{ site.baseurl }}/lectures/week-06/) | Interpretable & tree-based methods | Decision trees, random forests, feature importance | Biomarker / feature selection |
-| [7]({{ site.baseurl }}/lectures/week-07/) | Model selection + **midterm** | Bias–variance, overfitting, cross-validation | (review week) |
-| [8]({{ site.baseurl }}/lectures/week-08/) | Dimensionality reduction | PCA; t-SNE / UMAP intuition | scRNA-seq embedding |
-| [9]({{ site.baseurl }}/lectures/week-09/) | Clustering I | k-means, hierarchical; distance metrics | **scRNA-seq cell clustering** |
-| [10]({{ site.baseurl }}/lectures/week-10/) | Clustering II | Density-based, choosing *k*, validation | Cell-type discovery / markers |
-| [11]({{ site.baseurl }}/lectures/week-11/) | Regression & regularization | Linear & regularized regression; generalization | Expression prediction / dosage |
-| [12]({{ site.baseurl }}/lectures/week-12/) | Choosing a method in practice | Matching algorithm to problem; pipelines; data leakage | End-to-end mini case |
+| [4]({{ site.baseurl }}/lectures/week-04/) | Classification I: Naive Bayes | Generative classifiers; priors; likelihood; holding out data to test a model | **rRNA read classification (RDP)** |
+| [5]({{ site.baseurl }}/lectures/week-05/) | Evaluation & generalization | Precision/recall, ROC/AUC; overfitting, bias–variance; train/validation/test, cross-validation; data leakage | Evaluating the rRNA classifier honestly |
+| [6]({{ site.baseurl }}/lectures/week-06/) | Classification II: logistic regression | Logistic regression, decision boundaries; applying cross-validation & threshold choice | Variant pathogenicity / gene classification |
+| [7]({{ site.baseurl }}/lectures/week-07/) | Interpretable & tree-based methods | Decision trees, random forests, feature importance; bias–variance revisited; leakage in feature selection | Biomarker / feature selection |
+| [8]({{ site.baseurl }}/lectures/week-08/) | Consolidation + **midterm** | Review of classification & the generalization toolkit | (review week) |
+| [9]({{ site.baseurl }}/lectures/week-09/) | Dimensionality reduction | PCA; t-SNE / UMAP intuition; leakage when fitting on all the data | scRNA-seq embedding |
+| [10]({{ site.baseurl }}/lectures/week-10/) | Clustering I | k-means, hierarchical; distance metrics | **scRNA-seq cell clustering** |
+| [11]({{ site.baseurl }}/lectures/week-11/) | Clustering II | Density-based, choosing *k*, validation without peeking at labels | Cell-type discovery / markers |
+| [12]({{ site.baseurl }}/lectures/week-12/) | Regression & regularization | Linear & regularized regression; cross-validation for the regularization path | Expression prediction / dosage |
 | [13]({{ site.baseurl }}/lectures/week-13/) | Synthesis & frontiers | Intro to neural nets/DL; limits, ethics | Synthesis project presentations |
 
