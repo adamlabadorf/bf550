@@ -6,7 +6,9 @@
 > MWF sessions, and how the course serves a wide range of incoming mathematical background.
 >
 > Companion docs: [`course-design-rationale.md`](course-design-rationale.md) (the *why* of the
-> course overall), [`assignment-framework-authoring.md`](assignment-framework-authoring.md)
+> course overall), [`lab-computational-thinking-framework.md`](lab-computational-thinking-framework.md)
+> (how an individual lab is structured and staged under the computational-thinking arc, plus its
+> open questions), [`assignment-framework-authoring.md`](assignment-framework-authoring.md)
 > (how to write the labs), [`open-decisions.md`](open-decisions.md) (what is still unsettled).
 >
 > **Status: agreed direction, not yet propagated to student-facing pages.** See
