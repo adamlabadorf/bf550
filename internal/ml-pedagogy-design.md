@@ -103,8 +103,8 @@ the pedagogy reinforce each other:
 
 | Day | Session | Shape | What it is |
 |---|---|---|---|
-| **M** | **Build the model** | ~25–30 min exposition + live simulation → paired predict/run/explain → ~15 min naming the notation | The generative story for this week's method, arrived at by simulating it |
-| **W** | **Build the code** | Full studio | The week's lab on the biological anchor, agent-assisted |
+| **M** | **Build the model** | ~25–30 min exposition + live simulation → paired predict/run/explain → ~15 min naming the notation → **the lab's design phase, committed before leaving** | The generative story for this week's method, arrived at by simulating it — then the design of the computation (§8.4) |
+| **W** | **Build the code** | Full studio; lab materials unseal here | The week's lab on the biological anchor, agent-assisted |
 | **F** | **Break the model** | Critique clinic + depth share-out | Where it fails: overfitting, leakage, violated assumptions, uncalibrated output |
 
 ### Why Friday is worth protecting
@@ -138,6 +138,11 @@ check-in quiz format, and a one-page **model card** students fill in each week:
 By Week 13 students hold ten of these side by side, and that stack **is** the "intuition for the
 landscape of ML algorithms" learning objective, made physical. It is also the obvious scaffold
 for the synthesis project.
+
+> **This template is also the lab design-phase artifact.** The four slots constitute a design
+> document for a probabilistic method, so the card students commit at the end of Monday (§8.4)
+> and the card that accumulates into the term-long stack are the same object. One artifact, two
+> jobs — and it means the design phase never starts from a blank page.
 
 ## 6. Probabilistic reframes, week by week
 
@@ -202,6 +207,10 @@ Four types is not itself much to hold. The load comes from what a student must t
 **which type, which deliverables, which AI level, which biological anchor, which depth
 branch.** Three specific aggravating factors:
 
+> **Net effect of the fixes below.** The framework ends up as **three seats plus one fixed
+> opening phase** (§8.4) rather than four rotating types — fewer moving parts than we started
+> with, and every lab has the same first 30 minutes regardless of seat.
+
 1. **Letter names are opaque.** "Type C" carries no meaning; the student must maintain a
    memorized mapping from letter → pieces given → thing to produce. This is pure extraneous
    load — it teaches nothing.
@@ -214,117 +223,200 @@ branch.** Three specific aggravating factors:
 
 ### 8.2 Fix 1 — Show the picture, drop the letter
 
-The four types are not four things. They are **one thing with a moving hole**: the same four
+The seats are not separate things. They are **one thing with a moving hole**: the same four
 artifacts, with different pieces withheld. Make that visible and there is nothing to memorize.
 
-Every lab header carries the same strip, with the student's piece starred:
+Every lab header carries the same strip. **DESIGN is always the student's** (the universal
+opening phase, §8.4) and is sealed off from the rest until committed; the remaining boxes are
+given-or-starred according to the seat:
 
 ```
-DESIGN  →   SPEC   →  TESTS   →   CODE
-given      given      given      ★ YOURS
+Phase 1     DESIGN      SPEC      TESTS      CODE
+           ★ YOURS    ▨ sealed  ▨ sealed   ▨ sealed
+
+Phase 2     DESIGN      SPEC      TESTS      CODE       ← early term (one hole)
+          (committed)   given     given    ★ YOURS
+
+Phase 2     DESIGN      SPEC      TESTS      CODE       ← late term (multi-hole studio)
+          (committed)  ★ YOURS   ★ YOURS   ★ YOURS
 ```
 
-The student never learns "Type A" — they look at where the star is. **Letters survive as
+The student never learns "Type A" — they look at where the stars are. **Letters survive as
 author-side shorthand only** (in `internal/`, rubrics, and the schedule table), never as the
 primary student-facing label.
 
-The Designer seat (§8.4) uses the same strip with the given pieces **sealed** rather than
-shown, which makes its commitment step visible:
-
-```
-Phase 1    DESIGN     SPEC     TESTS      CODE
-          ★ YOURS   ▨ sealed  ▨ sealed  ▨ sealed
-```
+The strip is also what carries the term-long progression (§8.4) without anyone having to
+announce a new structure: the seats are training wheels, and coming off is just more stars.
 
 ### 8.3 Fix 2 — Name the seat, not the letter
 
 Pair the strip with a role name. These are real jobs on a real software team, and students
-already understand rotating roles from lab work:
+already understand rotating roles from lab work. **Three seats**, all of them phase-2 postures:
 
 | Type | Seat | One-line student framing |
 |:--:|---|---|
 | A | **Implementer** | "You have the spec and the tests. Make it work — and be able to explain every line." |
 | B | **Verifier** | "It claims to work. Prove it, with numbers you worked out yourself." |
 | C | **Reverse engineer** | "Here is code nobody documented. What is it *supposed* to do, and what did they forget to pin down?" |
-| D | **Designer** | "Before you look: what problem is this solving, and what would a good solution have to get right? Now look — **does this implementation meet the objectives of the task?**" |
 
 "This week you're the reverse engineer" is memorable in a way "Type C" will never be, and it
 carries the professional point the framework is actually making.
 
-### 8.4 The Designer seat (replaces "Reviewer")
+There is no fourth seat: **design became the universal opening phase instead** (§8.4). Late in
+the term the seats blur deliberately — a studio session may put stars on two or three boxes at
+once — so the seat names are a scaffold for the early weeks, not a permanent taxonomy.
 
-The fourth seat was originally **Reviewer** — "it works, should it ship?" — a critique of
-correctness against the given spec, plus efficiency and composability. That is an *inward*
-question: does the code satisfy the spec it was handed? **Designer asks the outward question
-instead: was that the right spec at all?**
+### 8.4 The design phase — universal, upstream of every seat
 
-#### Why this is the better fourth seat
+**Every lab opens with the same design phase, before any materials are revealed.** Students
+receive only the domain problem, work it down to computable questions and candidate methods,
+commit that, and *then* meet the pregenerated materials with their seat's hole in them. The
+comparison between the two is the pedagogical engine of the lab.
 
-1. **It is the actual failure mode in computational biology.** Code that passes its tests and
-   faithfully implements its spec, where the spec answered the wrong question. A reviewer
-   checking correctness/efficiency/composability never catches that; a designer who formed the
-   objectives independently does.
-2. **It completes the strip.** In the other three seats DESIGN is always *given* — nobody ever
-   produces it. Without this seat, students own SPEC, TESTS, and CODE over the term but never
-   the first box. With it, "by the end you have owned every box" is literally true.
-3. **It is the same activity as the probabilistic frame.** "What problem is this solving, what
-   would a good solution have to get right, how could it fool me" is precisely the four-slot
-   model-card template in §5. The Designer seat and the generative-story frame are one skill
-   wearing two hats.
-4. **It is the right capstone and the on-ramp to the synthesis project**, which asks for design
-   + spec + tests + implementation with justification for every decision. Design is the part
-   students have never practiced anywhere else in the course.
+This supersedes the earlier proposal to make design a fourth *seat* (originally "Reviewer,"
+then "Designer"). The seat version was worse, and specifically so:
 
-#### Structure: two phases with a commitment step
+- **Design would have been the least-practiced skill in the course** — 2–4 encounters in
+  thirteen weeks, for the highest-transfer thing we teach. As a universal phase it is practiced
+  twelve times.
+- **The seat version needed a bespoke two-phase commitment gate that no other seat had.** Making
+  phase 1 universal turns that special case into the standard lab rhythm, so anchoring is
+  handled structurally rather than by exception.
+- **It leaves three seats instead of four.** Three postures plus one fixed opening is less to
+  hold than four rotating types — this is a *reduction* against the §8.1 diagnosis, not a new
+  axis.
 
-**Anchoring would destroy this exercise.** A student who reads the implementation first will
-reconstruct its objectives and mistake them for their own. So the seat requires:
+#### Alignment with the computational-thinking instrument
 
-- **Phase 1 — the problem only.** Given the biological question and a data description, with no
-  spec, tests, or code: what should this compute? What would count as correct? Which failure
-  modes would you worry about? Then **commit it.**
-- **Phase 2 — everything revealed.** Where does the implementation's implicit objective differ
-  from yours? Which of your worries did it handle? Which did it miss? Which did it handle that
-  you never thought of?
+This mirrors pedagogical instruments being deployed in other courses in the program, whose arc
+is: **start from a problem statement → break it into solvable components → define the components
+as computable questions → select appropriate methods → implement.** Meeting the same
+decomposition in several courses is how it becomes a habit rather than a course-specific ritual.
 
-**The commitment device is `git commit`** — free, timestamped, and already part of the lab
-toolchain. Phase 2 materials are not opened until phase 1 is committed.
+> **DEPENDENCY — vocabulary alignment.** If the instrument has named steps, BF550 must use
+> *those names*, not a parallel set invented here. Most of the cross-course value dies if the
+> same four moves are called something different in this course. The phase-1 template below uses
+> placeholder language until the instrument's step names are confirmed.
 
-**The divergence analysis is the graded deliverable**, not the phase-1 design. Being "wrong" in
-phase 1 is fine and often more productive than being right; this must be stated explicitly in
-the assignment, because it is what makes the seat safe for students with low confidence. A
-phase-1 design that misses something the implementation caught is a *good* lab outcome.
+#### Why the comparison matters more than the design
 
-#### What happens to the old critique content
+The point is not that students produce a good design on the first try. It is that **the
+pregenerated materials become evidence rather than authority.** A student who has already
+committed to a view reads them critically; a student who opens them cold reads them receptively
+and mistakes that for learning. That difference is the whole argument for the sealed phase.
 
-Type D was the weakest of the four seats: "you get all three pieces, critique everything"
-yielded a summary table rather than a distinct skill, and it overlapped heavily with Verifier
-(finding behavior the tests miss) and Reverse engineer (gap analysis). Rather than preserve it,
-distribute it:
+It also catches the failure mode that matters most in computational biology: **code that passes
+its tests and faithfully implements its spec, where the spec answered the wrong question.** No
+amount of correctness review finds that. An independently-formed set of objectives does.
+
+#### Structure
+
+- **Phase 1 — the problem only.** No spec, tests, or code. Decompose the domain question, state
+  what should be computed, what would count as correct, and which failure modes you would worry
+  about. Then **commit it.**
+- **Phase 2 — materials revealed, seat applies.** Where do the materials' implicit objectives
+  differ from yours? Which of your worries did they handle, which did they miss, and which did
+  they handle that you never considered? Then do the seat's work.
+
+**Placement: end of the Monday session.** This gives "Build the model" (§4) a product rather
+than only an exposition, uses the overnight gap for design thinking, and — the useful part —
+**enforces the commitment gate by the calendar rather than by an honor system.** Materials
+unseal in Wednesday's studio. Monday then earns its name twice over: the generative model of the
+phenomenon, and the design of the computation.
+
+**The commitment device is `git commit`** — free, timestamped, already in the toolchain.
+
+#### The phase-1 artifact is the model card
+
+§5's four slots — the story, what is unknown, how we pin it down, how it lies to you — *are* a
+design document for a probabilistic method. So **one artifact serves both the
+computational-thinking instrument and the probabilistic frame**, and no student faces a blank
+page: it is four prompts, not an empty file. (Design-from-nothing is where students with the
+least background freeze; the card is the scaffold that prevents it.)
+
+By Week 13 each student holds twelve committed model cards plus twelve divergence analyses.
+
+#### Grading: commitment, not correctness
+
+- **Phase 1 is credit for having committed before the gate.** Not graded on quality.
+- **Divergence analysis is graded in depth on 3–4 labs**, spot-checked otherwise.
+
+Twelve graded design documents per student will not survive contact with the semester. More
+importantly, **a heavily-graded phase 1 stops being safe to be wrong in** — and being safe to be
+wrong is exactly the property that makes it usable by students with the least background. State
+explicitly on every assignment: *a phase-1 design that misses something the materials caught is
+a good outcome.*
+
+**Countermeasure against ritual decay:** if phase 1 is not graded, it risks becoming a box-tick.
+Use the **Friday share-out** to give it social stakes instead of grading stakes — "three groups
+thought the objective was X, the materials assumed Y; who is right?" This reuses a session that
+already exists (§4) and costs nothing extra.
+
+#### Progression: from one hole to many
+
+The seats are training wheels. The intended arc:
+
+| Term position | Phase 2 shape |
+|---|---|
+| **Early** | One hole, clearly marked, seat named and scaffolded |
+| **Middle** | One hole, less scaffolding; seat named |
+| **Late** | **Multi-hole studio** — stars on two or three boxes, possibly instructor-directed per group, because students now understand how spec, tests, and code constrain each other |
+
+Late-term multi-hole studios are what the old "Designer as capstone" was reaching for, and they
+are a better on-ramp to the synthesis project (design + spec + tests + implementation, every
+decision justified) than a single seat would have been. The strip (§8.2) communicates the whole
+progression without announcing a new structure.
+
+#### The AI level now varies *within* a lab
+
+Phase 1 is precisely the thinking an agent would happily do for the student. Recommended:
+
+| | AIAS level | Rationale |
+|---|:--:|---|
+| **Phase 1** | **2 — AI Planning** | Brainstorming allowed; the student develops the ideas. (Level 1 is the stricter alternative — see [fork 4](#9-deferred-forks).) |
+| **Phase 2** | **4 — Full AI** | Unchanged: direct the agent, verify it, own the result. |
+
+Mixed levels within a single lab is new for the course and must be stated explicitly on every
+assignment. It is also arguably the cleanest one-line statement of the course's ethos: **think
+first, unaided; then use the agent freely.**
+
+#### Authoring cost: problem statements that do not leak the spec
+
+This is the real price of the change, and it now applies to **all twelve labs** rather than to a
+handful of Designer prompts.
+
+**A problem statement that quietly contains its own decomposition makes phase 1 theater.** The
+statement must be a genuine domain question, not a task description:
+
+| ✅ Genuine question | ❌ Leaks the design |
+|---|---|
+| "Which of these reads are rRNA, and how confident can you be?" | "Implement a k-mer Naive Bayes classifier for rRNA reads." |
+| "Do these cells fall into distinct types, and how would you know?" | "Cluster the cells with k-means and pick *k*." |
+
+The existing biological anchors in `docs/schedule.md` are most of the way there; they need
+rewriting as *questions* rather than *tasks*. This joins the existing author rule in
+[`assignment-framework-authoring.md`](assignment-framework-authoring.md) that every exercise be
+hand-verifiable from domain knowledge — both constraints must hold at once, and phase-1 prompts
+will be the fussiest part of lab authoring.
+
+#### What happened to the old Type D critique content
+
+Type D ("all three given, critique everything") yielded a summary table rather than a distinct
+skill and overlapped heavily with Verifier and Reverse engineer. It is distributed rather than
+preserved:
 
 | Old Type D component | New home |
 |---|---|
 | Correctness beyond what the tests cover | Already the Verifier and Reverse-engineer seats |
 | Efficiency (reasoning from reading, not benchmarking) | The standing **compute depth branch** prompt (§7) |
-| Composability / fit into a larger pipeline | The compute depth branch, and Designer phase 2 where it bears on objectives |
+| Composability / fit into a larger pipeline | The compute depth branch, and phase-2 divergence analysis where it bears on objectives |
 
-Replacing Reviewer with Designer therefore **reduces** redundancy rather than adding a fifth
-thing to track.
+#### Sequencing consequence for the schedule
 
-#### Naming
-
-**Designer** is preferred because it maps directly onto the DESIGN box, which is what makes the
-strip self-explanatory. "Reviewer" primes conformance-checking — the exact posture this seat is
-meant to move away from. (Considered and rejected: *Architect*, which overclaims and suggests
-structure rather than purpose; *Client* / *Stakeholder*, which capture the objectives question
-but are odd seats for a scientist to occupy.)
-
-#### Sequencing consequence
-
-Designer is the highest-altitude seat and should sit **late** — it is the rehearsal for the
-synthesis project. The current schedule places Type D at weeks 7, 8, 10, and 11; those
-placements need revisiting when `docs/schedule.md` is rewritten for the MWF format, shifting
-Designer toward the end and giving the earlier weeks a second Reverse-engineer pass instead.
+`docs/schedule.md` currently assigns types A–D per week, including Type D at weeks 7, 8, 10, and
+11 (week 8 is the midterm/consolidation week). With no fourth seat, that column is rewritten as:
+**seat per week for the early and middle term, multi-hole studio for the late term** — and the
+design phase is not a column at all, because it is every week.
 
 ### 8.5 Fix 3 — One bundle, always the same files
 
@@ -390,6 +482,16 @@ Recorded here, deliberately **not decided** (see [`open-decisions.md`](open-deci
 3. **Fifth exercise type, or a modifier?** *Partially resolved in §8.7:* story ↔ code moves to
    the check-in quizzes rather than becoming either. Revisit only if check-ins prove too small
    to carry it.
+4. **AIAS level for the design phase — 2 or 1?** Level 2 (AI Planning: brainstorming allowed,
+   the student develops the ideas) is the recommended leaning; Level 1 (No AI) is defensible on
+   the grounds that phase 1 is exactly the reasoning an agent would substitute for. Note the
+   enforcement asymmetry: Level 1 is not observable here the way it is in a proctored check-in,
+   so Level 2 may be the more honest label for the same intent. Phase 2 stays Level 4 either
+   way. (§8.4)
+
+**Open dependency, not a fork:** the computational-thinking instrument's **step names** must be
+confirmed so the phase-1 template uses that vocabulary rather than a parallel set invented here
+(§8.4).
 
 ## 10. Pending propagation to student-facing pages
 
@@ -399,11 +501,14 @@ None of the following has been changed yet; recorded so it is not lost.
 |---|---|---|
 | **Contact format** is stated as 2 × 75-min lectures + 1 × 1–2 hr lab | `README.md`, `docs/course-design.md`, `docs/schedule.md`, `docs/syllabus.md` | Now **3 × 105-min MWF sessions**; needs updating everywhere it appears |
 | **Build / code / break** weekly rhythm | `docs/schedule.md`, `docs/course-design.md` | Replaces the lecture/lab table framing |
-| **Seats + the four-box strip** replace letter names | `docs/assignment-framework.md`, `_labs/`, `docs/schedule.md` | Letters stay as author shorthand in `internal/` |
+| **Seats + the four-box strip** replace letter names | `docs/assignment-framework.md`, `_labs/`, `docs/schedule.md` | Three seats; letters stay as author shorthand in `internal/` |
+| **Universal design phase** opens every lab, committed at the end of Monday before materials unseal | `docs/assignment-framework.md`, `docs/course-design.md`, `_labs/lab-overview.md`, `internal/templates/assignment-template.md` | Per §8.4. Biggest structural change; also needs the per-phase AIAS levels stated on every assignment |
+| **Biological anchors rewritten as questions, not tasks** | `docs/schedule.md`, `internal/assignment-framework-authoring.md` | Per §8.4 — a leaky problem statement makes phase 1 theater. Interacts with [issue #1](https://github.com/bu-bioinfo/bf550/issues/1) |
+| **Late-term multi-hole studios** replace the Type D column | `docs/schedule.md`, `docs/assignment-framework.md` | Per §8.4 progression table |
 | **One-bundle file layout** | `docs/assignment-framework.md`, [issue #5](https://github.com/bu-bioinfo/bf550/issues/5) | Also resolves the per-type-bundle gap |
 | **Depth branches** | `docs/assignment-framework.md`, `_labs/lab-overview.md` | Plus the "must be useful to others" author rule in `assignment-framework-authoring.md` |
 | **Notation decoder** page | new page under `docs/` or `_guides/` | Grows through the term |
 | **story → code → notation** rule | `internal/` author guidance | Week 3 lecture currently violates it |
 | **Verifier test requirements** relaxed to 2-of-3 + core | `docs/assignment-framework.md` | Per §8.6 |
 | **Check-in quizzes** alternate code-reading and story/formula-reading | `docs/assessment-and-ai-policy.md`, `internal/templates/checkin-quiz-template.md` | Per §8.7 |
-| **Designer replaces Reviewer** as the fourth seat, two-phase with a `git commit` gate | `docs/assignment-framework.md`, `_labs/lab-overview.md`, `internal/templates/assignment-template.md` | Per §8.4; Type D placement in `docs/schedule.md` shifts later |
+| **Type D / Reviewer removed** — critique content redistributed | `docs/assignment-framework.md` | Per §8.4; superseded by the universal design phase |
