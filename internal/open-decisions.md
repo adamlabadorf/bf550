@@ -15,5 +15,9 @@
 | BU/program policy statements; program-outcome mapping | syllabus, learning-objectives | [#8](https://github.com/bu-bioinfo/bf550/issues/8) |
 | AI attestation wording | syllabus | [#9](https://github.com/bu-bioinfo/bf550/issues/9) |
 | Credit-hour expectations; project vs. cumulative final | /about/ rationale | see [course-design-rationale](course-design-rationale.md) |
+| **How Bayesian?** MLE/MAP + simulation-based uncertainty vs. full posterior/MCMC | lectures (wks 3, 5, 12) | see [ml-pedagogy-design §9](ml-pedagogy-design.md#9-deferred-forks) |
+| **MWF split:** 1 concept + 2 hands-on, or 2 + 1 (does Friday stay a distinct critique session?) | schedule, /about/ | see [ml-pedagogy-design §9](ml-pedagogy-design.md#9-deferred-forks) |
+| ~~Fifth exercise type for story ↔ code~~ | assignments, assessment | ✅ Resolved — moved to the check-in quizzes instead of the lab framework ([§8.6](ml-pedagogy-design.md#86-withdrawn-the-fifth-exercise-type)) |
+| Propagate 3 × 105-min MWF format + seats/bundle changes to student-facing pages | README, /about/, schedule, syllabus, assignments | see [ml-pedagogy-design §10](ml-pedagogy-design.md#10-pending-propagation-to-student-facing-pages) |
 
 Student-facing pages deliberately omit these notes; they live here and in the issues.
