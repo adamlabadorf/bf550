@@ -17,7 +17,8 @@
 | Credit-hour expectations; project vs. cumulative final | /about/ rationale | see [course-design-rationale](course-design-rationale.md) |
 | **How Bayesian?** MLE/MAP + simulation-based uncertainty vs. full posterior/MCMC | lectures (wks 3, 5, 12) | see [ml-pedagogy-design §9](ml-pedagogy-design.md#9-deferred-forks) |
 | **MWF split:** 1 concept + 2 hands-on, or 2 + 1 (does Friday stay a distinct critique session?) | schedule, /about/ | see [ml-pedagogy-design §9](ml-pedagogy-design.md#9-deferred-forks) |
-| ~~Fifth exercise type for story ↔ code~~ | assignments, assessment | ✅ Resolved — moved to the check-in quizzes instead of the lab framework ([§8.6](ml-pedagogy-design.md#86-withdrawn-the-fifth-exercise-type)) |
+| ~~Fifth exercise type for story ↔ code~~ | assignments, assessment | ✅ Resolved — moved to the check-in quizzes instead of the lab framework ([§8.7](ml-pedagogy-design.md#87-withdrawn-the-fifth-exercise-type)) |
+| ~~Fourth exercise seat: Reviewer vs. Designer~~ | assignments, schedule | ✅ Resolved — **Designer**, two-phase with a `git commit` gate; old Type D critique content redistributed ([§8.4](ml-pedagogy-design.md#84-the-designer-seat-replaces-reviewer)) |
 | Propagate 3 × 105-min MWF format + seats/bundle changes to student-facing pages | README, /about/, schedule, syllabus, assignments | see [ml-pedagogy-design §10](ml-pedagogy-design.md#10-pending-propagation-to-student-facing-pages) |
 
 Student-facing pages deliberately omit these notes; they live here and in the issues.

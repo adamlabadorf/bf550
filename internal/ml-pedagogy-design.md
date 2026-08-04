@@ -174,7 +174,7 @@ different *kinds* of depth rather than different amounts.**
 | Branch | Prompt |
 |---|---|
 | **Math** | Derive why the estimator for this model is what it is |
-| **Compute** | Make it robust or fast — log-space to avoid underflow, vectorize, scale it up |
+| **Compute** | Make it robust or fast — log-space to avoid underflow, vectorize, scale it up. Also the standing home for the efficiency and composability critique inherited from the old Type D (§8.4): does it do unnecessary work, and would it fit into a larger pipeline? |
 | **Bio** | Which assumption does real data violate, and what does that cost you? |
 
 Why this works where tiering does not:
@@ -189,7 +189,7 @@ Why this works where tiering does not:
 needs to hear about is a bonus problem wearing a costume.
 
 **The three branch names stay fixed all term** — one choice from a stable menu, never a new
-structure to learn (see §8.4).
+structure to learn (see §8.5).
 
 ## 8. Exercise-type legibility
 
@@ -228,6 +228,14 @@ The student never learns "Type A" — they look at where the star is. **Letters 
 author-side shorthand only** (in `internal/`, rubrics, and the schedule table), never as the
 primary student-facing label.
 
+The Designer seat (§8.4) uses the same strip with the given pieces **sealed** rather than
+shown, which makes its commitment step visible:
+
+```
+Phase 1    DESIGN     SPEC     TESTS      CODE
+          ★ YOURS   ▨ sealed  ▨ sealed  ▨ sealed
+```
+
 ### 8.3 Fix 2 — Name the seat, not the letter
 
 Pair the strip with a role name. These are real jobs on a real software team, and students
@@ -238,12 +246,87 @@ already understand rotating roles from lab work:
 | A | **Implementer** | "You have the spec and the tests. Make it work — and be able to explain every line." |
 | B | **Verifier** | "It claims to work. Prove it, with numbers you worked out yourself." |
 | C | **Reverse engineer** | "Here is code nobody documented. What is it *supposed* to do, and what did they forget to pin down?" |
-| D | **Reviewer** | "It works. Should it ship?" |
+| D | **Designer** | "Before you look: what problem is this solving, and what would a good solution have to get right? Now look — **does this implementation meet the objectives of the task?**" |
 
 "This week you're the reverse engineer" is memorable in a way "Type C" will never be, and it
 carries the professional point the framework is actually making.
 
-### 8.4 Fix 3 — One bundle, always the same files
+### 8.4 The Designer seat (replaces "Reviewer")
+
+The fourth seat was originally **Reviewer** — "it works, should it ship?" — a critique of
+correctness against the given spec, plus efficiency and composability. That is an *inward*
+question: does the code satisfy the spec it was handed? **Designer asks the outward question
+instead: was that the right spec at all?**
+
+#### Why this is the better fourth seat
+
+1. **It is the actual failure mode in computational biology.** Code that passes its tests and
+   faithfully implements its spec, where the spec answered the wrong question. A reviewer
+   checking correctness/efficiency/composability never catches that; a designer who formed the
+   objectives independently does.
+2. **It completes the strip.** In the other three seats DESIGN is always *given* — nobody ever
+   produces it. Without this seat, students own SPEC, TESTS, and CODE over the term but never
+   the first box. With it, "by the end you have owned every box" is literally true.
+3. **It is the same activity as the probabilistic frame.** "What problem is this solving, what
+   would a good solution have to get right, how could it fool me" is precisely the four-slot
+   model-card template in §5. The Designer seat and the generative-story frame are one skill
+   wearing two hats.
+4. **It is the right capstone and the on-ramp to the synthesis project**, which asks for design
+   + spec + tests + implementation with justification for every decision. Design is the part
+   students have never practiced anywhere else in the course.
+
+#### Structure: two phases with a commitment step
+
+**Anchoring would destroy this exercise.** A student who reads the implementation first will
+reconstruct its objectives and mistake them for their own. So the seat requires:
+
+- **Phase 1 — the problem only.** Given the biological question and a data description, with no
+  spec, tests, or code: what should this compute? What would count as correct? Which failure
+  modes would you worry about? Then **commit it.**
+- **Phase 2 — everything revealed.** Where does the implementation's implicit objective differ
+  from yours? Which of your worries did it handle? Which did it miss? Which did it handle that
+  you never thought of?
+
+**The commitment device is `git commit`** — free, timestamped, and already part of the lab
+toolchain. Phase 2 materials are not opened until phase 1 is committed.
+
+**The divergence analysis is the graded deliverable**, not the phase-1 design. Being "wrong" in
+phase 1 is fine and often more productive than being right; this must be stated explicitly in
+the assignment, because it is what makes the seat safe for students with low confidence. A
+phase-1 design that misses something the implementation caught is a *good* lab outcome.
+
+#### What happens to the old critique content
+
+Type D was the weakest of the four seats: "you get all three pieces, critique everything"
+yielded a summary table rather than a distinct skill, and it overlapped heavily with Verifier
+(finding behavior the tests miss) and Reverse engineer (gap analysis). Rather than preserve it,
+distribute it:
+
+| Old Type D component | New home |
+|---|---|
+| Correctness beyond what the tests cover | Already the Verifier and Reverse-engineer seats |
+| Efficiency (reasoning from reading, not benchmarking) | The standing **compute depth branch** prompt (§7) |
+| Composability / fit into a larger pipeline | The compute depth branch, and Designer phase 2 where it bears on objectives |
+
+Replacing Reviewer with Designer therefore **reduces** redundancy rather than adding a fifth
+thing to track.
+
+#### Naming
+
+**Designer** is preferred because it maps directly onto the DESIGN box, which is what makes the
+strip self-explanatory. "Reviewer" primes conformance-checking — the exact posture this seat is
+meant to move away from. (Considered and rejected: *Architect*, which overclaims and suggests
+structure rather than purpose; *Client* / *Stakeholder*, which capture the objectives question
+but are odd seats for a scientist to occupy.)
+
+#### Sequencing consequence
+
+Designer is the highest-altitude seat and should sit **late** — it is the rehearsal for the
+synthesis project. The current schedule places Type D at weeks 7, 8, 10, and 11; those
+placements need revisiting when `docs/schedule.md` is rewritten for the MWF format, shifting
+Designer toward the end and giving the earlier weeks a second Reverse-engineer pass instead.
+
+### 8.5 Fix 3 — One bundle, always the same files
 
 Replace per-type deliverable bundles with **a single lab repo layout that never changes.** The
 seat determines which files arrive pre-filled and which the student writes:
@@ -265,7 +348,7 @@ differentiation entirely outside the required bundle: it adds a choice, not a st
 This is a concrete answer to issue #5, and it is worth noting it resolves that issue in the
 direction of *reducing* load rather than specifying more.
 
-### 8.5 Fix 4 — Cap the requirement count per lab
+### 8.6 Fix 4 — Cap the requirement count per lab
 
 The Verifier seat (Type B) currently asks for four distinct kinds of test: hand-calculated
 example, synthetic, property-based, and documented expected failure. **Property-based testing
@@ -278,7 +361,7 @@ problem). Synthetic, property-based, and documented-failure tests become **two-o
 required, with all three as the compute depth branch.** Same ceiling for strong students, a
 reachable floor for everyone.
 
-### 8.6 Withdrawn: the fifth exercise type
+### 8.7 Withdrawn: the fifth exercise type
 
 An earlier proposal in this discussion was a fifth type — **story ↔ code**: given a generative
 story in prose, identify which of three implementations matches it, or the reverse. It is the
@@ -304,7 +387,7 @@ Recorded here, deliberately **not decided** (see [`open-decisions.md`](open-deci
 2. **Is the MWF split 1 concept + 2 hands-on, or 2 + 1?** i.e. should Friday also be studio
    time, with critique folded into Wednesday? Recommended leaning: keep Friday distinct — the
    share-out needs its own room — at the cost of one studio session.
-3. **Fifth exercise type, or a modifier?** *Partially resolved in §8.6:* story ↔ code moves to
+3. **Fifth exercise type, or a modifier?** *Partially resolved in §8.7:* story ↔ code moves to
    the check-in quizzes rather than becoming either. Revisit only if check-ins prove too small
    to carry it.
 
@@ -321,5 +404,6 @@ None of the following has been changed yet; recorded so it is not lost.
 | **Depth branches** | `docs/assignment-framework.md`, `_labs/lab-overview.md` | Plus the "must be useful to others" author rule in `assignment-framework-authoring.md` |
 | **Notation decoder** page | new page under `docs/` or `_guides/` | Grows through the term |
 | **story → code → notation** rule | `internal/` author guidance | Week 3 lecture currently violates it |
-| **Verifier test requirements** relaxed to 2-of-3 + core | `docs/assignment-framework.md` | Per §8.5 |
-| **Check-in quizzes** alternate code-reading and story/formula-reading | `docs/assessment-and-ai-policy.md`, `internal/templates/checkin-quiz-template.md` | Per §8.6 |
+| **Verifier test requirements** relaxed to 2-of-3 + core | `docs/assignment-framework.md` | Per §8.6 |
+| **Check-in quizzes** alternate code-reading and story/formula-reading | `docs/assessment-and-ai-policy.md`, `internal/templates/checkin-quiz-template.md` | Per §8.7 |
+| **Designer replaces Reviewer** as the fourth seat, two-phase with a `git commit` gate | `docs/assignment-framework.md`, `_labs/lab-overview.md`, `internal/templates/assignment-template.md` | Per §8.4; Type D placement in `docs/schedule.md` shifts later |
