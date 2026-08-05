@@ -6,8 +6,13 @@
 
 | File | Week | Seat | Term position | Shows |
 |---|---|---|---|---|
+| [`week-01-lab.md`](week-01-lab.md) | 1 — Course intro / GC sliding window | **Implementer** (writes CODE) | **First lab** | Introduces the whole machinery; productive uncertainty as an *absence in the spec*; the agent-decisions exercise |
 | [`week-04-lab.md`](week-04-lab.md) | 4 — Naive Bayes / rRNA classification | **Verifier** (writes TESTS) | Early | Full scaffolding, paired phase 1, hand-calculable tests |
 | [`week-10-lab.md`](week-10-lab.md) | 10 — Clustering / scRNA-seq | **Reverse engineer** (writes SPEC) | Middle–late | Reduced scaffolding, individual phase 1, a multi-hole extension |
+
+Read in that order, the three show the intended arc: Week 1 explains the machinery and plants
+*absences*; Week 4 plants *arguable choices* in working code; Week 10 plants *silent defects* and
+expects students to distrust what they are given.
 
 Each file is laid out in the order a student meets it — Monday problem statement, phase-1
 worksheet, the gate, Wednesday reveal with the real materials inline, divergence analysis, seat

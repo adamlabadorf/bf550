@@ -19,7 +19,7 @@
 | [`ml-pedagogy-design.md`](ml-pedagogy-design.md) | Why the ML content is framed probabilistically, and how it lands across three MWF sessions |
 | [`assignment-framework-authoring.md`](assignment-framework-authoring.md) | Existing rules for writing exercises (biological grounding, per-seat sequencing) |
 | **this doc** | How an individual lab is structured, staged, and authored under the computational-thinking arc |
-| [`examples/`](examples/) | Two playable draft labs — [Week 4](examples/week-04-lab.md) (early, Verifier) and [Week 10](examples/week-10-lab.md) (later, Reverse engineer) — written in the order a student meets them |
+| [`examples/`](examples/) | Three playable draft labs — [Week 1](examples/week-01-lab.md) (first lab, Implementer), [Week 4](examples/week-04-lab.md) (early, Verifier), [Week 10](examples/week-10-lab.md) (later, Reverse engineer) — written in the order a student meets them |
 
 The decisions inherited from `ml-pedagogy-design.md` §8 and treated as settled here: **a
 universal design phase opens every lab**, there are **three seats** (Implementer, Verifier,
@@ -179,13 +179,20 @@ narrower). It covers three distinct kinds of thing, and a good week has some of 
 | **A defensible-but-arguable choice** — not wrong, but a student could reasonably prefer otherwise | Composition-based classification rather than alignment |
 | **An unexamined assumption the problem statement quietly contradicts** | Class priors from balanced reference sets, when the library is 70–90% rRNA |
 | **A real defect that does not announce itself** | Reads containing `N` raise `KeyError`; overlapping k-mers treated as independent |
+| **An absence — something the spec fails to say**, which the student's own agent then decides silently | Week 1: the spec is silent on lowercase, on `N`, and on trailing bases; the agent-written code handles all three anyway |
+
+The **absence** variety is only available when the student authors the code (Implementer seat), and
+it may be the strongest form of the technique: the undocumented decision is one the student
+produced themselves, so there is no one else to blame and nothing to take on faith. See
+[Week 1 §8](examples/week-01-lab.md#8-instructor-notes-not-for-students).
 
 **Author checklist per lab:** at least one item most students should find, at least one that
 rewards the depth branches, and **at least one that a strong phase-1 design would have caught** —
 that last one is what keeps "where was your design better?" from being a rhetorical question.
 
-Worked instances: [Week 4 §7](examples/week-04-lab.md#7-instructor-notes-not-for-students) (four
-planted items) and [Week 10 §7](examples/week-10-lab.md#7-instructor-notes-not-for-students) (seven).
+Worked instances: [Week 1 §8](examples/week-01-lab.md#8-instructor-notes-not-for-students) (three
+absences), [Week 4 §7](examples/week-04-lab.md#7-instructor-notes-not-for-students) (four planted
+items) and [Week 10 §7](examples/week-10-lab.md#7-instructor-notes-not-for-students) (seven).
 
 **Author rule 3a — record reachability, not just the defect.** Whether a planted item is *findable*
 depends on the fixture, not only on the code. Week 10's empty-cluster defect is unreachable on
@@ -269,8 +276,13 @@ Grouped by what blocks what. None of these are decided.
    The simplest option that works is probably instructor release with no cryptography — the
    calendar and the commit timestamp do the real work. Students who work ahead are a tolerable
    loss.
-7. **Does the design phase run all 13 weeks?** Week 1 has no method yet and Week 13 is
-   presentations. Likely 11–12 instances, which affects the "twelve model cards" claim.
+7. **Does the design phase run all 13 weeks?** *Partly answered by drafting
+   [Week 1](examples/week-01-lab.md):* yes, it runs from Week 1 — but **the artifact is not the
+   model card that early.** GC content is a *computation*, not a model: there is nothing to
+   estimate, so the "what's unknown" slot is near-empty. Week 1 uses the bare S1–S4 worksheet and
+   turns the empty slot into the lesson (count versus estimate), which sets up Weeks 3–4. The model
+   card proper likely starts Week 3 or 4, so **"twelve model cards" is really nine or ten** — worth
+   correcting wherever that figure appears. Week 13 (presentations) remains open.
 8. **Is Monday's tail enough time?** 25–30 minutes for S1–S4 plus a commit may be optimistic in
    the early weeks when the template itself is unfamiliar.
 
@@ -285,9 +297,17 @@ Grouped by what blocks what. None of these are decided.
     much per lab, and whether to disclose that it happens. Disclosure invites flaw-hunting and
     could turn each lab into a scavenger hunt; non-disclosure risks students treating the materials
     as authoritative, which is the exact deference the sealed phase exists to break. Middle option
-    worth considering: disclose the **policy** once at the start of term and never per-lab. The
-    example labs assume disclosure has happened — Week 4's divergence Q4 states outright that "at
-    least one choice in them is arguable."
+    worth considering: disclose the **policy** once at the start of term and never per-lab.
+    *Drafting [Week 1](examples/week-01-lab.md) effectively picks that option* — its §0 tells
+    students plainly that the materials sometimes contain arguable choices and sometimes plain
+    mistakes, and that arguing with them earns marks. If we want a different disclosure policy,
+    Week 1 §0 is the place to change it.
+
+    **A third kind of planted item surfaced while drafting Week 1: an *absence*.** When the seat is
+    Implementer there is no code to plant a defect in, so the uncertainty lives in what the *spec
+    fails to say* — and the student's own agent-generated code then silently decides it. This is
+    arguably the strongest version of the technique, because the student produced the flaw
+    themselves. Add it to the Rule 3 taxonomy in §9.
 11. **Is computational thinking assessed anywhere unaided?** Check-ins and the midterm currently
     cover code reading and (proposed) story ↔ code. A CT-flavored check-in — "here is a problem;
     give me three computable questions and the method you would use for each" — would be the only
