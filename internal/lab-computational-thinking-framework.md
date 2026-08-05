@@ -19,6 +19,7 @@
 | [`ml-pedagogy-design.md`](ml-pedagogy-design.md) | Why the ML content is framed probabilistically, and how it lands across three MWF sessions |
 | [`assignment-framework-authoring.md`](assignment-framework-authoring.md) | Existing rules for writing exercises (biological grounding, per-seat sequencing) |
 | **this doc** | How an individual lab is structured, staged, and authored under the computational-thinking arc |
+| [`examples/`](examples/) | Two playable draft labs — [Week 4](examples/week-04-lab.md) (early, Verifier) and [Week 10](examples/week-10-lab.md) (later, Reverse engineer) — written in the order a student meets them |
 
 The decisions inherited from `ml-pedagogy-design.md` §8 and treated as settled here: **a
 universal design phase opens every lab**, there are **three seats** (Implementer, Verifier,
@@ -167,9 +168,32 @@ decomposition makes phase 1 theater.
 whose correct answer is checkable from domain knowledge without running code. Rules 1 and 2 must
 hold *simultaneously*, which is what makes phase-1 prompts the fussiest part of lab authoring.
 
-**Rule 3 — the materials must be worth diverging from.** If the provided spec/tests/code are
-flawless and obvious, the divergence analysis has nothing to bite on. See §11 on whether to seed
-imperfection deliberately.
+**Rule 3 — the materials must be worth diverging from: plant productive uncertainty.** If the
+provided spec/tests/code are flawless and obvious, the divergence analysis has nothing to bite on.
+
+*Productive uncertainty* is the working term (preferred over "deliberate imperfection," which is
+narrower). It covers three distinct kinds of thing, and a good week has some of each:
+
+| Kind | Example (Week 4) |
+|---|---|
+| **A defensible-but-arguable choice** — not wrong, but a student could reasonably prefer otherwise | Composition-based classification rather than alignment |
+| **An unexamined assumption the problem statement quietly contradicts** | Class priors from balanced reference sets, when the library is 70–90% rRNA |
+| **A real defect that does not announce itself** | Reads containing `N` raise `KeyError`; overlapping k-mers treated as independent |
+
+**Author checklist per lab:** at least one item most students should find, at least one that
+rewards the depth branches, and **at least one that a strong phase-1 design would have caught** —
+that last one is what keeps "where was your design better?" from being a rhetorical question.
+
+Worked instances: [Week 4 §7](examples/week-04-lab.md#7-instructor-notes-not-for-students) (four
+planted items) and [Week 10 §7](examples/week-10-lab.md#7-instructor-notes-not-for-students) (seven).
+
+**Author rule 3a — record reachability, not just the defect.** Whether a planted item is *findable*
+depends on the fixture, not only on the code. Week 10's empty-cluster defect is unreachable on
+generic continuous data and needs duplicate or all-zero rows in the input; that was only discovered
+by running it. **Every planted item needs a verified note on how it surfaces**, or the lab ships
+with defects nobody can find and instructor hints that fire every time.
+
+**Open:** how much to plant, and whether to tell students it happens (§11 Q10).
 
 **Rule 4 — state the seat and both AI levels in the header**, alongside the strip.
 
@@ -213,17 +237,24 @@ Grouped by what blocks what. None of these are decided.
 
 1. **Step names and step count** (§2). Blocked on lab consult. Also: does BF550 use all five
    steps or explicitly claim only S1–S4 as the design phase?
-2. **How far down should decomposition go?** A 25–30 minute Monday tail cannot sustain
-   decomposition to function-level interfaces. We need a **stopping rule** students can apply —
-   "down to the point where each component is a question you could look up a method for" is a
-   candidate, but it needs testing against a real week.
-3. **Method selection is degenerate early.** In Week 4, "select an appropriate method" is a
-   choice from a toolbox containing one item. Options: (a) accept the degeneracy and let the menu
-   grow; (b) supply an explicit method menu each week, including inappropriate options, so
-   selection is real; (c) **reframe the early-weeks step as "what properties would the right
-   method need?"** — answerable with an empty toolbox, and it matures naturally into (a)/(b) as
-   the toolbox fills. (c) is the current leaning but it may deviate from the instrument's framing,
-   so it interacts with question 1.
+2. **How far down should decomposition go?** *Deferred to the team discussion of the
+   computational-thinking framework* — this should be settled once, for all courses using the
+   instrument, rather than invented here. A 25–30 minute Monday tail cannot sustain decomposition
+   to function-level interfaces, so some stopping rule is needed; "down to the point where each
+   component is a question you could look up a method for" is a candidate to bring to that
+   discussion, not a decision. The example labs sidestep the question with explicit sub-prompts
+   under S3, which works but does not scale to twelve weeks of authoring.
+
+### Resolved since first draft
+
+3. ~~**Method selection is degenerate early.**~~ **Resolved.** In the early weeks, "select an
+   appropriate method" is a choice from a toolbox holding one item. The step is therefore framed
+   as **"what properties would the right method need?"** — answerable with an empty toolbox, and it
+   matures into genuine selection as the menu fills. See the framing in
+   [Week 4 S3](examples/week-04-lab.md#s3--what-properties-would-the-right-method-need) versus
+   [Week 10 S3](examples/week-10-lab.md#s3--what-properties-would-the-right-method-need), where
+   students are told to actually choose and justify. Still contingent on Q1: if the instrument
+   words this step differently, match its wording while keeping the two-stage progression.
 
 ### Structural
 
@@ -249,10 +280,14 @@ Grouped by what blocks what. None of these are decided.
    differences (not cosmetic ones); did you diagnose *why* they differ; did you judge which is
    better *with justification*; did you honestly name what the materials caught that you missed.
    The last one is the hardest to grade and the most important to reward.
-10. **Should deliberate imperfection be seeded into materials?** It would make Rule 3 reliable
-    and keep "my design was better" live. But: how often, and **do we tell students it happens?**
-    Telling them invites hunting for planted flaws; not telling them risks students assuming the
-    materials are authoritative when they are not. No clear answer yet.
+10. **Productive uncertainty — how much, and do we tell them?** *Decided in principle:* yes, plant
+    it — see Rule 3 in §9 for the taxonomy and the per-lab author checklist. **Still open:** how
+    much per lab, and whether to disclose that it happens. Disclosure invites flaw-hunting and
+    could turn each lab into a scavenger hunt; non-disclosure risks students treating the materials
+    as authoritative, which is the exact deference the sealed phase exists to break. Middle option
+    worth considering: disclose the **policy** once at the start of term and never per-lab. The
+    example labs assume disclosure has happened — Week 4's divergence Q4 states outright that "at
+    least one choice in them is arguable."
 11. **Is computational thinking assessed anywhere unaided?** Check-ins and the midterm currently
     cover code reading and (proposed) story ↔ code. A CT-flavored check-in — "here is a problem;
     give me three computable questions and the method you would use for each" — would be the only
