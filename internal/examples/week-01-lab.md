@@ -90,11 +90,13 @@ letters to mark regions flagged as repetitive.
 
 ## 2. Monday — phase 1 worksheet
 
-Fill in `design.md` and commit it before you leave. Work in pairs; each partner commits the same
-design to their own repo.
+**We start this together in the last 10 minutes of Monday** — we will read the problem, do S1 on the
+board for a *different* problem (reverse complement) so you can see the shape, and take questions.
+**You finish S2–S4 on your own and commit before Wednesday.** Work in pairs; each partner commits
+the same design to their own repo.
 
-**We will do one of these together on the board first**, for a different problem (reverse
-complement), so you can see the shape before you write yours.
+This is the only assignment all term with no wrong answers available, so spend the time it deserves
+and no more — 30 to 40 minutes is right.
 
 > Placeholder step labels (S1–S4) pending vocabulary alignment with the program's
 > computational-thinking instrument.
@@ -361,11 +363,21 @@ figure elsewhere in the design docs is closer to nine or ten.
 
 ### Timing
 
-Monday tail: board demo ~8 min, S1 ~5, S2 ~5, S3 ~8, S4 ~5, commit ~4 (slow — git is new for
-some). Tight. **Cut S3's third bullet if needed.**
+**Monday, last 10 min only:** read the problem aloud ~3, board demo of S1 on reverse complement ~5,
+questions ~2. S2–S4 and the commit are out-of-class (~30–40 min). Do *not* attempt the full
+worksheet in the room — see `ml-pedagogy-design.md` §4.1.
 
-Wednesday: setup ~25, read materials ~10, divergence ~15, implement ~20, annotate ~15, agent
-decisions ~20, depth ~20. Setup will overrun for someone; have a second instructor or TA floating.
+**Wednesday (105 min):** just-in-time teach ~10 · toolchain setup ~20 · read materials ~10 ·
+divergence ~15 · implement ~15 · annotate ~15 · agent-decisions ~15 · wrap ~5. **Depth moves
+out-of-class this week** — the 20 min it needs does not exist in Week 1.
+
+> **This plan was over budget and had to be cut.** An earlier draft summed to **125 minutes against
+> a 105-minute session** (25 setup + 10 read + 15 divergence + 20 implement + 15 annotate + 20
+> agent-decisions + 20 depth). Week 1 is the tightest session of the term because toolchain setup
+> is real and unskippable. If setup runs long, **cut the implement block** — the agent can produce
+> passing code faster than the estimate assumes, and the annotation is what is graded.
+
+Have a second instructor or TA floating for setup; it will overrun for someone.
 
 ### Risks
 

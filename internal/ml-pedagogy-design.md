@@ -105,9 +105,84 @@ the pedagogy reinforce each other:
 
 | Day | Session | Shape | What it is |
 |---|---|---|---|
-| **M** | **Build the model** | ~25–30 min exposition + live simulation → paired predict/run/explain → ~15 min naming the notation → **the lab's design phase, committed before leaving** | The generative story for this week's method, arrived at by simulating it — then the design of the computation (§8.4) |
-| **W** | **Build the code** | Full studio; lab materials unseal here | The week's lab on the biological anchor, agent-assisted |
-| **F** | **Break the model** | Critique clinic + depth share-out | Where it fails: overfitting, leakage, violated assumptions, uncalibrated output |
+| **M** | **Build the model** | **3 × [15 min teach + 15 min activity]** → 10 min launching the lab's design phase | The generative story for this week's method, arrived at by simulating it |
+| **W** | **Build the code** | **15 min just-in-time teach** → 85 min studio → 5 min wrap; lab materials unseal here | The week's lab on the biological anchor, agent-assisted |
+| **F** | **Break the model** | **15 min generalize** → 40 min critique clinic → 30 min share-out → 20 min consolidation | Where it fails: overfitting, leakage, violated assumptions, uncalibrated output |
+
+### 4.1 Where the content actually gets delivered
+
+**This section exists because the first draft of this document did not budget exposition at all,
+and the omission was serious.** As originally written, Monday carried ~30 min of exposition plus
+~15 min of notation, Wednesday was pure studio, and Friday was described as "critique clinic +
+share-out" with no teaching budgeted. That is **~45 min/week — roughly 10 hours across the term,
+against ~150 min/week and 32.5 hours in a conventional 2 × 75 lecture course.** A 70% cut to
+content delivery, unrecorded. The example labs made it concrete: the
+[Week 1](examples/week-01-lab.md) Wednesday plan sums to **125 minutes against a 105-minute
+session**, so the studios were over-subscribed before any teaching was added.
+
+Three corrections, in order of what they buy:
+
+**1. Every session opens with a teach block — including Wednesday and Friday.** MWF supplies three
+touchpoints where a 2 × 75 course has two; the first draft used one. Wednesday's block is not new
+concepts, it is the just-in-time thing today's lab needs. Friday's names the general phenomenon
+behind what students just hit in three different labs.
+
+**Friday's critique clinic is content delivery and was mislabeled as discussion.** Breaking a model
+in front of the room is *how* overfitting, leakage, and calibration get taught. That is ~40
+min/week of content-by-demonstration that the original budget did not count.
+
+**2. Interleave rather than block.** A 105-minute room holds three 15-minute bursts separated by
+activity: 45 min of exposition where 30 was budgeted, better retention, and no passive stretch
+over 15 minutes.
+
+**3. Move most of the design phase out of class.** Monday was spending 25–30 min on it — in the
+session under the most pressure. Instead **Monday ends with ~10 minutes launching it** (read the
+problem, sketch S1, answer questions); students finish and commit before Wednesday. Design
+benefits from overnight, it is AIAS 2 so agent brainstorming is allowed, and the 10 in-room minutes
+preserve the property that actually mattered: nobody faces a blank page alone. This supersedes the
+"committed before leaving" instruction in §8.4.
+
+#### The budget
+
+| | Explicit teaching | Everything else | Content/week |
+|---|---|---|---|
+| **Mon** | 3 × 15 min | 3 × 15 min activity + 10 min design launch | **45 min** |
+| **Wed** | 15 min | 85 min studio + 5 wrap | **15 min** |
+| **Fri** | 15 min | 40 critique clinic + 30 share-out + 20 consolidation | **15 min + 40 demonstration** |
+| | | | **≈75 explicit, ≈115 with the clinic** |
+
+Against ~150 min/week conventional, the gap narrows from 105 min/week to about 35.
+
+#### What absorbs the remaining gap
+
+**Reading carries first exposure.** This is a flipped-classroom bet and should be taken
+deliberately, since its failure mode is students not doing it. **Budget ~2 hr/week: one Rethinking
+chapter (~90 min) plus one short worked notebook (~30 min).** Cheapest accountability is a
+two-question ungraded entry poll opening Monday, which doubles as live information about where to
+spend the 45 minutes. It deliberately does *not* touch the check-in quizzes, whose No-AI
+code-reading role is load-bearing for assessment.
+
+> **Correction to the format note below.** Its claim that out-of-class reading stays "genuinely
+> modest" described reading's *volume* while silently changing its *role* from reinforcement to
+> first contact. The volume claim survives (~2 hr/week is modest for a graduate course); the role
+> change is real and needs stating to students explicitly, because a student who treats the
+> reading as optional will experience Monday as incomprehensible rather than as review.
+
+**Some content lives in the lab materials.** In [Week 4](examples/week-04-lab.md) students learn
+Laplace smoothing by *reading the spec and code*, not from a lecture. That is genuine delivery, and
+it is why authoring these labs costs more than preparing slides — the prep shifts rather than
+shrinking.
+
+**The 13-week topic list probably does not fit unchanged.** Candidates, cheapest first:
+
+| Cut | Frees | Rationale |
+|---|---|---|
+| **Merge Clustering I + II** (wks 10–11) | ~1 week | If k-means is taught as the hard-assignment limit of a mixture (§6), it is one idea, not two |
+| **Compress t-SNE/UMAP** (wk 9) to a demo | ~30–45 min | Expensive to teach properly, cheap to gesture at honestly |
+| Week 13 neural nets | — | Already the light frontiers week; leave it |
+
+**Instructor decision, not a design consequence** — recorded so the schedule does not silently
+assume 150 min/week of lecture that no longer exists.
 
 ### Why Friday is worth protecting
 
@@ -116,7 +191,9 @@ Friday is the session most at risk of being reclaimed for content, and the one t
 - It is where the schedule's *"a recurring theme, not a one-time topic"* commitment gets teeth.
   Every method offers a fresh way to get generalization wrong; a standing session means that
   recurrence does not have to be scheduled topic by topic.
-- It is the natural home for the reviewer- and analyst-seat exercises (§6).
+- It carries ~55 min/week of content — a 15-min generalizing teach block plus the critique clinic,
+  which teaches by demonstration (§4.1). Reclaiming Friday for "lecture" would not add exposition;
+  it would trade a more effective delivery mode for a less effective one.
 - It is where **depth branches get shared out** (§7), which is what keeps differentiated depth
   from siloing.
 
@@ -320,11 +397,16 @@ amount of correctness review finds that. An independently-formed set of objectiv
   differ from yours? Which of your worries did they handle, which did they miss, and which did
   they handle that you never considered? Then do the seat's work.
 
-**Placement: end of the Monday session.** This gives "Build the model" (§4) a product rather
-than only an exposition, uses the overnight gap for design thinking, and — the useful part —
-**enforces the commitment gate by the calendar rather than by an honor system.** Materials
-unseal in Wednesday's studio. Monday then earns its name twice over: the generative model of the
-phenomenon, and the design of the computation.
+**Placement: launched in the last ~10 minutes of Monday, finished and committed before Wednesday.**
+Monday reads the problem aloud, sketches S1 together, and answers questions; students complete
+S2–S4 on their own time. The gate is still **enforced by the calendar rather than an honor
+system** — materials unseal in Wednesday's studio — and the overnight gap is where design thinking
+actually happens.
+
+> **Revised.** An earlier draft ran the *entire* design phase in the last 25–30 minutes of Monday.
+> That spent the scarcest resource in the format on the activity least dependent on being in a
+> room together; see §4.1 for the budget that forced the change. The 10 in-room minutes preserve
+> the property that mattered — nobody faces a blank page alone — at a third of the cost.
 
 **The commitment device is `git commit`** — free, timestamped, already in the toolchain.
 
@@ -510,6 +592,9 @@ None of the following has been changed yet; recorded so it is not lost.
 | **One-bundle file layout** | `docs/assignment-framework.md`, [issue #5](https://github.com/bu-bioinfo/bf550/issues/5) | Also resolves the per-type-bundle gap |
 | **Depth branches** | `docs/assignment-framework.md`, `_labs/lab-overview.md` | Plus the "must be useful to others" author rule in `assignment-framework-authoring.md` |
 | **Notation decoder** page | new page under `docs/` or `_guides/` | Grows through the term |
+| **Reading carries first exposure**, ~2 hr/week, and students must be told so | `docs/syllabus.md`, `docs/course-design.md`, `_lectures/week-*.md` | Per §4.1. A student who treats it as optional will find Monday incomprehensible rather than review |
+| **Per-session teach blocks** (Mon 3 × 15, Wed 15, Fri 15) | `docs/schedule.md`, `docs/course-design.md` | Per §4.1 — the format is not "1 lecture + 2 labs" |
+| **Topic compression** — merge Clustering I+II, compress t-SNE/UMAP | `docs/schedule.md` | Per §4.1. **Instructor decision**, tracked in `open-decisions.md` |
 | **story → code → notation** rule | `internal/` author guidance | Week 3 lecture currently violates it |
 | **Verifier test requirements** relaxed to 2-of-3 + core | `docs/assignment-framework.md` | Per §8.6 |
 | **Check-in quizzes** alternate code-reading and story/formula-reading | `docs/assessment-and-ai-policy.md`, `internal/templates/checkin-quiz-template.md` | Per §8.7 |

@@ -21,6 +21,7 @@
 | ~~Fourth exercise seat: Reviewer vs. Designer~~ | assignments, schedule | ✅ Resolved — **neither.** Design became the *universal opening phase* on every lab; three seats remain ([§8.4](ml-pedagogy-design.md#84-the-design-phase--universal-upstream-of-every-seat)) |
 | AIAS level for the lab design phase — Level 2 or Level 1 | assignments, assessment | see [ml-pedagogy-design §9](ml-pedagogy-design.md#9-deferred-forks) |
 | **Confirm the computational-thinking instrument's step names** so BF550 reuses that vocabulary | assignments, /about/ | blocking the phase-1 template — see [§8.4](ml-pedagogy-design.md#84-the-design-phase--universal-upstream-of-every-seat) |
+| **Topic compression to fit the studio format** — merge Clustering I+II, compress t-SNE/UMAP to a demo | schedule | instructor call; rationale + budget in [ml-pedagogy-design §4.1](ml-pedagogy-design.md#41-where-the-content-actually-gets-delivered) |
 | Lab structuring under the computational-thinking arc — decomposition stopping rule, degenerate early method selection, gate mechanics, divergence rubric, deliberate imperfection, load | assignments, schedule, assessment | 14 open questions in [lab-computational-thinking-framework §11](lab-computational-thinking-framework.md#11-open-questions) |
 | Propagate 3 × 105-min MWF format + seats/bundle changes to student-facing pages | README, /about/, schedule, syllabus, assignments | see [ml-pedagogy-design §10](ml-pedagogy-design.md#10-pending-propagation-to-student-facing-pages) |
 

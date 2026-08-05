@@ -51,8 +51,9 @@ sequencer was unsure.
 
 ## 2. Monday — phase 1 worksheet
 
-Fill in `design.md`, then commit it before you leave. Work in pairs; both partners commit the
-same design to their own repo.
+**Started in the last 10 minutes of Monday** (we read the problem and sketch S1 together);
+**finished on your own and committed before Wednesday.** Work in pairs; both partners commit the
+same design to their own repo. Budget 30–40 minutes outside class.
 
 > Placeholder step labels (S1–S4) pending vocabulary alignment with the program's
 > computational-thinking instrument.
@@ -269,10 +270,12 @@ stated assumption.
 
 ### Timing
 
-Monday tail: S1 ~6 min, S2 ~4, S3 ~10, S4 ~6, commit ~2. **S3 is the one that overruns** — the
-four sub-prompts are there to stop open-ended flailing, and it is fine if pairs answer only three.
+**Monday, last 10 min only:** read the problem aloud ~3, sketch S1 together ~5, questions ~2.
+S2–S4 out-of-class (~30–40 min). **S3 is the step that overruns** when students do it alone — the
+four sub-prompts exist to stop open-ended flailing, and answering three of four is fine.
 
-Wednesday: reveal + read ~15 min, divergence ~30, tests ~45, depth ~15.
+**Wednesday (105 min):** just-in-time teach ~15 (smoothing, and why a zero is fatal in a product)
+· reveal + read ~10 · divergence ~25 · tests ~40 · wrap ~5. **Depth is out-of-class.**
 
 ### Risks
 
