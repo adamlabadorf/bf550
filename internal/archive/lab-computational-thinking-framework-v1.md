@@ -272,8 +272,8 @@ Grouped by what blocks what. None of these are decided.
    appropriate method" is a choice from a toolbox holding one item. The step is therefore framed
    as **"what properties would the right method need?"** — answerable with an empty toolbox, and it
    matures into genuine selection as the menu fills. See the framing in
-   [Week 4 S3](examples-v1/week-04-lab.md#s3--what-properties-would-the-right-method-need) versus
-   [Week 10 S3](examples-v1/week-10-lab.md#s3--what-properties-would-the-right-method-need), where
+   [Week 4 S3](examples-v1/week-04-lab.md) versus
+   [Week 10 S3](examples-v1/week-10-lab.md), where
    students are told to actually choose and justify. Still contingent on Q1: if the instrument
    words this step differently, match its wording while keeping the two-stage progression.
 

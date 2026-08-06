@@ -6,19 +6,22 @@
 
 ## Why the framework works across our skill range
 
-Spec writing, test writing, and critique are **novel to nearly every student regardless of
-Python background**, so they level the playing field. Implementation can be scaffolded for
-students who need it and delegated to a coding agent by students who don't — *without
-changing what the exercise actually assesses.* This is what lets one course serve both the
-rudimentary and the highly skilled programmer.
+**Design, spec writing, and test writing are novel to nearly every student regardless of Python
+background**, so they level the playing field. Implementation can be scaffolded for students who
+need it and delegated to a coding agent by students who don't — *without changing what the exercise
+actually assesses.* This is what lets one course serve both the rudimentary and the highly skilled
+programmer.
+
+The **design stage** (`course-structure.md` §1) is the strongest version of this: nobody arrives
+fluent at decomposing a biological question into computable ones, so week 1 starts everyone at
+roughly the same place on the thing that matters most.
 
 ## Which piece to withhold
 
-> **Superseded:** the A/B/C/D letter scheme and its per-week rotation are retired. See
-> [`course-structure.md`](course-structure.md) §5 — the strip is now the single canonical
-> representation, and which piece is withheld varies for authoring reasons rather than as a
-> pedagogical rotation students track. Type D (critique-everything) is gone entirely; its content is
-> redistributed.
+Each problem withholds exactly one of the four artifacts. **The strip is the canonical
+representation** ([`course-structure.md`](course-structure.md) §5); which piece is withheld varies
+for authoring reasons and is not a rotation students track. **Do not use exercise-type letters** —
+the student-facing `docs/assignment-framework.md` still describes an A–D scheme and needs rewriting.
 
 | Withheld piece | Seat label | Accountable product |
 |---|---|---|
@@ -92,12 +95,24 @@ nobody can find and instructor hints that fire every time. Worked inventories wi
 
 ## Open decisions
 
-- **GAP:** define the standard deliverable bundle and file layout per lab (e.g. `spec.md`,
-  `test_*.py`, `impl.py`, `annotation.md`, `failure-log.md`), a rubric per type, and the
-  toolchain/runtime (Python version, test runner, provided agent). Tracked in
-  [issue #5](https://github.com/bu-bioinfo/bf550/issues/5).
+The deliverable bundle is fixed: `design.md` · `spec.md` · `test_*.py` · `impl.py` · `notes.md` ·
+`log.md`, identical every week ([`course-structure.md`](course-structure.md) §5).
+
+**Still open under [issue #5](https://github.com/bu-bioinfo/bf550/issues/5):** a grading rubric per
+starred artifact, a rubric for the divergence analysis, and the toolchain/runtime (Python version,
+test runner, provided agent).
 
 ## Templates
 
-Authoring templates live in [`internal/templates/`](templates/): the TILT assignment template
-and the check-in quiz template.
+Authoring templates live in [`internal/templates/`](templates/):
+
+| Template | Use |
+|---|---|
+| [`assignment-template.md`](templates/assignment-template.md) | TILT problem template. **One file per problem, spanning both weeks** — released in two parts (design week, then build week). |
+| [`checkin-quiz-template.md`](templates/checkin-quiz-template.md) | The **No-AI code-reading** check-in (AIAS 1). |
+
+> **Two different things are called "check-in" and they must not be confused.** The
+> code-reading check-in above is a graded No-AI assessment. The **Monday reading check-in**
+> (`course-structure.md` §8) is a low-stakes, near-ungraded prompt whose job is to tell the
+> instructor live which part of the reading did not land. **A template for the reading check-in
+> does not exist yet** and is needed before the term.

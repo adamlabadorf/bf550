@@ -19,9 +19,9 @@
 
 | Decision | Where it surfaces | Tracking |
 |---|---|---|
-| **How Bayesian?** MLE/MAP + simulation-based uncertainty vs. full posterior/MCMC | lectures (wks 3, 5, 12) | [ml-pedagogy-design §9](ml-pedagogy-design.md#9-deferred-forks) |
-| **Simulation's scope** — leaning: front-load wks 2–4 + Friday diagnostic, not a weekly ritual | lectures, Friday sessions | [ml-pedagogy-design §2.1](ml-pedagogy-design.md#21-narrowing-simulation-first) |
-| **Topic compression** — merge Clustering I+II; compress t-SNE/UMAP to a demo | schedule | [ml-pedagogy-design §4.1](ml-pedagogy-design.md#41-where-the-content-actually-gets-delivered) |
+| **How Bayesian?** MLE/MAP + simulation-based uncertainty vs. full posterior/MCMC | lectures (wks 3, 5, 12) | [course-structure §9](course-structure.md#9-open-and-pending) |
+| **Simulation's scope** — leaning: front-load wks 2–4 + Friday diagnostic, not a weekly ritual | lectures, Friday sessions | [ml-pedagogy-design §2.1](ml-pedagogy-design.md#21-the-scope-of-simulation) |
+| **Topic compression** — merge Clustering I+II; compress t-SNE/UMAP to a demo | schedule | [course-structure §3](course-structure.md#3-the-week-in-steady-state) |
 | **AIAS level for the design stage** — 2 or 1 | assignments, assessment | [course-structure §9](course-structure.md#9-open-and-pending) |
 | **Two problems in flight** — fallback is designing every other week (6 not 12) if load proves too high | schedule, assignments | [course-structure §9](course-structure.md#9-open-and-pending) |
 | **Decomposition stopping rule** — how far down students decompose | design-stage template | deferred to the team's computational-thinking discussion |
@@ -53,17 +53,17 @@
 | AI attestation wording | syllabus | [#9](https://github.com/bu-bioinfo/bf550/issues/9) |
 | Credit-hour expectations | /about/ rationale | [course-design-rationale](course-design-rationale.md) |
 
-## Resolved
+## Settled
 
 | Decision | Outcome |
 |---|---|
-| ~~Grade weights; final exam vs. synthesis project~~ | ✅ Weights confirmed; project replaces a final exam ([#2](https://github.com/bu-bioinfo/bf550/issues/2)) |
-| ~~Fourth exercise seat: Reviewer or Designer~~ | ✅ **Neither.** Design became a universal stage for every problem; three seats remain, and they are labels rather than a rotation |
-| ~~Fifth exercise type for story ↔ code~~ | ✅ Moved to the check-in quizzes rather than the lab framework |
-| ~~Within-week two-phase lab~~ | ✅ Replaced by the **staggered pipeline** — design problem *N* in week *N*, implement it in week *N+1* ([course-structure §2](course-structure.md#2-why-the-stagger-rather-than-one-lab-per-week)) |
-| ~~Method selection degenerate in early weeks~~ | ✅ S3 asks *"what properties would the right method need?"* early, maturing into real selection |
-| ~~Where content gets delivered~~ | ✅ Flipped: textbook carries first exposure (~2 hr/week), Monday activates and elaborates, Friday's critique clinic delivers by demonstration |
-| ~~Contact format~~ | ✅ **3 × 105-min MWF sessions** (site still says 2 × 75 + lab — see [course-structure §9](course-structure.md#9-open-and-pending)) |
-| ~~Hosted tutor vs. bring-your-own; sealed textbook content~~ | ✅ **Moot.** The textbook contains **no graded assignments by design**, so there is nothing to seal — the tutor ships as a **Claude skill** students install, and the visibility-tier machinery is deleted ([textbook-ai-design §1](textbook-ai-design.md#1-the-founding-constraint-no-assignments-in-the-textbook)) |
+| Grade weights; culminating assessment | Weights confirmed; the **synthesis project** is the culminating assessment, with no separate final exam ([#2](https://github.com/bu-bioinfo/bf550/issues/2)) |
+| The design stage | **Design is a universal stage for every problem**, not a seat. Three seats remain (Implementer, Verifier, Reverse engineer) and are labels rather than a rotation |
+| Story ↔ code exercises | Live in the **check-in quizzes**, not the problem framework |
+| Design/implement sequencing | **Staggered pipeline** — design problem *N* in week *N*, implement it in week *N+1* ([course-structure §2](course-structure.md#2-why-the-stagger-rather-than-one-lab-per-week)) |
+| Method selection in early weeks | S3 asks *"what properties would the right method need?"* early, maturing into genuine selection as the toolbox fills |
+| Where content gets delivered | Flipped: the textbook carries first exposure (~2 hr/week), Monday activates and elaborates, Friday's critique clinic delivers by demonstration |
+| Contact format | **3 × 105-min MWF sessions.** The public site still says 2 × 75 + lab and needs updating ([course-structure §9](course-structure.md#9-open-and-pending)) |
+| Tutor delivery & textbook content | The textbook contains **no graded assignments by design**, so nothing needs sealing. The tutor ships as a **portable skill** students install; no visibility tiers ([textbook-ai-design §1](textbook-ai-design.md#1-the-founding-constraint-no-assignments-in-the-textbook)) |
 
 Student-facing pages deliberately omit these notes; they live here and in the issues.

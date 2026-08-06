@@ -7,7 +7,7 @@
 > Companions: [`course-structure.md`](course-structure.md) (the staggered pipeline the textbook
 > serves), [`ml-pedagogy-design.md`](ml-pedagogy-design.md) (the pedagogy the tutor should reflect).
 >
-> **Status: design sketch**, revised after the founding constraint in §1 was set. Prior art for the
+> **Status: design sketch.** Prior art for the
 > human-facing form: [Biological Data Science in R](https://bu-bioinfo.github.io/biological-data-science-in-r/).
 
 ---
@@ -28,9 +28,9 @@ This one decision is what makes the whole thing tractable, and it is worth being
 | Instructor-only material must be excluded from the index | Already solved: it lives in `internal/`, which is excluded from the site |
 | Tutor use converges every student's design | Much reduced — the tutor cannot see the design problem at all |
 
-An earlier draft of this document built elaborate visibility tiers to solve these. **All of that
-machinery is deleted.** The structural choice does the work that access control was going to have to
-do badly.
+**No visibility tiers, no release gating, no access control.** The structural separation does that
+job properly, and any scheme relying on the model declining to reveal content it can see would do it
+badly.
 
 ## 2. The student story this is built for
 
@@ -67,6 +67,12 @@ A generic agent already knows decision trees. Four things it cannot know, in rou
 
 **A skill, not a hosted service.** Students install it once; it works with the agent they already
 have. The skill is a map plus a pedagogy note — **not a copy of the book.**
+
+> **Skills are a portable format, not a Claude-specific one.** They are installable across coding
+> harnesses via the `skills` CLI (`npx skills …`), so authoring the tutor as a skill does not bind
+> the course to a single vendor, and cross-agent portability is therefore not an argument for
+> adding an MCP server. *(Confirm the exact install invocation at build time; the portability itself
+> is the load-bearing claim.)*
 
 ```
 bf550-textbook-skill/
@@ -106,15 +112,15 @@ So the real question is whether the skill needs a **server behind it**.
 |---|---|
 | **Server-side logging** | **The real win.** Recovers the "where is the book unclear" feedback loop that BYO agents otherwise cost us (§8 risk 4) — the most valuable textbook-revision data available. |
 | **Exact structured answers** | `get_prerequisites("gini-impurity")` returns the graph rather than the agent paraphrasing a markdown table. Modest but real. |
-| **Cross-agent portability** | MCP is a standard; skills are Claude-specific. A hedge against [issue #3](https://github.com/bu-bioinfo/bf550/issues/3) being undecided. |
+| **Cross-agent portability** | **Not a differentiator.** Skills already install across harnesses via the `skills` CLI (§4). |
 | **Semantic search** | **Weaker than it looks.** Thirteen chapters is a small corpus, and in the §2 student story the student *names the chapter*. "Read the TOC, fetch chapter 7" suffices. This solves a problem we do not have. |
 | **Executable tools** | **Adds little.** A coding agent already writes and runs Python; a `run_simulation` tool is not a unique capability. |
 
 **What it costs:**
 
-- **It reintroduces the brittleness the course structure was just revised to remove.** A skill has
-  no uptime requirement. A server must stay up for a semester, and a server down at 11pm before a
-  deadline means no tutor. This is the heaviest consideration.
+- **It adds a single point of failure the rest of the design avoids.** A skill has no uptime
+  requirement. A server must stay up for a semester, and a server down at 11pm before a deadline
+  means no tutor. This is the heaviest consideration.
 - **Installation friction lands on exactly the wrong students** — configuring an endpoint is more
   than installing a skill, and the students who most need a tutor are the least likely to debug a
   connection error.
@@ -134,6 +140,41 @@ So the real question is whether the skill needs a **server behind it**.
 >
 > The server therefore becomes **stage 6** of the build order (§9), not a prerequisite — so a
 > semester of use decides whether the telemetry justifies hosting, rather than a guess now.
+
+### 4.2 How the server gets deployed and distributed
+
+**Its purpose is logging.** Search and structured queries are secondary; the server exists to answer
+*"where is this book unclear?"* Design it around that and resist scope creep.
+
+**Deployment for BF550: an MCP connector scoped to our students.** Because the course provides
+Claude subscriptions, the connector can be made available only to enrolled students — which
+disposes of two of the cost objections above:
+
+- **Installation friction** largely disappears; a connector provisioned with the subscription is not
+  a hand-configured endpoint.
+- **Access control** comes free with enrollment, so the server does not need its own auth system —
+  which matters, because *not* building auth is what keeps logging anonymous by construction.
+
+**Distribution: the server ships with the textbook.** Anyone adopting the book can deploy their own
+instance and get their own telemetry. That makes the textbook a self-contained, reusable artifact
+rather than something wired to BU infrastructure, and it means the server must be **configurable,
+not hardcoded** — corpus URL, log sink, and retention as configuration.
+
+**Anonymity is a property of the build, not a promise in a privacy policy.** Do not collect
+identity. Because access is gated by subscription rather than by in-server auth, there is nothing to
+correlate a query against, and the "are these educational records?" question mostly evaporates —
+still worth confirming with BU, but from a much better starting position.
+
+**The skill must state all of this plainly**, in language a student reads before their first
+question:
+
+> *This course runs an optional server that records the questions asked of this skill — never who
+> asked them, and never your conversation. It exists so we can find the parts of the textbook that
+> are unclear and fix them. The skill works fully without it.*
+
+Two reasons this belongs in `SKILL.md` rather than only in the syllabus: the student sees it at the
+moment of use, and **an agent asked "is this logging me?" should be able to answer accurately from
+the skill itself.**
 
 ## 5. Metadata, kept light
 
@@ -165,9 +206,8 @@ Four fields earn their keep; the rest is optional:
   ~20 concepts that matter; skip the rest.
 - **`practice_problems.probes`** — so guidance aims at the concept rather than the answer.
 
-**This is deliberately much lighter than the previous draft**, which wanted a discover-versus-tell
-mode on every section. That was not authorable at scale and it was solving the sealed-content
-problem, which no longer exists.
+**Keep it this light.** A discover-versus-tell mode on every section is not authorable at scale,
+and with no sealed content there is nothing for it to protect.
 
 ## 6. The pedagogy layer — lightly
 
@@ -195,8 +235,7 @@ it is the course's core answer to a wide range of incoming background.
 Do not over-engineer this. **Practice problems are ungraded**, so a student who extracts an answer
 has cost themselves some practice and nothing else. Let the solutions be reachable and let the
 pedagogy layer encourage working through them. Any scheme that depends on the model *declining* to
-reveal content it can see is unreliable anyway — the previous draft's own conclusion, and it applies
-here in the direction of relaxing rather than tightening.
+reveal content it can see is unreliable anyway.
 
 The graded work is protected structurally, by not being in the corpus.
 
@@ -212,7 +251,7 @@ The tutor is worth building because it answers three problems the course already
 
 ## 8. Residual risks
 
-Much shorter than the previous draft, because §1 removed most of them.
+Short, because §1 removes most of them structurally.
 
 **1. Students paste the assignment into chat.** The tutor cannot see the design problem, but a
 student can bring it. This is an AIAS-policy question, not an architecture one — the design stage is

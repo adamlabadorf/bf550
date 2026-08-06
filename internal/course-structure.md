@@ -10,7 +10,7 @@
 > | [`ml-pedagogy-design.md`](ml-pedagogy-design.md) | The probabilistic frame, notation literacy, depth branches, week-by-week ML reframes |
 > | [`textbook-ai-design.md`](textbook-ai-design.md) | The AI-forward textbook and its tutor skill |
 > | [`assignment-framework-authoring.md`](assignment-framework-authoring.md) | Rules for writing exercises |
-> | [`archive/`](archive/) | Superseded drafts, including the v1 example labs |
+> | [`archive/`](archive/) | Earlier drafts, retained only for the verified problem statements and planted-defect inventories still to be ported forward (§9) |
 >
 > **Status:** agreed direction; nothing student-facing has been updated yet (§9).
 
@@ -29,9 +29,7 @@ it.
 
 ## 2. Why the stagger, rather than one lab per week
 
-The obvious design puts design and implementation in the same week. It was tried (see
-[`archive/examples-v1/`](archive/examples-v1/)) and abandoned, because it forced three goals into
-conflict:
+Compressing design and implementation into a single week forces three goals into conflict:
 
 | Goal | Within one week | Staggered |
 |---|---|---|
@@ -39,17 +37,17 @@ conflict:
 | **The seal needs to hold** | A commitment gate between Monday and Wednesday, unenforceable when a student simply opens the folder | A **week boundary** — coarse, natural, one materials release per week |
 | **The schedule must survive disruption** | Hard cross-day dependency; a lost Monday breaks the week | Sessions are independent; a lost session costs its own content only |
 
-The stagger also improves the thing it was not aimed at. **A week of separation makes the
-divergence analysis better**: students compare against a design they are no longer attached to,
-after a further week of instruction. Same exercise, more honest.
+The stagger buys a fourth thing it is not aimed at. **A week of separation makes the divergence
+analysis better**: students compare against a design they are no longer attached to, after a further
+week of instruction. Same exercise, more honest.
 
 ### The one-week lag is a feature
 
-Under the old structure students learned Naive Bayes Monday and implemented it Wednesday, which is
-a lot to ask and is why the studio budgets kept overrunning. Under the stagger: **taught Monday →
-designed with it fresh that week → implemented the following week, after it has settled.** Every
-studio session applies material that has had a week to consolidate, and the Friday critique clinic
-gets much stronger because students are breaking a method whose code they wrote two days earlier.
+Learning Naive Bayes on Monday and implementing it on Wednesday is a great deal to ask, and it
+crowds the studio session. Under the stagger: **taught Monday → designed with it fresh that week →
+implemented the following week, after it has settled.** Every studio session applies material that
+has had a week to consolidate, and the Friday critique clinic is stronger because students are
+breaking a method whose code they wrote two days earlier.
 
 **The schedule must state plainly that the lab topic trails the lecture topic by one week**, or it
 will confuse everyone including the instructor.
@@ -79,9 +77,8 @@ Wed  15 unseal+read + 30 divergence + 55 produce      +  5 wrap  = 105
 Fri  15 generalize + 35 critique + 25 share-out + 25 design clinic + 5 wrap = 105
 ```
 
-**The stagger removes the need for a Wednesday teach block.** Studio work is on last week's topic,
-already taught — so the 15 minutes the old design spent on just-in-time teaching is recovered as
-studio time. Content delivery lands at **~60 min/week explicit plus ~35 min of
+**No Wednesday teach block is needed** — studio work is on last week's topic, already taught, so the
+full session goes to the work. Content delivery lands at **~60 min/week explicit plus ~35 min of
 content-by-demonstration** in the critique clinic, with the textbook (§8) carrying first exposure.
 
 ## 4. The pipeline calendar
@@ -99,9 +96,15 @@ Wk 13               |  implement P12     ← pipeline drains, project ramps
 
 Twelve designs, twelve implementations, one problem per week.
 
-**Week 1 is design-only.** This is a gift: the opening week has no implementation, no toolchain
-dependency for the graded work, and one clear task. Far gentler than the v1 Week 1 draft, which
-tried to introduce the entire apparatus and run a full studio in the same week.
+**Week 1 is design-only, and that is what makes setup week work.** There is no P0 to implement, so
+**Wednesday's studio in week 1 is free for toolchain setup and course orientation** — git, the repo,
+the test runner, the agent, the tutor skill, and a walkthrough of how a week works. No other week
+can spare a session for this; the pipeline filling provides one.
+
+> **Sequencing detail that matters:** committing `design.md` requires git, so **git setup must land
+> before Sunday of week 1.** Wednesday's setup session is the natural place. If a student is still
+> stuck, accept the week-1 design by any means (email, paper) rather than let the toolchain gate the
+> first design — it is credit-for-committing, and the point is the habit, not the mechanism.
 
 **Week 13 is implementation-only**, winding down as the synthesis project ramps up.
 
@@ -118,9 +121,10 @@ Two things:
 1. **Every problem gets designed one week and built the next.**
 2. **You pick a depth branch** — math, compute, or bio.
 
-Everything else is a *view* of the first one. This was the failure of the previous draft: it
-presented the strip, the seat names, the file bundle, and the model card as four separate systems
-when they are four descriptions of "which piece is yours this week."
+Everything else is a *view* of the first one. The strip, the seat names, the file bundle, and the
+model card are four descriptions of a single fact — *which piece is yours this week* — and must be
+taught as one thing. Presenting them as four systems is the main way this structure becomes hard to
+follow.
 
 **One canonical representation: the strip.** Everything else derives from it.
 
@@ -136,7 +140,11 @@ Week N+1      DESIGN      SPEC      TESTS      CODE
 - The **seat name** is a label for the starred box — *Implementer* (code), *Verifier* (tests),
   *Reverse engineer* (spec). Good names, memorable, but **not a rotation students must track.**
   Which piece is withheld varies for authoring reasons; the strip already says which.
-- The **model card** is simply what goes in the DESIGN box.
+- The **model card** is what goes in the DESIGN box. Strictly, the DESIGN box always holds the
+  four-slot S1–S4 worksheet (§6); it earns the name *model card* from around week 3, once there is
+  something to estimate. Weeks 1–2 are computations rather than models, so the "what's unknown" slot
+  comes out near-empty — deliberately, since that emptiness is what sets up the count-versus-estimate
+  distinction. See `ml-pedagogy-design.md` §5.
 
 ### The bundle
 

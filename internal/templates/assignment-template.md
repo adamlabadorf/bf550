@@ -1,17 +1,33 @@
 <!--
 BF550 assignment template — TILT (Transparent Assignment: Purpose / Task / Criteria).
-Copy this file for each lab/assignment. Fill every section; delete the HTML comments.
-Pair with the exercise type (A–D) from ../assignment-framework.md.
+Copy this file for each problem. Fill every section; delete the HTML comments.
+
+STRUCTURE: each problem spans two weeks (see ../course-structure.md).
+  Week N   — students design it. Only the PROBLEM STATEMENT is released.
+  Week N+1 — our materials unseal; students do the divergence analysis and
+             produce whichever artifact the strip stars.
+Write ONE file per problem covering both weeks; release it in two parts.
+
+Use the strip + seat label. Do not use exercise-type letters.
 -->
 
 | | |
 |---|---|
-| **Week** | _N_ |
-| **Exercise type** | _A (spec+tests→code) · B (spec+code→tests) · C (code+tests→spec) · D (critique)_ |
-| **AIAS level** | _e.g. 4 (Full AI)_ |
-| **Biological anchor** | _e.g. rRNA classification_ |
-| **Est. time** | _hrs_ |
-| **Due** | _date_ |
+| **Problem** | _N_ |
+| **Design week / Build week** | _N_ / _N+1_ |
+| **Starred artifact** | _CODE (Implementer) · TESTS (Verifier) · SPEC (Reverse engineer)_ |
+| **AIAS level** | _design: 2 (AI Planning) · build: 4 (Full AI)_ |
+| **Biological anchor** | _e.g. rRNA classification — phrased as a QUESTION, not a task (author rule 1)_ |
+| **Est. time** | _design ~30–40 min out of class; build in studio_ |
+| **Due** | _design: Sun of week N · build: end of week N+1_ |
+
+```
+Week N        DESIGN      SPEC      TESTS      CODE
+             ★ YOURS    ▨ sealed  ▨ sealed   ▨ sealed
+
+Week N+1      DESIGN      SPEC      TESTS      CODE
+            (committed)   ...       ...        ...        <!-- star the withheld one -->
+```
 
 ## Purpose  <!-- TILT: WHY -->
 
@@ -22,7 +38,7 @@ Pair with the exercise type (A–D) from ../assignment-framework.md.
 
 ## Task  <!-- TILT: WHAT -->
 
-_Concrete steps and deliverables. Be explicit. Example for a Type C lab:_
+_Concrete steps and deliverables. Be explicit. Example for a Reverse-engineer (SPEC) problem:_
 
 1. Read the provided implementation (`impl.py`) and test suite (`test_*.py`).
 2. Write `spec.md` describing inputs, outputs, types, and invariants precisely enough to
@@ -33,8 +49,8 @@ _Concrete steps and deliverables. Be explicit. Example for a Type C lab:_
 
 **Deliverables (file list):**
 - `spec.md`
-- `gap-analysis.md` _(weighted most heavily for Type C)_
-- _…type-specific artifacts: `annotation.md`, `failure-log.md`, `test_*.py`, etc._
+- gap analysis in `notes.md` _(weighted most heavily for the Reverse-engineer seat)_
+- _…plus `log.md`, and the artifact your strip stars (`impl.py` + annotation, or `test_*.py`)._
 
 **Allowed tools / AI use:** _state the AIAS level and what it permits here, explicitly._
 
