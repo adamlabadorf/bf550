@@ -8,7 +8,7 @@
 > |---|---|
 > | [`course-design-rationale.md`](course-design-rationale.md) | Why the course makes the code-literacy bet |
 > | [`ml-pedagogy-design.md`](ml-pedagogy-design.md) | The probabilistic frame, notation literacy, depth branches, week-by-week ML reframes |
-> | [`textbook-ai-design.md`](textbook-ai-design.md) | The AI-forward textbook and the Socratic tutor |
+> | [`textbook-ai-design.md`](textbook-ai-design.md) | The AI-forward textbook and its tutor skill |
 > | [`assignment-framework-authoring.md`](assignment-framework-authoring.md) | Rules for writing exercises |
 > | [`archive/`](archive/) | Superseded drafts, including the v1 example labs |
 >
@@ -212,7 +212,14 @@ material already read**, not first delivery.
   and the textbook is the answer to it.
 
 The textbook is therefore not a supplement — it is load-bearing infrastructure. Its design,
-including the AI-tutor layer, is in [`textbook-ai-design.md`](textbook-ai-design.md).
+including the tutor-skill layer, is in [`textbook-ai-design.md`](textbook-ai-design.md).
+
+> **The textbook contains no graded assignments, by design.** It holds explanation, worked examples,
+> and ungraded **practice problems**; the weekly design problems and lab materials are released
+> separately. This separation is what lets the textbook be fully open to a student's AI tutor
+> without exposing any graded work — see `textbook-ai-design.md` §1. Keeping it clean is a standing
+> authoring constraint, not an incidental fact: **a lab problem that migrates into the textbook
+> breaks the tutor's safety property.**
 
 ## 9. Open and pending
 

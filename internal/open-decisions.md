@@ -34,10 +34,12 @@
 
 | Decision | Where it surfaces | Tracking |
 |---|---|---|
-| **Hosted tutor or bring-your-own?** BYO cannot enforce the seal at all — this may decide procurement | textbook, assignments | [textbook-ai-design §8](textbook-ai-design.md#8-open-questions) |
-| Where sealed content lives before its unseal date | textbook repo layout | [textbook-ai-design §8](textbook-ai-design.md#8-open-questions) |
-| Is `mode: discover` authorable at scale, or only for the dozen ideas that matter most? | textbook authoring | [textbook-ai-design §8](textbook-ai-design.md#8-open-questions) |
-| **Design homogenization** — how to detect it; consider one tutor-free problem as a year-one control | Friday share-out | [textbook-ai-design §6](textbook-ai-design.md#6-risks-in-order-of-seriousness) |
+| Fetch chapter prose on demand, or bundle it in the skill? | textbook skill | [textbook-ai-design §10](textbook-ai-design.md#10-open-questions) |
+| How does the tutor know which week it is — infer from chapter, or a date table? | textbook skill | [textbook-ai-design §10](textbook-ai-design.md#10-open-questions) |
+| One skill, or a separate notation-decoder skill? | textbook skill | [textbook-ai-design §10](textbook-ai-design.md#10-open-questions) |
+| **Authoring order** — the book must exist before the skill is useful, so the skill is realistically a year-two artifact unless a subset of chapters is prioritized | textbook | [textbook-ai-design §10](textbook-ai-design.md#10-open-questions) |
+| **Design homogenization** — reduced but not zero; watch in year one, consider a tutor-discouraged control problem | Friday share-out | [textbook-ai-design §8](textbook-ai-design.md#8-residual-risks) |
+| No usage visibility with BYO agents — lose the "where is the book unclear" feedback loop | textbook revision | [textbook-ai-design §8](textbook-ai-design.md#8-residual-risks) |
 
 ## Course administration
 
@@ -60,5 +62,6 @@
 | ~~Method selection degenerate in early weeks~~ | ✅ S3 asks *"what properties would the right method need?"* early, maturing into real selection |
 | ~~Where content gets delivered~~ | ✅ Flipped: textbook carries first exposure (~2 hr/week), Monday activates and elaborates, Friday's critique clinic delivers by demonstration |
 | ~~Contact format~~ | ✅ **3 × 105-min MWF sessions** (site still says 2 × 75 + lab — see [course-structure §9](course-structure.md#9-open-and-pending)) |
+| ~~Hosted tutor vs. bring-your-own; sealed textbook content~~ | ✅ **Moot.** The textbook contains **no graded assignments by design**, so there is nothing to seal — the tutor ships as a **Claude skill** students install, and the visibility-tier machinery is deleted ([textbook-ai-design §1](textbook-ai-design.md#1-the-founding-constraint-no-assignments-in-the-textbook)) |
 
 Student-facing pages deliberately omit these notes; they live here and in the issues.
