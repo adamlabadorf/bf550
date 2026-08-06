@@ -10,7 +10,6 @@
 
 | Decision | Where it surfaces | Tracking |
 |---|---|---|
-| **Computational-thinking instrument step names** — BF550 must reuse the program's vocabulary, not invent a parallel set | design-stage template, assignments | blocks the S1–S4 template; awaiting lab consult |
 | Finalize biological anchor problems, **written as questions rather than tasks** | schedule | [#1](https://github.com/bu-bioinfo/bf550/issues/1) + author rule 1 |
 | Select & provision the student coding agent — **and the textbook tutor, probably the same procurement** | syllabus, /about/ | [#3](https://github.com/bu-bioinfo/bf550/issues/3) |
 | Align the 13-week schedule to the Fall calendar | schedule | [#4](https://github.com/bu-bioinfo/bf550/issues/4) |
@@ -24,9 +23,11 @@
 | **Topic compression** — merge Clustering I+II; compress t-SNE/UMAP to a demo | schedule | [course-structure §3](course-structure.md#3-the-week-in-steady-state) |
 | **AIAS level for the design stage** — 2 or 1 | assignments, assessment | [course-structure §9](course-structure.md#9-open-and-pending) |
 | **Two problems in flight** — fallback is designing every other week (6 not 12) if load proves too high | schedule, assignments | [course-structure §9](course-structure.md#9-open-and-pending) |
-| **Decomposition stopping rule** — how far down students decompose | design-stage template | deferred to the team's computational-thinking discussion |
+| **Decomposition stopping rule** — how far down D2 should go | design-stage template | [computational-thinking-basis §7](computational-thinking-basis.md#7-what-is-ours-and-open) |
 | **Productive uncertainty** — how much per problem, and whether to disclose the policy | assignments | author rule 3; disclosure currently assumed to happen once at term start |
-| Divergence-analysis rubric | assessment | [course-structure §7](course-structure.md#7-grading-posture) |
+| Divergence-analysis rubric | assessment | [course-structure §7](course-structure.md#7-grading-posture); may be a genuine contribution to CT assessment — [computational-thinking-basis §7](computational-thinking-basis.md#7-what-is-ours-and-open) |
+| **What a strong D4 (anticipate failure) looks like** — least-taught step in the literature, no rubric anywhere | assessment | [computational-thinking-basis §7](computational-thinking-basis.md#7-what-is-ours-and-open) |
+| Does D1 ("what process produced this data?") strain on non-probabilistic weeks like trees? | design-stage template | [computational-thinking-basis §7](computational-thinking-basis.md#7-what-is-ours-and-open) |
 | Is computational thinking assessed anywhere **unaided**? | assessment | check-ins currently cover code reading only |
 | Per-week deliverable rubrics and toolchain | assignments | [#5](https://github.com/bu-bioinfo/bf550/issues/5) — bundle now settled ([course-structure §5](course-structure.md#5-what-the-student-actually-has-to-learn)) |
 
@@ -61,7 +62,8 @@
 | The design stage | **Design is a universal stage for every problem**, not a seat. Three seats remain (Implementer, Verifier, Reverse engineer) and are labels rather than a rotation |
 | Story ↔ code exercises | Live in the **check-in quizzes**, not the problem framework |
 | Design/implement sequencing | **Staggered pipeline** — design problem *N* in week *N*, implement it in week *N+1* ([course-structure §2](course-structure.md#2-why-the-stagger-rather-than-one-lab-per-week)) |
-| Method selection in early weeks | S3 asks *"what properties would the right method need?"* early, maturing into genuine selection as the toolbox fills |
+| Design-step names | **D1 Frame · D2 Decompose · D3 Select · D4 Anticipate** — ours, grounded in but not adopted from any published CT framework ([computational-thinking-basis](computational-thinking-basis.md)) |
+| Method selection in early weeks | D3 asks *"what properties would the right method need?"* early, maturing into genuine selection as the toolbox fills |
 | Where content gets delivered | Flipped: the textbook carries first exposure (~2 hr/week), Monday activates and elaborates, Friday's critique clinic delivers by demonstration |
 | Contact format | **3 × 105-min MWF sessions.** The public site still says 2 × 75 + lab and needs updating ([course-structure §9](course-structure.md#9-open-and-pending)) |
 | Tutor delivery & textbook content | The textbook contains **no graded assignments by design**, so nothing needs sealing. The tutor ships as a **portable skill** students install; no visibility tiers ([textbook-ai-design §1](textbook-ai-design.md#1-the-founding-constraint-no-assignments-in-the-textbook)) |

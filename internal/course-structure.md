@@ -10,6 +10,7 @@
 > | [`ml-pedagogy-design.md`](ml-pedagogy-design.md) | The probabilistic frame, notation literacy, depth branches, week-by-week ML reframes |
 > | [`textbook-ai-design.md`](textbook-ai-design.md) | The AI-forward textbook and its tutor skill |
 > | [`assignment-framework-authoring.md`](assignment-framework-authoring.md) | Rules for writing exercises |
+> | [`computational-thinking-basis.md`](computational-thinking-basis.md) | What we mean by computational thinking; the literature grounding for the four design steps |
 > | [`archive/`](archive/) | Earlier drafts, retained only for the verified problem statements and planted-defect inventories still to be ported forward (§9) |
 >
 > **Status:** agreed direction; nothing student-facing has been updated yet (§9).
@@ -141,7 +142,7 @@ Week N+1      DESIGN      SPEC      TESTS      CODE
   *Reverse engineer* (spec). Good names, memorable, but **not a rotation students must track.**
   Which piece is withheld varies for authoring reasons; the strip already says which.
 - The **model card** is what goes in the DESIGN box. Strictly, the DESIGN box always holds the
-  four-slot S1–S4 worksheet (§6); it earns the name *model card* from around week 3, once there is
+  four-slot D1–D4 worksheet (§6); it earns the name *model card* from around week 3, once there is
   something to estimate. Weeks 1–2 are computations rather than models, so the "what's unknown" slot
   comes out near-empty — deliberately, since that emptiness is what sets up the count-versus-estimate
   distinction. See `ml-pedagogy-design.md` §5.
@@ -176,17 +177,19 @@ textbook (§8) makes the best one nearly free.
 
 ### The design steps
 
-Placeholder labels S1–S4 pending vocabulary alignment with the program's computational-thinking
-instrument (still blocked on the lab consult — see [`open-decisions.md`](open-decisions.md)):
+Four steps, the same every week. They are also the four slots of the model card
+(`ml-pedagogy-design.md` §4), so exposition and design share one template. Grounding in the
+computational-thinking literature, and where we depart from it, is in
+[`computational-thinking-basis.md`](computational-thinking-basis.md).
 
 | Step | Prompt | Model-card slot |
 |---|---|---|
-| **S1** | What process produced this data? | The story |
-| **S2** | What is unknown — what must be counted or estimated? | What's unknown |
-| **S3** | Early weeks: *what properties would the right method need?* Later weeks: *choose, and justify* | How we pin them down |
-| **S4** | How would it lie to you? | How it fails |
+| **D1 · Frame** | What process produced this data? | The story |
+| **D2 · Decompose** | What has to be computed or estimated? | What's unknown |
+| **D3 · Select** | *Early:* what would the right method need to do? *Later:* which method, and why that one? | How we pin them down |
+| **D4 · Anticipate** | How would it lie to you? | How it fails |
 
-The S3 two-stage framing exists because **method selection is degenerate when the toolbox holds one
+The D3 two-stage framing exists because **method selection is degenerate when the toolbox holds one
 item.** "What properties would it need?" is answerable with an empty toolbox and matures into real
 selection as the menu fills.
 
@@ -233,7 +236,9 @@ including the tutor-skill layer, is in [`textbook-ai-design.md`](textbook-ai-des
 
 **Deferred forks** (also in [`open-decisions.md`](open-decisions.md)):
 
-1. **Computational-thinking step names** — blocked on the lab consult. Blocks the S1–S4 template.
+1. **Decomposition stopping rule** — D2 needs a rule students can apply for how far down to go.
+   Candidate: *down to the point where each component is a question you could look up a method for.*
+   ([`computational-thinking-basis.md`](computational-thinking-basis.md) §7)
 2. **How Bayesian?** Leaning: McElreath's pedagogy and generative framing, not his inference
    machinery. Grid approximation for genuine-posterior cases; full Bayes as a depth branch.
 3. **AIAS level for the design stage** — 2 or 1.

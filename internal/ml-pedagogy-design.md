@@ -132,14 +132,14 @@ rather than aspirational:
 ## 4. One template, every week
 
 Every method is introduced with the same four slots — **the same four slots as the weekly design
-task** (`course-structure.md` §6). One artifact, two jobs:
+task** (`course-structure.md` §6, grounded in [`computational-thinking-basis.md`](computational-thinking-basis.md)). One artifact, two jobs:
 
 | Slot | As exposition | As a design step |
 |---|---|---|
-| **The story** | What process would generate data like this? (prose *and* ~10 lines of code) | S1 |
-| **What's unknown** | Which parts of the story are parameters? | S2 |
-| **How we pin them down** | Counting, optimizing a loss, or a posterior | S3 |
-| **How it lies to you** | Assumptions violated, failure modes, what a fooled version looks like | S4 |
+| **The story** | What process would generate data like this? (prose *and* ~10 lines of code) | D1 · Frame |
+| **What's unknown** | Which parts of the story are parameters? | D2 · Decompose |
+| **How we pin them down** | Counting, optimizing a loss, or a posterior | D3 · Select |
+| **How it lies to you** | Assumptions violated, failure modes, what a fooled version looks like | D4 · Anticipate |
 
 Because the design task and the exposition share a template, **the design stage never starts from a
 blank page** — it is four prompts, not an empty file.
