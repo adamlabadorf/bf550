@@ -5,11 +5,24 @@
 > learning content: the probabilistic framing, how it is delivered across three 105-minute
 > MWF sessions, and how the course serves a wide range of incoming mathematical background.
 >
-> Companion docs: [`course-design-rationale.md`](course-design-rationale.md) (the *why* of the
-> course overall), [`lab-computational-thinking-framework.md`](lab-computational-thinking-framework.md)
-> (how an individual lab is structured and staged under the computational-thinking arc, plus its
-> open questions), [`assignment-framework-authoring.md`](assignment-framework-authoring.md)
-> (how to write the labs), [`open-decisions.md`](open-decisions.md) (what is still unsettled).
+> Companion docs: [`course-structure.md`](course-structure.md) (**the canonical week-to-week
+> structure**), [`course-design-rationale.md`](course-design-rationale.md) (the *why* of the course
+> overall), [`textbook-ai-design.md`](textbook-ai-design.md) (the AI-forward textbook and Socratic
+> tutor), [`assignment-framework-authoring.md`](assignment-framework-authoring.md) (how to write the
+> labs), [`open-decisions.md`](open-decisions.md) (what is still unsettled).
+>
+> ## ⚠ Partially superseded
+>
+> The **pedagogy** in this document stands: the probabilistic frame (§2–3), the story → code →
+> notation rule, the model card (§5), the week-by-week ML reframes (§6), and the depth branches (§7).
+>
+> The **structure** in §4, §4.1, and §8 has been replaced by the staggered design/implement pipeline
+> in [`course-structure.md`](course-structure.md). Specifically superseded: the within-week
+> two-phase lab, the Monday design phase with a `git commit` gate, the Wednesday just-in-time teach
+> block, the seat-per-week rotation as something students track, and all session budgets. Read those
+> sections for the reasoning, not the mechanics.
+>
+> §2's simulation-first framing is also narrowed — see [§2.1](#21-narrowing-simulation-first).
 >
 > **Status: agreed direction, not yet propagated to student-facing pages.** See
 > [Pending propagation](#pending-propagation-to-student-facing-pages) at the end.
@@ -48,6 +61,36 @@ This fits BF550 unusually well, because **the course's medium is already code.**
 story *is* code. So "read the model" and "read the code" become the same act, and the
 probabilistic frame reinforces the central code-literacy bet rather than competing with it for
 time.
+
+### 2.1 Narrowing simulation-first
+
+An earlier draft of this document made simulation the primary explanatory device for **every**
+method. That is too much, and it risks the ML content — the concern that prompted this revision.
+
+**Where simulation is load-bearing** (~5 topics): building probability from nothing (wks 2–3), Naive
+Bayes, Gaussian mixtures → k-means, probabilistic PCA, regularization-as-a-prior, calibration.
+
+**Where it is overhead:** logistic regression and trees have no natural generative story. Trees were
+already flagged in §6 as "the honest outlier," which was a warning sign that the doctrine did not
+generalize.
+
+What simulation actually buys is three things, and only the third generalizes:
+
+1. Probability without algebra — **decisive in weeks 2–4**, where the whole point is building
+   probabilistic intuition from nothing.
+2. Honest treatment of sampling variability — the uncertainty through-line.
+3. **Making assumptions visible by violating them and watching the method fail** — this works for
+   *every* method, trees included.
+
+Use (3) is a **critique activity, not an exposition activity**. It belongs in the Friday critique
+clinic, not in Monday's teaching.
+
+> **Revised position: simulation is a front-loaded investment plus a recurring diagnostic, not a
+> weekly ritual.** Concentrate it in weeks 2–4 where probability is being built; thereafter reach for
+> it on Fridays to break a method by violating its assumptions. Drop the "every method gets a
+> generative story" doctrine — keep the story where it is true (NB, GMM, PPCA, priors) and do not
+> contort for the rest. This recovers roughly 15 min/week of teaching time in the back half of the
+> term, which is exactly where the ML content is densest.
 
 ## 3. Core commitments
 
@@ -117,7 +160,7 @@ and the omission was serious.** As originally written, Monday carried ~30 min of
 share-out" with no teaching budgeted. That is **~45 min/week — roughly 10 hours across the term,
 against ~150 min/week and 32.5 hours in a conventional 2 × 75 lecture course.** A 70% cut to
 content delivery, unrecorded. The example labs made it concrete: the
-[Week 1](examples/week-01-lab.md) Wednesday plan sums to **125 minutes against a 105-minute
+[Week 1](archive/examples-v1/week-01-lab.md) Wednesday plan sums to **125 minutes against a 105-minute
 session**, so the studios were over-subscribed before any teaching was added.
 
 Three corrections, in order of what they buy:
@@ -168,7 +211,7 @@ code-reading role is load-bearing for assessment.
 > change is real and needs stating to students explicitly, because a student who treats the
 > reading as optional will experience Monday as incomprehensible rather than as review.
 
-**Some content lives in the lab materials.** In [Week 4](examples/week-04-lab.md) students learn
+**Some content lives in the lab materials.** In [Week 4](archive/examples-v1/week-04-lab.md) students learn
 Laplace smoothing by *reading the spec and code*, not from a lecture. That is genuine delivery, and
 it is why authoring these labs costs more than preparing slides — the prep shifts rather than
 shrinking.

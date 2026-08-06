@@ -12,30 +12,83 @@ students who need it and delegated to a coding agent by students who don't — *
 changing what the exercise actually assesses.* This is what lets one course serve both the
 rudimentary and the highly skilled programmer.
 
-## When to use each type (sequencing)
+## Which piece to withhold
 
-- **Type A — Spec + Tests → Code:** early (orientation); agent may write the code while the
-  annotation + failure log are the accountable product. AIAS Level 4.
-- **Type B — Spec + Code → Tests:** verification-focused weeks. **Enforcement:** a test
-  without a worked, hand-calculated expected value in its docstring is not accepted — this is
-  the component an agent cannot produce without the student already understanding the problem.
-- **Type C — Code + Tests → Spec:** the core code-literacy weeks. **Grade the gap analysis
-  more heavily than the spec itself** — finding underspecification shows deeper engagement
-  than a complete-but-unsurprising spec.
-- **Type D — All three → Critique:** later weeks; integrates everything. The summary table
-  (impact / effort / breaking?) is the primary deliverable.
+> **Superseded:** the A/B/C/D letter scheme and its per-week rotation are retired. See
+> [`course-structure.md`](course-structure.md) §5 — the strip is now the single canonical
+> representation, and which piece is withheld varies for authoring reasons rather than as a
+> pedagogical rotation students track. Type D (critique-everything) is gone entirely; its content is
+> redistributed.
 
-## Biological-grounding requirement (author rule)
+| Withheld piece | Seat label | Accountable product |
+|---|---|---|
+| **CODE** | Implementer | Line annotation + failure log. Agent may write the code. |
+| **TESTS** | Verifier | **A test without a worked, hand-calculated expected value in its docstring is not accepted** — that is the component an agent cannot produce without the student already understanding the problem. |
+| **SPEC** | Reverse engineer | Reimplementable spec + gap analysis. **Grade the gap analysis more heavily than the spec** — finding underspecification shows more than a complete-but-unsurprising spec. |
+
+Every problem is *designed* by the student the week before, whichever piece is withheld
+(`course-structure.md` §1).
+
+## Author rule 1 — problem statements are questions, not tasks
+
+The design stage collapses if the problem statement contains its own decomposition.
+
+| ✅ Genuine question | ❌ Leaks the design |
+|---|---|
+| "Which of these reads are rRNA, and how confident can you be?" | "Implement a k-mer Naive Bayes classifier." |
+| "Do these cells fall into distinct types, and how would you know?" | "Cluster the cells with k-means and pick *k*." |
+| "Which genes best separate responders from non-responders?" | "Rank features by random-forest importance." |
+
+**Corollary — over-provide context deliberately.** A good problem statement supplies facts it never
+uses, so that the gaps in our materials are discoverable rather than tricks. The archived Week 1
+draft mentions `N` bases and lowercase masking without connecting them to anything; that is what
+makes the corresponding absences findable. **Trimming a problem statement for length silently breaks
+the divergence prompts that depend on it** — they are coupled.
+
+## Author rule 2 — biological grounding
 
 **Every exercise must use a problem whose correct answer is verifiable from domain knowledge
-without running any code.** This is what makes Type B assessable and connects the framework
-to biology-first students.
+without running any code.** This is what makes the Verifier seat assessable and connects the
+framework to biology-first students. It must hold **simultaneously** with rule 1, which is what
+makes problem statements the fussiest part of authoring.
 
 - **Good fits** (checkable by hand from biology): FASTA/FASTQ parsing, reverse complement,
   codon translation, GC content, genomic interval overlap, alignment summary stats,
   k-mer / Naive Bayes classification.
 - **Poor fits** (require running code to verify): sorting algorithms, abstract data
   structures, string puzzles. **Do not use these.**
+
+## Author rule 3 — plant productive uncertainty
+
+If the provided materials are flawless and obvious, the divergence analysis has nothing to bite on.
+*Productive uncertainty* is the working term; it covers four kinds, and a good problem has some of
+each:
+
+| Kind | Example |
+|---|---|
+| **A defensible-but-arguable choice** | Composition-based classification rather than alignment |
+| **An unexamined assumption the problem statement quietly contradicts** | Class priors from balanced reference sets, when the real library is 70–90% rRNA |
+| **A real defect that does not announce itself** | Empty k-means clusters collapsing silently; `KeyError` on `N` |
+| **An absence — something the spec fails to say**, which the student's own agent then decides silently | The spec is silent on lowercase, `N`, and trailing bases; the generated code handles all three anyway |
+
+The **absence** variety is only available when the student authors the code (Implementer), and may
+be the strongest form: the undocumented decision is one the student produced themselves, so there is
+nobody else to defer to and nothing to take on faith.
+
+**Per-problem checklist:** at least one item most students should find, at least one that rewards a
+depth branch, and **at least one that a strong design would have caught** — that last is what keeps
+*"where was your design better?"* from being a rhetorical question.
+
+### Rule 3a — verify reachability by running it
+
+Whether a planted item is *findable* depends on the fixture, not only on the code. The archived Week
+10 draft's empty-cluster defect is unreachable on generic continuous data (200 random seeds produced
+none) and requires duplicate or all-zero rows — realistic for scRNA-seq, but only if deliberately
+present. **That was discovered by executing the example, not by reading it.**
+
+Every planted item needs a verified note on how it surfaces, or the problem ships with defects
+nobody can find and instructor hints that fire every time. Worked inventories with verified numbers:
+[`archive/examples-v1/`](archive/examples-v1/).
 
 ## Open decisions
 

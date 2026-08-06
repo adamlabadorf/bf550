@@ -2,7 +2,9 @@
 
 > **Not published, not final, not authored against a settled spec.** These are *playable drafts*
 > written to make the lab flow concrete so we can react to it. They implement the structure in
-> [`../lab-computational-thinking-framework.md`](../lab-computational-thinking-framework.md).
+> [`../../course-structure.md`](../../course-structure.md). The framework doc these were written
+> against is archived alongside them as
+> [`../lab-computational-thinking-framework-v1.md`](../lab-computational-thinking-framework-v1.md).
 
 | File | Week | Seat | Term position | Shows |
 |---|---|---|---|---|
