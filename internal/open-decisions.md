@@ -40,6 +40,8 @@
 | **Authoring order** — the book must exist before the skill is useful, so the skill is realistically a year-two artifact unless a subset of chapters is prioritized | textbook | [textbook-ai-design §10](textbook-ai-design.md#10-open-questions) |
 | **Design homogenization** — reduced but not zero; watch in year one, consider a tutor-discouraged control problem | Friday share-out | [textbook-ai-design §8](textbook-ai-design.md#8-residual-risks) |
 | No usage visibility with BYO agents — lose the "where is the book unclear" feedback loop | textbook revision | [textbook-ai-design §8](textbook-ai-design.md#8-residual-risks) |
+| **Optional MCP server** (stage 6) — decide after a semester of skill use whether telemetry justifies the hosting, uptime, and institutional cost | textbook skill | [textbook-ai-design §4.1](textbook-ai-design.md#41-skill-or-mcp-server) |
+| **Ask BU about logging student queries** before building any server that records them; anonymous/aggregate logging likely avoids the issue | textbook skill | [textbook-ai-design §4.1](textbook-ai-design.md#41-skill-or-mcp-server) |
 
 ## Course administration
 

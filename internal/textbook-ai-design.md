@@ -91,6 +91,50 @@ conversations. It should name the course, the textbook, chapters, and practice p
 > tooling for evaluating description-triggering accuracy — which is exactly the thing worth
 > measuring.
 
+### 4.1 Skill or MCP server?
+
+They are not alternatives. **A skill carries pedagogy; an MCP server carries capability.** The four
+commitments in §6 are behavioral guidance, which is what a skill's markdown is for; tool
+descriptions carry that awkwardly at best. An MCP server with no skill would give the agent
+excellent data access and no teaching posture.
+
+So the real question is whether the skill needs a **server behind it**.
+
+**What a server would genuinely buy:**
+
+| | Assessment |
+|---|---|
+| **Server-side logging** | **The real win.** Recovers the "where is the book unclear" feedback loop that BYO agents otherwise cost us (§8 risk 4) — the most valuable textbook-revision data available. |
+| **Exact structured answers** | `get_prerequisites("gini-impurity")` returns the graph rather than the agent paraphrasing a markdown table. Modest but real. |
+| **Cross-agent portability** | MCP is a standard; skills are Claude-specific. A hedge against [issue #3](https://github.com/bu-bioinfo/bf550/issues/3) being undecided. |
+| **Semantic search** | **Weaker than it looks.** Thirteen chapters is a small corpus, and in the §2 student story the student *names the chapter*. "Read the TOC, fetch chapter 7" suffices. This solves a problem we do not have. |
+| **Executable tools** | **Adds little.** A coding agent already writes and runs Python; a `run_simulation` tool is not a unique capability. |
+
+**What it costs:**
+
+- **It reintroduces the brittleness the course structure was just revised to remove.** A skill has
+  no uptime requirement. A server must stay up for a semester, and a server down at 11pm before a
+  deadline means no tutor. This is the heaviest consideration.
+- **Installation friction lands on exactly the wrong students** — configuring an endpoint is more
+  than installing a skill, and the students who most need a tutor are the least likely to debug a
+  connection error.
+- **Logging raises an institutional question, not merely a technical one.** Query logs tied to
+  student identity are plausibly educational records; **ask BU before building, not after.**
+  Mitigation is straightforward: we want to know *what* was hard, not *who* struggled, so
+  **anonymous or aggregate logging captures the whole pedagogical benefit** and sidesteps most of
+  the concern.
+
+> **Decision: skill as the floor, server as an optional layer that degrades gracefully.**
+>
+> **Design constraint to honor from the first commit: the skill must never depend on the server.**
+> It navigates by bundled TOC and fetches chapter prose from the public site. If a server exists,
+> the skill prefers it for search and it records anonymous queries; if the server is down or was
+> never built, everything still works, slightly worse. This is cheap to honor if decided up front
+> and expensive to retrofit.
+>
+> The server therefore becomes **stage 6** of the build order (§9), not a prerequisite — so a
+> semester of use decides whether the telemetry justifies hosting, rather than a guess now.
+
 ## 5. Metadata, kept light
 
 Per-section frontmatter in the textbook source, from which the reference files are generated:
@@ -186,9 +230,11 @@ problem as a control.
 to cite; the residual is a tutor extrapolating past the corpus. Instruct it to say so.
 
 **4. No visibility into usage.** With bring-your-own agents there are no logs, so we lose the
-"conversations show where the book is unclear" feedback loop the hosted design would have had. That
-is a real cost of the cheaper architecture. Partial recovery: have the skill invite students to
-report sections that needed a lot of unpacking, and ask for examples in class.
+"conversations show where the book is unclear" feedback loop. That is a real cost of the cheaper
+architecture. Partial recovery: have the skill invite students to report sections that needed a lot
+of unpacking, and ask for examples in class. **This is the one risk an optional MCP server would
+actually retire** (§4.1) — at the price of uptime, installation friction, and an institutional
+question about logging.
 
 **5. Equity of access.** If the tutor becomes load-bearing it must be uniformly available. Ties to
 [issue #3](https://github.com/bu-bioinfo/bf550/issues/3) — probably the same provisioning decision
@@ -203,6 +249,7 @@ as the coding agent, and now cheaper because there is no hosting.
 | **3** | `SKILL.md` + `toc.md` + `conventions.md` — a skill that can navigate and cite the book | The student story in §2 works |
 | **4** | `misconceptions` on the ~20 concepts that matter; `problems.md` | Guidance becomes diagnostic rather than generic |
 | **5** | Trigger evals + a handful of scripted student questions as regression tests | The skill can be *versioned and tested* — a real advantage over an ad-hoc chatbot |
+| **6** *(optional)* | MCP server: search, exact graph queries, **anonymous** query logging. Skill prefers it when present, works without it (§4.1) | Recovers the textbook-revision feedback loop — **only worth it if a semester of use shows the telemetry matters** |
 
 Stages 1 and 2 are ordinary good authoring plus a lint that finds real mistakes. **They are worth
 doing whether or not the skill ships**, which is the argument for starting there.
