@@ -1,8 +1,22 @@
-# Lab Structure in a Computational-Thinking Framework (INTERNAL)
+# ⚠ ARCHIVED — Lab Structure in a Computational-Thinking Framework, v1 (INTERNAL)
+
+> **Superseded by [`../course-structure.md`](../course-structure.md).** This described the
+> **within-week two-phase lab** (design in the last minutes of Monday, materials unsealing
+> Wednesday), replaced by the staggered design/implement pipeline. Kept for its reasoning and its
+> open-question inventory, most of which carried forward.
+>
+> Still-valid content that moved rather than died: the productive-uncertainty taxonomy and the
+> reachability rule are now author rules 3 and 3a in
+> [`../assignment-framework-authoring.md`](../assignment-framework-authoring.md); the open questions
+> are consolidated in [`../course-structure.md`](../course-structure.md) §9 and
+> [`../open-decisions.md`](../open-decisions.md).
+
+---
+
 
 > **Internal working document — not published to the course site** (`internal/` is excluded in
 > `_config.yml`). This is the operational companion to
-> [`ml-pedagogy-design.md`](ml-pedagogy-design.md): that doc records *why* the labs are shaped
+> [`ml-pedagogy-design.md`](../ml-pedagogy-design.md): that doc records *why* the labs are shaped
 > this way; this one records *how a lab is actually built and run*, and — deliberately — **what
 > we have not decided yet.**
 >
@@ -15,11 +29,11 @@
 
 | Doc | Question it answers |
 |---|---|
-| [`course-design-rationale.md`](course-design-rationale.md) | Why the course makes the code-literacy bet at all |
-| [`ml-pedagogy-design.md`](ml-pedagogy-design.md) | Why the ML content is framed probabilistically, and how it lands across three MWF sessions |
-| [`assignment-framework-authoring.md`](assignment-framework-authoring.md) | Existing rules for writing exercises (biological grounding, per-seat sequencing) |
+| [`course-design-rationale.md`](../course-design-rationale.md) | Why the course makes the code-literacy bet at all |
+| [`ml-pedagogy-design.md`](../ml-pedagogy-design.md) | Why the ML content is framed probabilistically, and how it lands across three MWF sessions |
+| [`assignment-framework-authoring.md`](../assignment-framework-authoring.md) | Existing rules for writing exercises (biological grounding, per-seat sequencing) |
 | **this doc** | How an individual lab is structured, staged, and authored under the computational-thinking arc |
-| [`examples/`](examples/) | Three playable draft labs — [Week 1](examples/week-01-lab.md) (first lab, Implementer), [Week 4](examples/week-04-lab.md) (early, Verifier), [Week 10](examples/week-10-lab.md) (later, Reverse engineer) — written in the order a student meets them |
+| [`examples/`](examples-v1/) | Three playable draft labs — [Week 1](examples-v1/week-01-lab.md) (first lab, Implementer), [Week 4](examples-v1/week-04-lab.md) (early, Verifier), [Week 10](examples-v1/week-10-lab.md) (later, Reverse engineer) — written in the order a student meets them |
 
 The decisions inherited from `ml-pedagogy-design.md` §8 and treated as settled here: **a
 universal design phase opens every lab**, there are **three seats** (Implementer, Verifier,
@@ -41,7 +55,7 @@ roughly:
 > parallel set invented here; cross-course transfer is most of the value and it evaporates if the
 > same five moves have two vocabularies. Pending a lab consult. **Everything below uses
 > placeholder labels (S1–S5) and will need a find-and-replace pass once the names are
-> confirmed.** Tracked in [`open-decisions.md`](open-decisions.md).
+> confirmed.** Tracked in [`open-decisions.md`](../open-decisions.md).
 
 A second question rides along with the naming one: **does BF550 use all five steps, or a
 subset?** Step 5 (implement) is only the student's work in the Implementer seat, and steps 1–4
@@ -153,7 +167,7 @@ whatever needs fixing. It is also the direct rehearsal for the synthesis project
 ## 9. Authoring rules
 
 Additions to the existing rules in
-[`assignment-framework-authoring.md`](assignment-framework-authoring.md):
+[`assignment-framework-authoring.md`](../assignment-framework-authoring.md):
 
 **Rule 1 — the problem statement must be a question, not a task.** A statement containing its own
 decomposition makes phase 1 theater.
@@ -184,15 +198,15 @@ narrower). It covers three distinct kinds of thing, and a good week has some of 
 The **absence** variety is only available when the student authors the code (Implementer seat), and
 it may be the strongest form of the technique: the undocumented decision is one the student
 produced themselves, so there is no one else to blame and nothing to take on faith. See
-[Week 1 §8](examples/week-01-lab.md#8-instructor-notes-not-for-students).
+[Week 1 §8](examples-v1/week-01-lab.md#8-instructor-notes-not-for-students).
 
 **Author checklist per lab:** at least one item most students should find, at least one that
 rewards the depth branches, and **at least one that a strong phase-1 design would have caught** —
 that last one is what keeps "where was your design better?" from being a rhetorical question.
 
-Worked instances: [Week 1 §8](examples/week-01-lab.md#8-instructor-notes-not-for-students) (three
-absences), [Week 4 §7](examples/week-04-lab.md#7-instructor-notes-not-for-students) (four planted
-items) and [Week 10 §7](examples/week-10-lab.md#7-instructor-notes-not-for-students) (seven).
+Worked instances: [Week 1 §8](examples-v1/week-01-lab.md#8-instructor-notes-not-for-students) (three
+absences), [Week 4 §7](examples-v1/week-04-lab.md#7-instructor-notes-not-for-students) (four planted
+items) and [Week 10 §7](examples-v1/week-10-lab.md#7-instructor-notes-not-for-students) (seven).
 
 **Author rule 3a — record reachability, not just the defect.** Whether a planted item is *findable*
 depends on the fixture, not only on the code. Week 10's empty-cluster defect is unreachable on
@@ -258,8 +272,8 @@ Grouped by what blocks what. None of these are decided.
    appropriate method" is a choice from a toolbox holding one item. The step is therefore framed
    as **"what properties would the right method need?"** — answerable with an empty toolbox, and it
    matures into genuine selection as the menu fills. See the framing in
-   [Week 4 S3](examples/week-04-lab.md#s3--what-properties-would-the-right-method-need) versus
-   [Week 10 S3](examples/week-10-lab.md#s3--what-properties-would-the-right-method-need), where
+   [Week 4 S3](examples-v1/week-04-lab.md) versus
+   [Week 10 S3](examples-v1/week-10-lab.md), where
    students are told to actually choose and justify. Still contingent on Q1: if the instrument
    words this step differently, match its wording while keeping the two-stage progression.
 
@@ -277,7 +291,7 @@ Grouped by what blocks what. None of these are decided.
    calendar and the commit timestamp do the real work. Students who work ahead are a tolerable
    loss.
 7. **Does the design phase run all 13 weeks?** *Partly answered by drafting
-   [Week 1](examples/week-01-lab.md):* yes, it runs from Week 1 — but **the artifact is not the
+   [Week 1](examples-v1/week-01-lab.md):* yes, it runs from Week 1 — but **the artifact is not the
    model card that early.** GC content is a *computation*, not a model: there is nothing to
    estimate, so the "what's unknown" slot is near-empty. Week 1 uses the bare S1–S4 worksheet and
    turns the empty slot into the lesson (count versus estimate), which sets up Weeks 3–4. The model
@@ -298,7 +312,7 @@ Grouped by what blocks what. None of these are decided.
     could turn each lab into a scavenger hunt; non-disclosure risks students treating the materials
     as authoritative, which is the exact deference the sealed phase exists to break. Middle option
     worth considering: disclose the **policy** once at the start of term and never per-lab.
-    *Drafting [Week 1](examples/week-01-lab.md) effectively picks that option* — its §0 tells
+    *Drafting [Week 1](examples-v1/week-01-lab.md) effectively picks that option* — its §0 tells
     students plainly that the materials sometimes contain arguable choices and sometimes plain
     mistakes, and that arguing with them earns marks. If we want a different disclosure policy,
     Week 1 §0 is the place to change it.

@@ -47,7 +47,8 @@ right?**
 
 ## 2. Monday — phase 1 worksheet
 
-`design.md`, committed before you leave. **Individually this week.**
+`design.md`, **started in the last 10 minutes of Monday and committed before Wednesday.**
+**Individually this week** — no pairing. Budget 30–40 minutes outside class.
 
 ### S1 · The story
 
@@ -295,11 +296,14 @@ mature into genuine selection exactly here.
 
 ### Timing
 
-Monday tail: S1 ~5, S2 ~7, S3 ~10, S4 ~6, commit ~2. S2 is the overrun risk this week (the
-parameter/structural-choice distinction is new).
+**Monday, last 10 min only:** read the problem aloud ~3, frame S2's parameter-versus-structural-
+choice distinction ~5 (it is new this week and the overrun risk if left unexplained), questions ~2.
+S1–S4 out-of-class (~30–40 min).
 
-Wednesday: read ~10, divergence ~25, spec ~35, gaps ~20, depth ~15. The multi-hole extension will
-not fit for most — that is fine, it is bait for the fast finishers.
+**Wednesday (105 min):** just-in-time teach ~15 (k-means as the hard-assignment limit of a
+mixture) · read ~10 · divergence ~25 · spec ~30 · gaps ~20 · wrap ~5. **Depth and the multi-hole
+extension are out-of-class** — the extension was never going to fit in the room, which is fine; it
+is bait for the fast finishers.
 
 ### Risks
 

@@ -34,6 +34,19 @@ Why this works pedagogically:
 - Implementation can be scaffolded for students who need it and delegated to a coding agent
   by students who don't — **without changing what the exercise actually assesses.**
 
+**The bet now has mainstream backing — and one sharp empirical caveat.** The computing-education
+field has converged on the same position: Denny et al. (2024, *CACM* 67(2)) and the ACM Task Force
+on Generative AI and Programming Assessment (2026, surveying 750+ educators) both recommend
+shifting emphasis toward code comprehension, design, testing, and critical evaluation of
+AI-generated output, with secured no-AI assessment alongside open-AI work. The caveat is Prather
+et al. (2024, ICER), who show GenAI *compounds* struggling novices' metacognitive difficulties and
+leaves them with an **illusion of competence** while capable students accelerate — a widening gap.
+The course's countermeasures (No-AI check-ins, the sealed design stage, hand-calculated test
+values, the divergence analysis) exist precisely to close that gap; **per-student check-in
+trajectories are the early-warning instrument** and should be watched, since class averages will
+hide it. Full citations and analysis:
+[`computational-thinking-basis.md`](computational-thinking-basis.md) §4.
+
 ## Why agents are assumed, not banned
 
 Students are provided coding-agent capabilities and expected to use them. The design ensures
