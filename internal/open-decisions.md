@@ -23,12 +23,13 @@
 | **Topic compression** — merge Clustering I+II; compress t-SNE/UMAP to a demo | schedule | [course-structure §3](course-structure.md#3-the-week-in-steady-state) |
 | **AIAS level for the design stage** — 2 or 1 | assignments, assessment | [course-structure §9](course-structure.md#9-open-and-pending) |
 | **Two problems in flight** — fallback is designing every other week (6 not 12) if load proves too high | schedule, assignments | [course-structure §9](course-structure.md#9-open-and-pending) |
-| **Decomposition stopping rule** — how far down D2 should go | design-stage template | [computational-thinking-basis §7](computational-thinking-basis.md#7-what-is-ours-and-open) |
+| **Decomposition stopping rule** — how far down D2 should go | design-stage template | [computational-thinking-basis §8](computational-thinking-basis.md#8-what-is-ours-and-open) |
 | **Productive uncertainty** — how much per problem, and whether to disclose the policy | assignments | author rule 3; disclosure currently assumed to happen once at term start |
-| Divergence-analysis rubric | assessment | [course-structure §7](course-structure.md#7-grading-posture); may be a genuine contribution to CT assessment — [computational-thinking-basis §7](computational-thinking-basis.md#7-what-is-ours-and-open) |
-| **What a strong D4 (anticipate failure) looks like** — least-taught step in the literature, no rubric anywhere | assessment | [computational-thinking-basis §7](computational-thinking-basis.md#7-what-is-ours-and-open) |
-| Does D1 ("what process produced this data?") strain on non-probabilistic weeks like trees? | design-stage template | [computational-thinking-basis §7](computational-thinking-basis.md#7-what-is-ours-and-open) |
+| Divergence-analysis rubric | assessment | [course-structure §7](course-structure.md#7-grading-posture); may be a genuine contribution to CT assessment — [computational-thinking-basis §8](computational-thinking-basis.md#8-what-is-ours-and-open) |
+| **What a strong D4 (anticipate failure) looks like** — least-taught step in the literature, no rubric anywhere | assessment | [computational-thinking-basis §8](computational-thinking-basis.md#8-what-is-ours-and-open) |
+| Does D1 ("what process produced this data?") strain on non-probabilistic weeks like trees? | design-stage template | [computational-thinking-basis §8](computational-thinking-basis.md#8-what-is-ours-and-open) |
 | Is computational thinking assessed anywhere **unaided**? | assessment | check-ins currently cover code reading only |
+| **Widening-gap monitoring** — how to track per-student check-in trajectories so struggling students' illusion of competence (Prather et al. 2024) is caught early | assessment, advising | [computational-thinking-basis §4.3](computational-thinking-basis.md#43-the-empirical-warning-the-widening-gap) |
 | Per-week deliverable rubrics and toolchain | assignments | [#5](https://github.com/bu-bioinfo/bf550/issues/5) — bundle now settled ([course-structure §5](course-structure.md#5-what-the-student-actually-has-to-learn)) |
 
 ## Textbook & tutor
