@@ -11,6 +11,7 @@
 > | [`textbook-ai-design.md`](textbook-ai-design.md) | The AI-forward textbook and its tutor skill |
 > | [`assignment-framework-authoring.md`](assignment-framework-authoring.md) | Rules for writing exercises |
 > | [`computational-thinking-basis.md`](computational-thinking-basis.md) | What we mean by computational thinking; the literature grounding for the four design steps |
+> | [`textbook-implementation.md`](textbook-implementation.md) | How the textbook gets built: toolchain, chapter anatomy, CI, co-design workflow |
 > | [`archive/`](archive/) | Earlier drafts, retained only for the verified problem statements and planted-defect inventories still to be ported forward (§9) |
 >
 > **Status:** agreed direction; nothing student-facing has been updated yet (§9).

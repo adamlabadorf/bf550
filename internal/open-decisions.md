@@ -35,6 +35,10 @@
 
 | Decision | Where it surfaces | Tracking |
 |---|---|---|
+| **Textbook toolchain: Quarto** recommended; environment pinning (`uv` vs conda) should match the course toolchain decision | textbook | [textbook-implementation §1](textbook-implementation.md#1-toolchain-quarto) |
+| **Textbook repo** — create `bf550-textbook` under the org and add to session scope | textbook | [textbook-implementation §2](textbook-implementation.md#2-repository-its-own-repo) |
+| Worked notebooks — textbook repo or course repo? Leaning: textbook (they are ungraded corpus) | textbook | [textbook-implementation §9](textbook-implementation.md#9-open-questions) |
+| Exemplar chapter for stage 2 — ch. 3 or ch. 4? Leaning: ch. 4 | textbook | [textbook-implementation §9](textbook-implementation.md#9-open-questions) |
 | Fetch chapter prose on demand, or bundle it in the skill? | textbook skill | [textbook-ai-design §10](textbook-ai-design.md#10-open-questions) |
 | How does the tutor know which week it is — infer from chapter, or a date table? | textbook skill | [textbook-ai-design §10](textbook-ai-design.md#10-open-questions) |
 | One skill, or a separate notation-decoder skill? | textbook skill | [textbook-ai-design §10](textbook-ai-design.md#10-open-questions) |
