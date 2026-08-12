@@ -34,6 +34,19 @@ Why this works pedagogically:
 - Implementation can be scaffolded for students who need it and delegated to a coding agent
   by students who don't — **without changing what the exercise actually assesses.**
 
+**The bet now has mainstream backing — and one sharp empirical caveat.** The computing-education
+field has converged on the same position: Denny et al. (2024, *CACM* 67(2)) and the ACM Task Force
+on Generative AI and Programming Assessment (2026, surveying 750+ educators) both recommend
+shifting emphasis toward code comprehension, design, testing, and critical evaluation of
+AI-generated output, with secured no-AI assessment alongside open-AI work. The caveat is Prather
+et al. (2024, ICER), who show GenAI *compounds* struggling novices' metacognitive difficulties and
+leaves them with an **illusion of competence** while capable students accelerate — a widening gap.
+The course's countermeasures (No-AI check-ins, the sealed design stage, hand-calculated test
+values, the divergence analysis) exist precisely to close that gap; **per-student check-in
+trajectories are the early-warning instrument** and should be watched, since class averages will
+hide it. Full citations and analysis:
+[`computational-thinking-basis.md`](computational-thinking-basis.md) §4.
+
 ## Why agents are assumed, not banned
 
 Students are provided coding-agent capabilities and expected to use them. The design ensures
@@ -54,10 +67,15 @@ inverted the process and produced nothing verifiable. The structure forces "cons
 
 ## Resolved decisions
 
-- **Final assessment & weights** — *resolved ([#2](https://github.com/bu-bioinfo/bf550/issues/2)).*
-  The **synthesis project is the culminating assessment; there is no separate final exam.**
-  The 4-credit structure imposes no required assessment minimums. Grade weights confirmed:
-  labs 35% / check-in quizzes 10% / midterm 20% / synthesis project 30% / participation 5%.
+- **Final assessment & weights** — the **synthesis project is the culminating assessment; there
+  is no exam in finals period.** Two secured in-class exams close the course's two act
+  boundaries: the midterm (week 8, Acts I–II) and the **Act III exam** (Monday of week 12,
+  weeks 9–11) — added because the re-sequenced calendar concentrates the most judgment-heavy,
+  least-verifiable material after the midterm, and it would otherwise carry no secured
+  assessment. Weights: **problems 30 / check-ins 10 / midterm 15 / Act III exam 15 / project 30
+  / participation 5** (supersedes the weights in [#2](https://github.com/bu-bioinfo/bf550/issues/2);
+  the project stays at 30% so the incentive structure and the stated philosophy agree). The
+  4-credit structure imposes no required assessment minimums.
 
 > Other open decisions live in the relevant internal docs and in the
 > [discussion issues](https://github.com/bu-bioinfo/bf550/issues).
