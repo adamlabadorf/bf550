@@ -25,7 +25,7 @@ the student-facing `docs/assignment-framework.md` still describes an A–D schem
 
 | Withheld piece | Seat label | Accountable product |
 |---|---|---|
-| **CODE** | Implementer | Line annotation + failure log. Agent may write the code. |
+| **CODE** | Implementer | Line annotation + the process record in `notes.md`, including what the agent decided silently. Agent may write the code. |
 | **TESTS** | Verifier | **A test without a worked, hand-calculated expected value in its docstring is not accepted** — that is the component an agent cannot produce without the student already understanding the problem. |
 | **SPEC** | Reverse engineer | Reimplementable spec + gap analysis. **Grade the gap analysis more heavily than the spec** — finding underspecification shows more than a complete-but-unsurprising spec. |
 
@@ -82,6 +82,16 @@ nobody else to defer to and nothing to take on faith.
 depth branch, and **at least one that a strong design would have caught** — that last is what keeps
 *"where was your design better?"* from being a rhetorical question.
 
+### Rule 3b — heavy and light problems
+
+Not every problem carries the full apparatus. Of the eleven weekly problems, **about six are
+"heavy"**: full planted-uncertainty inventory (per the checklist above) and deeply-graded
+divergence analysis. The rest are **"light"**: one planted item, rubric-graded. The alternation
+is invisible to students — every week has the same shape from their chair — but it halves the
+fussiest authoring and concentrates deep grading where it pays. Heavy slots should include the
+weeks whose divergence teaches the most: the first classifier (P4), evaluation (P5), and
+clustering (P11) are obvious candidates.
+
 ### Rule 3a — verify reachability by running it
 
 Whether a planted item is *findable* depends on the fixture, not only on the code. The archived Week
@@ -95,8 +105,9 @@ nobody can find and instructor hints that fire every time. Worked inventories wi
 
 ## Open decisions
 
-The deliverable bundle is fixed: `design.md` · `spec.md` · `test_*.py` · `impl.py` · `notes.md` ·
-`log.md`, identical every week ([`course-structure.md`](course-structure.md) §5).
+The deliverable bundle is fixed: `design.md` · `spec.md` · `test_*.py` · `impl.py` · `notes.md`,
+identical every week; the process record is a section of `notes.md`
+([`course-structure.md`](course-structure.md) §5).
 
 **Still open under [issue #5](https://github.com/bu-bioinfo/bf550/issues/5):** a grading rubric per
 starred artifact, a rubric for the divergence analysis, and the toolchain/runtime (Python version,

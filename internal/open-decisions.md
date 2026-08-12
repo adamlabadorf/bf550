@@ -20,8 +20,6 @@
 |---|---|---|
 | **How Bayesian?** MLE/MAP + simulation-based uncertainty vs. full posterior/MCMC | lectures (wks 3, 5, 12) | [course-structure §9](course-structure.md#9-open-and-pending) |
 | **Simulation's scope** — leaning: front-load wks 2–4 + Friday diagnostic, not a weekly ritual | lectures, Friday sessions | [ml-pedagogy-design §2.1](ml-pedagogy-design.md#21-the-scope-of-simulation) |
-| **Topic compression** — merge Clustering I+II; compress t-SNE/UMAP to a demo | schedule | [course-structure §3](course-structure.md#3-the-week-in-steady-state) |
-| **AIAS level for the design stage** — 2 or 1 | assignments, assessment | [course-structure §9](course-structure.md#9-open-and-pending) |
 | **Two problems in flight** — fallback is designing every other week (6 not 12) if load proves too high | schedule, assignments | [course-structure §9](course-structure.md#9-open-and-pending) |
 | **Decomposition stopping rule** — how far down D2 should go | design-stage template | [computational-thinking-basis §8](computational-thinking-basis.md#8-what-is-ours-and-open) |
 | **Productive uncertainty** — how much per problem, and whether to disclose the policy | assignments | author rule 3; disclosure currently assumed to happen once at term start |
@@ -53,7 +51,9 @@
 
 | Decision | Where it surfaces | Tracking |
 |---|---|---|
-| Synthesis project format (individual/team, scope) | schedule, assessment | [#6](https://github.com/bu-bioinfo/bf550/issues/6) |
+| **Synthesis project: presentation format at 50–60 students** — traditional presentations don't fit; candidates: poster/gallery session, parallel TA-run tracks, recorded lightning talks + structured peer review, written artifact + oral spot-defense sample | schedule, assessment | *(class size is internal-only)* [#6](https://github.com/bu-bioinfo/bf550/issues/6) |
+| Synthesis project scope: individual vs. team (team-of-2 would halve presentation and grading volume) | schedule, assessment | [#6](https://github.com/bu-bioinfo/bf550/issues/6) |
+| **Agentic grading assistance** — whether/how TAs use agents; needs a policy note before term | assessment | new |
 | Written midterm logistics | assessment | [#7](https://github.com/bu-bioinfo/bf550/issues/7) |
 | BU/program policy statements; program-outcome mapping | syllabus, learning-objectives | [#8](https://github.com/bu-bioinfo/bf550/issues/8) |
 | AI attestation wording | syllabus | [#9](https://github.com/bu-bioinfo/bf550/issues/9) |
@@ -63,14 +63,17 @@
 
 | Decision | Outcome |
 |---|---|
-| Grade weights; culminating assessment | Weights confirmed; the **synthesis project** is the culminating assessment, with no separate final exam ([#2](https://github.com/bu-bioinfo/bf550/issues/2)) |
 | The design stage | **Design is a universal stage for every problem**, not a seat. Three seats remain (Implementer, Verifier, Reverse engineer) and are labels rather than a rotation |
 | Story ↔ code exercises | Live in the **check-in quizzes**, not the problem framework |
 | Design/implement sequencing | **Staggered pipeline** — design problem *N* in week *N*, implement it in week *N+1* ([course-structure §2](course-structure.md#2-why-the-stagger-rather-than-one-lab-per-week)) |
 | Design-step names | **D1 Frame · D2 Decompose · D3 Select · D4 Anticipate** — ours, grounded in but not adopted from any published CT framework ([computational-thinking-basis](computational-thinking-basis.md)) |
 | Method selection in early weeks | D3 asks *"what properties would the right method need?"* early, maturing into genuine selection as the toolbox fills |
 | Where content gets delivered | Flipped: the textbook carries first exposure (~2 hr/week), Monday activates and elaborates, Friday's critique clinic delivers by demonstration |
-| Contact format | **3 × 105-min MWF sessions.** The public site still says 2 × 75 + lab and needs updating ([course-structure §9](course-structure.md#9-open-and-pending)) |
+| Contact format | **3 × 105-min MWF sessions**; front page, schedule, and assessment pages published — remaining pages tracked in [course-structure §9](course-structure.md#9-open-and-pending) |
+| Topic sequencing | **Three acts organized by "what is unknown?"** — regression to wk 7, trees to wk 9 post-midterm, clustering one week, t-SNE/UMAP a demo ([course-structure §4](course-structure.md#4-the-pipeline-calendar)) |
+| Final assessment | **Act III exam, Monday of week 12** (wks 9–11, no-AI code reading, 15%) + midterm wk 8 (15%); **nothing in finals period** — weeks 12–13 belong to the project. Weights now 30/10/15/15/30/5, superseding [#2](https://github.com/bu-bioinfo/bf550/issues/2) |
+| Design-stage AI level | **AIAS 2** (published on the front page as "AI for brainstorming only") |
+| Load shedding | Depth = **6 per term** (≥1 per branch, rotational share-outs); `log.md` merged into `notes.md`; graded check-ins biweekly; Monday reading check-in is ungraded telemetry; Friday runs as two blocks; published re-entry rule (missed design → hindsight critique) |
 | Tutor delivery & textbook content | The textbook contains **no graded assignments by design**, so nothing needs sealing. The tutor ships as a **portable skill** students install; no visibility tiers ([textbook-ai-design §1](textbook-ai-design.md#1-the-founding-constraint-no-assignments-in-the-textbook)) |
 
 Student-facing pages deliberately omit these notes; they live here and in the issues.

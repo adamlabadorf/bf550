@@ -96,11 +96,12 @@ You'll have a provided coding agent and a textbook tutor, and every assignment s
 - **Build weeks — full AI, encouraged.** Let the agent write code. What we grade is what agents
   can't fake: your hand-calculated values, your annotations, your account of what the agent
   silently decided on your behalf.
-- **Check-ins and the midterm — no AI.** Short code-reading exercises, every other week,
-  closed-book. These exist for your benefit as much as ours: research on novices using AI finds
-  that the students who struggle most are often the ones most convinced they're doing fine. The
-  check-ins are how you and we both see your *unaided* skill actually growing — so nobody
-  discovers a gap for the first time during the midterm.
+- **Check-ins and the two exams — no AI.** Short code-reading exercises, every other week,
+  closed-book, plus a midterm (week 8) and an Act III exam (week 12). These exist for your
+  benefit as much as ours: research on novices using AI finds that the students who struggle
+  most are often the ones most convinced they're doing fine. The check-ins are how you and we
+  both see your *unaided* skill actually growing — so nobody discovers a gap for the first
+  time during an exam.
 
 ## Going deeper, your way
 
@@ -123,16 +124,18 @@ times a term) your depth section.
 
 | | Weight | AI level |
 |---|---:|---|
-| Weekly problems (designs + builds) | 35% | Design: planning only · Build: full |
+| Weekly problems (designs + builds) | 30% | Design: planning only · Build: full |
 | Check-in quizzes (biweekly, code reading) | 10% | None |
-| Written midterm | 20% | None |
+| Written midterm (week 8) | 15% | None |
+| Act III exam (week 12) | 15% | None |
 | Synthesis project | 30% | Full, with your design as the spine |
 | Participation (Fridays count) | 5% | — |
 
-The synthesis project is the course in miniature and there is **no final exam**: a complete
-design → specification → tests → implementation for a real method on a real biological problem,
-every decision defended. By then you'll have done the design move a dozen times. It will feel
-like the most natural thing in the world.
+The synthesis project is the course in miniature and the culminating assessment — **there is no
+exam during finals period**: a complete design → specification → tests → implementation for a
+real method on a real biological problem, every decision defended. Its design is your week-12
+design slot, and the last two weeks of the course belong to building it. By then you'll have
+done the design move eleven times. It will feel like the most natural thing in the world.
 
 **If you miss a week** — it happens — the design converts to a hindsight-critique variant with
 the same credit, and you rejoin the pipeline the following Monday. One missed week costs one

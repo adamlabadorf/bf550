@@ -67,10 +67,15 @@ inverted the process and produced nothing verifiable. The structure forces "cons
 
 ## Resolved decisions
 
-- **Final assessment & weights** — *resolved ([#2](https://github.com/bu-bioinfo/bf550/issues/2)).*
-  The **synthesis project is the culminating assessment; there is no separate final exam.**
-  The 4-credit structure imposes no required assessment minimums. Grade weights confirmed:
-  labs 35% / check-in quizzes 10% / midterm 20% / synthesis project 30% / participation 5%.
+- **Final assessment & weights** — the **synthesis project is the culminating assessment; there
+  is no exam in finals period.** Two secured in-class exams close the course's two act
+  boundaries: the midterm (week 8, Acts I–II) and the **Act III exam** (Monday of week 12,
+  weeks 9–11) — added because the re-sequenced calendar concentrates the most judgment-heavy,
+  least-verifiable material after the midterm, and it would otherwise carry no secured
+  assessment. Weights: **problems 30 / check-ins 10 / midterm 15 / Act III exam 15 / project 30
+  / participation 5** (supersedes the weights in [#2](https://github.com/bu-bioinfo/bf550/issues/2);
+  the project stays at 30% so the incentive structure and the stated philosophy agree). The
+  4-credit structure imposes no required assessment minimums.
 
 > Other open decisions live in the relevant internal docs and in the
 > [discussion issues](https://github.com/bu-bioinfo/bf550/issues).
