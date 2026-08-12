@@ -31,66 +31,72 @@ are in flight at any time, one week apart, and every week has the same shape.
 That is the whole structure. Everything below is either a consequence of it or a way of presenting
 it.
 
-## 2. Why the stagger, rather than one lab per week
+## 2. Why the stagger, rather than one problem per cycle
 
-Compressing design and implementation into a single week forces three goals into conflict:
+Compressing design and implementation into a single cycle forces three goals into conflict:
 
-| Goal | Within one week | Staggered |
+| Goal | Within one cycle | Staggered |
 |---|---|---|
-| **Design needs real time** | ~15–30 min at the end of a session | A full week, with a supervised clinic |
-| **The seal needs to hold** | A commitment gate between Monday and Wednesday, unenforceable when a student simply opens the folder | A **week boundary** — coarse, natural, one materials release per week |
-| **The schedule must survive disruption** | Hard cross-day dependency; a lost Monday breaks the week | Sessions are independent; a lost session costs its own content only |
+| **Design needs real time** | ~15–30 min at the end of a session | A full cycle, with a supervised clinic |
+| **The seal needs to hold** | An intra-cycle commitment gate, unenforceable when a student simply opens the folder | A **cycle boundary** — coarse, natural, one materials release per cycle |
+| **The schedule must survive disruption** | Hard cross-session dependency; a lost meeting breaks the cycle | The session stream absorbs a lost meeting — dates shift, sequence does not (§4.1) |
 
-The stagger buys a fourth thing it is not aimed at. **A week of separation makes the divergence
-analysis better**: students compare against a design they are no longer attached to, after a further
-week of instruction. Same exercise, more honest.
+The stagger buys a fourth thing it is not aimed at. **A cycle of separation makes the divergence
+analysis better**: students commit a design, then meet ours after a further cycle of instruction.
+Same exercise, more honest.
 
-### The one-week lag is a feature
+### The one-cycle lag is a feature
 
-Learning Naive Bayes on Monday and implementing it on Wednesday is a great deal to ask, and it
-crowds the studio session. Under the stagger: **taught Monday → designed with it fresh that week →
-implemented the following week, after it has settled.** Every studio session applies material that
-has had a week to consolidate, and the Friday critique clinic is stronger because students are
+Meeting Naive Bayes in a Design session and implementing it two days later is a great deal to ask,
+and it crowds the studio. Under the stagger: **taught in cycle *N* → designed with it fresh that
+cycle → implemented in cycle *N+1*, after it has settled.** Every studio session applies material that
+has had a cycle to consolidate, and the Share session's critique clinic is stronger because students are
 breaking a method whose code they wrote two days earlier.
 
-**The schedule must state plainly that the lab topic trails the lecture topic by one week**, or it
-will confuse everyone including the instructor.
+**The schedule must state plainly that the build topic trails the teaching topic by one cycle**, or
+it will confuse everyone including the instructor.
 
-## 3. The week, in steady state
+## 3. The cycle, in steady state
 
-Every week from 2 through 12 is identical in shape:
+**Sessions are named by function, not by weekday.** The course meets three times per week, but the
+term starts mid-week and holidays fall unevenly, so weekday labels would be wrong on the page and
+wrong in students' heads. The three session types are:
 
-| | Session | **Problem *N*** (designing) | **Problem *N−1*** (implementing) |
+| Session | What it is | Problem *N* (designing) | Problem *N−1* (building) |
 |---|---|---|---|
-| **Mon** | Teach topic *N* | Reading check-in (5) → teaching (75, interleaved) → **launch design *N*** (10) → wrap (5) | — |
-| **Wed** | Studio | *incubating* | **Materials unseal** + read (15) → divergence analysis (30) → produce the missing piece (55) → wrap (5) |
-| **Fri** | Break the model | *(block 2 is the design clinic)* | **Block 1** (~50): generalize + critique clinic · **Block 2** (~50): divergence share-out + design clinic |
-| **Sun** | | **design *N* committed** | |
+| **① Design** | Teach the topic; open the new problem | Reading check-in (5) → teaching (75, interleaved) → **launch design *N*** (10) → wrap (5) | — |
+| **② Build** | Studio | *incubating* | **Materials unseal** + read (15) → divergence analysis (30) → produce the missing piece (55) → wrap (5) |
+| **③ Share** | Break the model; compare | *(block 2 is the design clinic)* | **Block 1** (~50): generalize + critique clinic · **Block 2** (~50): divergence share-out + design clinic |
 
-Design *N* is launched Monday, incubates all week with a supervised Friday clinic, and commits
-Sunday. Its materials unseal the following Wednesday — a three-day seal with no dependency that
-breaks if a student misses a session.
+A **cycle** is one pass through Design → Build → Share. **Normally a cycle is one calendar week**,
+which keeps deadlines weekly and predictable; §4.1 covers short cycles.
+
+**The design deadline is defined by the pipeline, not by a weekday:** design *N* is launched in the
+Design session of cycle *N*, worked on across the cycle with a supervised clinic in the Share
+session, and **due before the Build session of cycle *N+1***, which is where its materials unseal.
+In practice this is a fixed weekly LMS deadline, but stating it against the *Build session* is what
+makes the seal survive a shifted or cancelled meeting.
 
 ### Session budgets
 
 All three fit 105 minutes:
 
 ```
-Mon   5 check-in + 75 teach/activity + 10 design launch +  5 wrap  = 95  (10 slack)
-Wed  15 unseal+read + 30 divergence + 55 produce      +  5 wrap  = 105
-Fri  50 [generalize + critique clinic] + 50 [share-out + design clinic] + 5 wrap = 105
+① Design   5 check-in + 75 teach/activity + 10 design launch +  5 wrap = 95  (10 slack)
+② Build   15 unseal+read + 30 divergence + 55 produce        +  5 wrap = 105
+③ Share   50 [generalize + critique clinic] + 50 [share-out + design clinic] + 5 wrap = 105
 ```
 
-**Friday is two blocks, not four activities.** Each block still functions at reduced
-attendance. The share-out surfaces divergence findings — "three groups thought the objective was
-X, the materials assumed Y; who is right?" — sampled across the room, not exhaustive. The
-**Monday reading check-in is telemetry, not assessment** — a short ungraded form whose job is
-telling the instructor where to spend the session; the *graded* code-reading check-ins are
-biweekly and separate.
+**Share is two blocks, not four activities.** Each block still functions at reduced attendance. The
+share-out surfaces divergence findings — "three groups thought the objective was X, the materials
+assumed Y; who is right?" — sampled across the room, not exhaustive. The **reading check-in opening
+the Design session is telemetry, not assessment** — a short ungraded form whose job is telling the
+instructor where to spend the session; the *graded* code-reading check-ins are biweekly and separate.
 
-**No Wednesday teach block is needed** — studio work is on last week's topic, already taught, so the
-full session goes to the work. Content delivery lands at **~60 min/week explicit plus ~35 min of
-content-by-demonstration** in the critique clinic, with the textbook (§8) carrying first exposure.
+**The Build session needs no teaching block** — studio work is on the previous cycle's topic,
+already taught, so the full session goes to the work. Content delivery lands at **~60 min/cycle
+explicit plus ~35 min of content-by-demonstration** in the critique clinic, with the textbook (§8)
+carrying first exposure.
 
 ## 4. The pipeline calendar
 
@@ -98,23 +104,23 @@ The topic order is organized by the course's own D2 question — **what is unkno
 acts, with the parallel D4 escalation (*how would you know you're right?*) getting harder each
 act: a standard error → held-out data → no ground truth at all.
 
-| Wk | Act | Topic | Design (this week) | Build (last week's) |
+| Cycle | Act | Topic | Design (this cycle) | Build (previous cycle's) |
 |---:|:--:|---|---|---|
-| 1 | I | Course intro; reading code | P1 GC content | — (Wed = toolchain setup) |
+| 1 | I | Course intro; reading code | P1 GC content | — (Build session = toolchain setup) |
 | 2 | I | Estimation & uncertainty | P2 differential expression | P1 |
 | 3 | I | Bayes; probabilities from counts | P3 species of origin | P2 |
 | 4 | II | Naive Bayes (generative) | P4 rRNA classification | P3 |
 | 5 | II | Evaluation, CV, leakage, calibration | P5 evaluate the classifier | P4 |
 | 6 | II | Logistic regression (discriminative pivot) | P6 variant pathogenicity | P5 |
 | 7 | II | Linear regression & regularization | P7 dose–response | P6 |
-| 8 | II | Consolidation + **midterm** | P8 method selection | P7 (**light build**) |
+| 8 | II | Consolidation + **midterm** (Design session) | P8 method selection | P7 (**light build**) |
 | 9 | III | Trees & forests (the honest outlier) | P9 biomarkers | P8 |
 | 10 | III | PCA (t-SNE/UMAP as demo) | P10 matrix structure | P9 |
 | 11 | III | Clustering: GMM → k-means, validating *k* | P11 cell types | P10 |
-| 12 | III | **Act III exam** (Mon) · frontiers/NN (Fri) | **Synthesis project** | P11 |
+| 12 | III | **Act III exam** (Design session) · frontiers/NN (Share session) | **Synthesis project** | P11 |
 | 13 | — | Project studio | — | project |
 
-**Eleven weekly problems; the synthesis project is the twelfth design.** The pipeline drains
+**Eleven problems, one per cycle; the synthesis project is the twelfth design.** The pipeline drains
 *into* the project rather than alongside it — one less problem to author, and the project's
 design uses the identical move students have made eleven times.
 
@@ -134,35 +140,67 @@ Sequencing choices that carry weight:
 ### The two exams
 
 Each act closes with a secured, no-AI, code-reading exam. **Midterm, week 8**: Acts I–II.
-**Act III exam, Monday of week 12**: weeks 9–11 only — frontiers material is exam-exempt,
-which keeps week 12's teaching honest as a light session. **Nothing is examined in finals
-period**; after Monday of week 12 the term belongs to the project.
+**Act III exam, cycle 13's Design session**: cycles 9–11 only — frontiers material is exam-exempt.
+**Nothing is examined in finals period**; after the Act III exam every remaining session is project
+studio. See §4.1 for why the exam sits in cycle 13 rather than 12.
 
-Week 12's shape: Mon = Act III exam (~75 min) + project design launch (~30) · Wed = studio,
-P11 build · Fri = frontiers demo + project design clinic. Week 13: all three sessions are
-project studio.
+Cycle 12's shape: **Design session** = Act III exam (~75 min) + project design launch (~30) ·
+**Build session** = studio, P11 build · **Share session** = frontiers demo + project design clinic.
+Cycle 13: all sessions are project studio.
 
-**Week 1 is design-only, and that is what makes setup week work.** There is no P0 to implement, so
-**Wednesday's studio in week 1 is free for toolchain setup and course orientation** — git, the repo,
-the test runner, the agent, the tutor skill, and a walkthrough of how a week works. No other week
-can spare a session for this; the pipeline filling provides one.
+### 4.1 The session stream, holidays, and the Fall 2026 grid
 
-> **Sequencing detail that matters:** committing `design.md` requires git, so **git setup must land
-> before Sunday of week 1.** Wednesday's setup session is the natural place. If a student is still
-> stuck, accept the week-1 design by any means (email, paper) rather than let the toolchain gate the
-> first design — it is credit-for-committing, and the point is the habit, not the mechanism.
+**Cycles are always three sessions. The Design → Build → Share stream never breaks.** When a
+holiday removes a meeting, the next meeting takes the next session type — so cycles drift relative
+to calendar weeks, and **no session is ever dropped, compressed, or doubled up.** This is why
+sessions are named by function: weekday labels would be wrong within two weeks of the term
+starting.
 
-**Week 8 does not stall the pipeline.** The midterm/consolidation week keeps its design slot, and
-its design task is a **cross-cutting method-selection problem**: given a biological question, choose
-among everything covered in the first half and justify it. It doubles as midterm preparation, and
-P7's build that week is deliberately light (linear regression is the most hand-calculable build of
-the term).
+Consequences to hold onto:
 
-> **Class size is a planning parameter: 50–60 students** (not student-facing). Consequences:
-> Friday share-outs must be rotational (~6 presenters/week works at any size); design clinics
-> pair-based; grading is TA-staffed (~20 hr/TA/week, with agentic assistance under
-> consideration); and **project presentations in any traditional format do not fit** — see
-> `open-decisions.md` for the format question.
+- **Deadlines are anchored to the stream, not the week.** Design *N* is due before cycle *N+1*'s
+  Build session, because that is when its materials unseal. In a normal stretch this lands on a
+  fixed weekday, but the *rule* is the session, not the day.
+- **Reading is per cycle**, due before its Design session — not "weekly."
+- **Nothing needs a contingency plan.** A lost meeting costs a shifted date, not lost content. The
+  published calendar is the authoritative mapping and is reissued when it shifts.
+- **Slack lives at the end.** Spare sessions beyond the last planned cycle absorb weather and
+  closures; if nothing is lost they become extra project studio.
+
+#### Fall 2026: 41 meetings, 13 cycles + 2
+
+Derived from the published BU Fall 2026 calendar — classes begin **Tue Sep 1**, so an MWF section's
+first meeting is **Wed Sep 2**; last day of classes **Thu Dec 10**. Holidays removing MWF meetings:
+Labor Day (Mon Sep 7) and Indigenous Peoples' Day (Mon Oct 12), each with a **substitute Monday
+schedule** on the following Tuesday (Sep 8, Oct 13) that an MWF section *does* meet; plus
+Thanksgiving recess (Wed Nov 25, Fri Nov 27).
+
+Net: **41 meetings = 13 full cycles (39) + 2 spare sessions.** Because the substitute Tuesdays
+preserve the count exactly, **cycles 1–12 all run Wed → Fri → Mon**; Thanksgiving shifts the phase
+once, and **cycles 13–14 run Mon → Wed → Fri**. That single phase shift is the only irregularity.
+
+Student-facing grid: [`docs/calendar.md`](../docs/calendar.md) (`/calendar/`).
+
+> **Unverified, flag before publishing:** `www.bu.edu` is unreachable from the authoring
+> environment, so these dates come from secondary sources. Two specifics need checking against the
+> registrar: whether classes meet on **Veterans Day (Wed Nov 11)**, and the **study period** dates.
+> If Nov 11 turns out to be a holiday, the stream simply shifts by one session — which is the
+> design working as intended, not a problem.
+
+#### Exam placement in the Fall 2026 grid
+
+- **Midterm: cycle 8's Design session, Wed Oct 21.** Closes Acts I–II as designed.
+- **Act III exam: cycle 13's Design session, Mon Nov 30** — *not* cycle 12's, which the earlier
+  plan implied. At cycle 12's Design session (Wed Nov 18) students have neither built nor
+  critiqued clustering: P11's materials unseal Fri Nov 20 and its critique clinic is Mon Nov 23.
+  Examining Act III's headline lesson before its deepest treatment would be a real flaw. Moving to
+  Nov 30 puts the exam after all Act III material, gives Thanksgiving recess as study time, and
+  still leaves **four sessions of pure project studio** (Dec 2, 4, 7, 9) — preserving the intent
+  that the end of term belongs to the project.
+- **Frontiers/neural nets moves to cycle 12's Design session** (Wed Nov 18), which is where it
+  belongs anyway: light, exam-exempt, and it makes cycle 12 a normal teaching cycle.
+- **The project design is due Wed Dec 2**, not before the exam, so students are not doing project
+  design and exam study over the same recess.
 
 ## 5. What the student actually has to learn
 
@@ -199,7 +237,7 @@ Week N+1      DESIGN      SPEC      TESTS      CODE
 
 | File | Contents | When |
 |---|---|---|
-| `design.md` | The design | Week *N*, committed Sunday |
+| `design.md` | The design | Cycle *N*, committed before cycle *N+1*'s Build session |
 | `spec.md`, `test_*.py`, `impl.py` | The four artifacts — given or authored per the strip | Week *N+1* |
 | `notes.md` | Divergence analysis, the reflective product for the starred box, and the process record (failures and what they taught) | Week *N+1* |
 
@@ -225,7 +263,7 @@ textbook (§8) makes the best one nearly free.
 2. **Progressive prompt removal.** Weeks 1–3: sub-prompts under every step. Weeks 4–8: step names
    only. Weeks 9+: the problem and the model card. **Publish the removal schedule up front**, so it
    reads as growth rather than as the handouts degrading.
-3. **The Friday design clinic with peer read-through.** Pairs swap drafts and ask questions — not
+3. **The Share session's design clinic with peer read-through.** Pairs swap drafts and ask questions — not
    critique, just *"what would your output actually look like?"* Catches the most common failure
    (answering a different question than the one asked) while the instructor is in the room.
 4. **A pre-commit self-check.** Four or five questions: have I said what the output is? what would
@@ -273,16 +311,16 @@ AI levels differ by stage — **design at AIAS 2, week *N+1* work at AIAS 4** (o
 split is the cleanest statement of the course's ethos: *think first, unaided; then use the agent
 freely.*
 
-**Friday's share-out supplies social stakes** so the ungraded design weeks do not decay into
+**The Share session's share-out supplies social stakes** so the ungraded designs do not decay into
 box-ticking: three groups thought the objective was X, the materials assumed Y — who is right?
 
 ## 8. Reading carries first exposure
 
-The format is flipped, deliberately. Monday's 75 minutes are **activation and elaboration of
+The format is flipped, deliberately. The Design session's 75 minutes are **activation and elaboration of
 material already read**, not first delivery.
 
 - **Budget ~2 hr/week**: one textbook chapter plus one short worked notebook.
-- **Accountability is the Monday reading check-in** — deliberately low-stakes; its real job is
+- **Accountability is the reading check-in opening each Design session** — deliberately low-stakes; its real job is
   telling the instructor live which part of the reading did not land, so the 75 minutes can be spent
   there.
 - **This is what makes the structure robust to disruption.** A student who misses a session recovers
@@ -316,7 +354,7 @@ including the tutor-skill layer, is in [`textbook-ai-design.md`](textbook-ai-des
    candidate formats in `open-decisions.md`.
 
 Settled since earlier drafts of this list: design stage is **AIAS 2**; simulation front-loads
-weeks 2–4 + Friday diagnostic; clustering is one week and t-SNE/UMAP a demo (both baked into the
+cycles 2–4 + Share-session diagnostic; clustering is one cycle and t-SNE/UMAP a demo (both baked into the
 §4 calendar).
 
 **Pending propagation to student-facing pages** — none of this has been written up for students:

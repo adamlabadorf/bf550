@@ -262,7 +262,7 @@ supply.
 **2. Design homogenization** — twenty students consulting the same tutor converging on similar
 designs. Substantially reduced now, but not zero, since they can describe the problem themselves.
 Worth watching in year one, because it would present as students agreeing rather than as a tool
-artifact, and Friday's share-out depends on designs differing. Consider one tutor-discouraged
+artifact, and the Share session's share-out depends on designs differing. Consider one tutor-discouraged
 problem as a control.
 
 **3. Hallucinated biology.** Mitigated by grounding to the published book and instructing the skill

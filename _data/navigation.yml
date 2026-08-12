@@ -4,6 +4,8 @@ main:
     url: "/"
   - title: "Schedule"
     url: "/schedule/"
+  - title: "Calendar"
+    url: "/calendar/"
   - title: "Github"
     url: "https://github.com/bu-bioinfo/bf550"
 
@@ -19,6 +21,8 @@ sidebar:
         url: "/syllabus/"
       - title: "Schedule"
         url: "/schedule/"
+      - title: "Detailed Calendar"
+        url: "/calendar/"
       - title: "Assignments"
         url: "/assignments/"
       - title: "Assessment & AI Policy"

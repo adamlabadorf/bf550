@@ -62,7 +62,7 @@ Two hard rules keep this honest:
 
 ### The share-out: what makes depth lateral rather than siloed
 
-Depth only avoids tiering if the findings are **redistributed**. The Friday session includes a
+Depth only avoids tiering if the findings are **redistributed**. The Share session includes a
 share-out where the week's depth work is presented back to the room, so each direction's findings
 become common knowledge.
 
@@ -99,7 +99,7 @@ Removed for year one from:
 | Location | What was there |
 |---|---|
 | `index.md` | "Going deeper, your way" section; depth in the deliverables paragraph |
-| `internal/course-structure.md` | §3 Friday block 2 ("depth share-out"); §5 "two things to learn" (now one) and the bundle's `## Depth` section; §7 grading row |
+| `internal/course-structure.md` | §3 Share-session block 2 ("depth share-out"); §5 "two things to learn" (now one) and the bundle's `## Depth` section; §7 grading row |
 | `internal/ml-pedagogy-design.md` | §6 "Depth branches: challenge without tiers" (the full rationale, preserved above) |
 | `internal/assignment-framework-authoring.md` | Rule 3 checklist item "rewards a depth branch" |
 | `internal/textbook-ai-design.md` | Depth branches in the skill's conventions list; lateral escalation reworded to stand alone |
@@ -136,8 +136,8 @@ When adding depth back (target: second offering):
    problems bucket.
 3. Add branch prompts to problem materials (3 for heavy, 2 for light) — check the planted
    uncertainty still includes a depth-rewarding item per problem.
-4. Stand up the pod-based share-out in Friday block 2 (displacing ~25 min of design-clinic time —
-   re-verify the Friday budget).
+4. Stand up the pod-based share-out in the Share session's block 2 (displacing ~25 min of
+   design-clinic time — re-verify the Share-session budget).
 5. Decide whether `depth_hooks` enter textbook frontmatter (cheap if done during authoring,
    annoying to retrofit — **consider carrying the hooks in chapter frontmatter from the start
    even in year one**, unrendered).
@@ -157,7 +157,7 @@ As published on the front page before removal:
 > - **Compute** — make it fast, robust, or scalable
 > - **Bio** — find the assumption real data violates, and what it costs
 >
-> These are *different directions*, not different difficulty levels. The Friday sessions where
+> These are *different directions*, not different difficulty levels. The Share sessions where
 > depth work gets shared exist so that the room ends up knowing what each direction found. Pick
 > by curiosity, not by what sounds impressive.
 
@@ -182,7 +182,7 @@ As published on the front page before removal:
 > per branch, pass/revise grading.
 >
 > **Why they exist:** differentiation across a wide incoming-background range **without tiering** —
-> the branches cut across the skill axes, so there is no single ladder to be low on, and the Friday
+> the branches cut across the skill axes, so there is no single ladder to be low on, and the Share
 > share-out redistributes each direction's findings.
 >
 > **What year one loses:** the only *named* differentiation mechanism. **Reintroduction trigger:
@@ -192,7 +192,7 @@ As published on the front page before removal:
 > - [ ] Restore the student-facing section (§6 of the internal doc) and the `## Depth` slot in `notes.md`
 > - [ ] Restore the grading row (pass/revise; no weight change — lives inside the problems bucket)
 > - [ ] Branch prompts in problem materials (3 heavy / 2 light) + a depth-rewarding planted item per problem
-> - [ ] **Pod-based** share-outs in Friday block 2 (~33 depth-writers/week at 50–60 students; whole-room is infeasible)
+> - [ ] **Pod-based** share-outs in the Share session's block 2 (~33 depth-writers/cycle at 50–60 students; whole-room is infeasible)
 > - [ ] Decide textbook `depth_hooks` frontmatter (consider carrying unrendered hooks from year one)
 > - [ ] Do **not** reintroduce at weekly cadence — it was cut to 6/term for load before being deferred
 >

@@ -71,11 +71,11 @@ Simulation buys three things, and only the third generalizes:
 3. **Making assumptions visible by violating them and watching the method fail** — this works for
    *every* method, trees included.
 
-Use (3) is a **critique activity, not an exposition activity**. It belongs in the Friday critique
-clinic, not in Monday's teaching.
+Use (3) is a **critique activity, not an exposition activity**. It belongs in the Share session's
+critique clinic, not in the Design session's teaching.
 
 > **Simulation is a front-loaded investment plus a recurring diagnostic, not a weekly ritual.**
-> Concentrate it in weeks 2–4 where probability is being built; thereafter reach for it on Fridays
+> Concentrate it in cycles 2–4 where probability is being built; thereafter reach for it in Share sessions
 > to break a method by violating its assumptions. Tell the generative story where it is true (NB,
 > GMM, PPCA, priors) and do not contort for the rest. This keeps roughly 15 min/week of teaching
 > time available in the back half of the term, which is where the ML content is densest.

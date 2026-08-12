@@ -58,10 +58,10 @@ lab progression.
 
 See [Assessment & AI Policy](https://bu-bioinfo.github.io/bf550/assessment/). Your grade comes
 from weekly labs (design → spec → test → implementation), weekly code-reading check-in
-quizzes, two written code-reading exams (no AI: a midterm in week 8 and an Act III exam in
-week 12), a synthesis project, and participation. **There is no exam during finals period** —
+quizzes, two written code-reading exams (no AI: a midterm on Wed Oct 21 and an Act III exam on
+Mon Nov 30), a synthesis project, and participation. **There is no exam during finals period** —
 the synthesis project is the culminating assessment, and the last two weeks of the course
-belong to it. Weights and details: [Assessment & AI policy]({{ site.baseurl }}/assessment/).
+belong to it. Every meeting date and deadline is on the [detailed calendar]({{ site.baseurl }}/calendar/). Weights and details: [Assessment & AI policy]({{ site.baseurl }}/assessment/).
 
 ## Materials & tools
 
