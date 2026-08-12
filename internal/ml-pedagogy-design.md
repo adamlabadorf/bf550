@@ -71,11 +71,11 @@ Simulation buys three things, and only the third generalizes:
 3. **Making assumptions visible by violating them and watching the method fail** — this works for
    *every* method, trees included.
 
-Use (3) is a **critique activity, not an exposition activity**. It belongs in the Friday critique
-clinic, not in Monday's teaching.
+Use (3) is a **critique activity, not an exposition activity**. It belongs in the Share session's
+critique clinic, not in the Design session's teaching.
 
 > **Simulation is a front-loaded investment plus a recurring diagnostic, not a weekly ritual.**
-> Concentrate it in weeks 2–4 where probability is being built; thereafter reach for it on Fridays
+> Concentrate it in cycles 2–4 where probability is being built; thereafter reach for it in Share sessions
 > to break a method by violating its assumptions. Tell the generative story where it is true (NB,
 > GMM, PPCA, priors) and do not contort for the rest. This keeps roughly 15 min/week of teaching
 > time available in the back half of the term, which is where the ML content is densest.
@@ -182,31 +182,14 @@ student who reports *"my classifier got 0.91 AUC"* and one who reports *"here is
 distribution of AUCs across resamples, and here is why I don't trust the point estimate"* is
 the clearest single measure of whether this design worked.
 
-## 6. Depth branches: challenge without tiers
+## 6. Differentiation across the background range
 
-The usual approach to a wide range — optional harder problems — quietly brands a second tier
-and mostly rewards students who were already comfortable. Instead:
+**Depth branches — lateral math/compute/bio extensions — are designed but deferred to a future
+offering**; the complete design, rationale, and reintroduction checklist are in
+[`future-depth-branches.md`](future-depth-branches.md).
 
-**Every lab has one core path everyone completes, plus three optional branches that are
-different *kinds* of depth rather than different amounts.**
-
-| Branch | Prompt |
-|---|---|
-| **Math** | Derive why the estimator for this model is what it is |
-| **Compute** | Make it robust or fast — log-space to avoid underflow, vectorize, scale it up. Also the standing home for the efficiency and composability critique inherited from the old Type D (§8.4): does it do unnecessary work, and would it fit into a larger pipeline? |
-| **Bio** | Which assumption does real data violate, and what does that cost you? |
-
-Why this works where tiering does not:
-
-- Students **do not sort cleanly by math background.** CS-strong students take the compute
-  branch; wet-lab students take the bio branch. There is no single ladder to be low on.
-- **Friday's share-out pushes each branch back into common knowledge**, so depth is
-  redistributed rather than siloed — and each student is the person who knows something the
-  others need.
-
-**Author rule: every branch must be genuinely useful to the others.** A branch nobody else
-needs to hear about is a bonus problem wearing a costume.
-
-**The three branch names stay fixed all term** — one choice from a stable menu, never a new
-structure to learn (see §8.5).
-
+Year one's differentiation relies on the mechanisms with no ceiling: the design stage ("how
+would it lie to you?" rewards all the sophistication a student brings), the divergence analysis
+("where was your design better than ours?"), and the textbook's ungraded practice problems.
+Watch the strong tail for boredom — that is the symptom depth branches exist to prevent, and
+the trigger for reintroducing them.

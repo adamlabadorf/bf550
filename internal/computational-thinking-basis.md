@@ -188,10 +188,10 @@ Unchanged by the recent sweep; kept because it says what we are *not* teaching.
 
 | Weintrop category | BF550 coverage |
 |---|---|
-| **Modeling & simulation** | **Heavy.** D1; the probabilistic frame; simulation front-loaded in weeks 2–4 and recurring as a Friday diagnostic. |
+| **Modeling & simulation** | **Heavy.** D1; the probabilistic frame; simulation front-loaded in cycles 2–4 and recurring as a Share-session diagnostic. |
 | **Computational problem solving** | **Heavy.** D2–D4 plus the implementation week. |
 | **Data practices** | **Partial.** Students analyze and visualize real data but do not collect or curate it. A deliberate scope limit. |
-| **Systems thinking** | **Light.** Pipelines appear in the compute depth branch and the synthesis project. The clearest gap if broader CT coverage is ever wanted. |
+| **Systems thinking** | **Light.** Pipelines appear in the synthesis project (and in the deferred compute depth branch). The clearest gap if broader CT coverage is ever wanted. |
 
 ## 6. How this course answers the vagueness critique
 

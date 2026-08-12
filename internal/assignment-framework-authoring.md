@@ -13,7 +13,7 @@ actually assesses.* This is what lets one course serve both the rudimentary and 
 programmer.
 
 The **design stage** (`course-structure.md` §1) is the strongest version of this: nobody arrives
-fluent at decomposing a biological question into computable ones, so week 1 starts everyone at
+fluent at decomposing a biological question into computable ones, so cycle 1 starts everyone at
 roughly the same place on the thing that matters most.
 
 ## Which piece to withhold
@@ -29,7 +29,7 @@ the student-facing `docs/assignment-framework.md` still describes an A–D schem
 | **TESTS** | Verifier | **A test without a worked, hand-calculated expected value in its docstring is not accepted** — that is the component an agent cannot produce without the student already understanding the problem. |
 | **SPEC** | Reverse engineer | Reimplementable spec + gap analysis. **Grade the gap analysis more heavily than the spec** — finding underspecification shows more than a complete-but-unsurprising spec. |
 
-Every problem is *designed* by the student the week before, whichever piece is withheld
+Every problem is *designed* by the student in the previous cycle, whichever piece is withheld
 (`course-structure.md` §1).
 
 ## Author rule 1 — problem statements are questions, not tasks
@@ -78,19 +78,21 @@ The **absence** variety is only available when the student authors the code (Imp
 be the strongest form: the undocumented decision is one the student produced themselves, so there is
 nobody else to defer to and nothing to take on faith.
 
-**Per-problem checklist:** at least one item most students should find, at least one that rewards a
-depth branch, and **at least one that a strong design would have caught** — that last is what keeps
-*"where was your design better?"* from being a rhetorical question.
+**Per-problem checklist:** at least one item most students should find, at least one that rewards
+deeper digging (a derivation, a profiling pass, or a real-data check — these become depth-branch
+prompts if [`future-depth-branches.md`](future-depth-branches.md) is reintroduced), and **at least
+one that a strong design would have caught** — that last is what keeps *"where was your design
+better?"* from being a rhetorical question.
 
 ### Rule 3b — heavy and light problems
 
-Not every problem carries the full apparatus. Of the eleven weekly problems, **about six are
-"heavy"**: full planted-uncertainty inventory (per the checklist above) and deeply-graded
-divergence analysis. The rest are **"light"**: one planted item, rubric-graded. The alternation
-is invisible to students — every week has the same shape from their chair — but it halves the
-fussiest authoring and concentrates deep grading where it pays. Heavy slots should include the
-weeks whose divergence teaches the most: the first classifier (P4), evaluation (P5), and
-clustering (P11) are obvious candidates.
+Not every problem carries the full apparatus. Of the eleven problems, **about six are "heavy"**:
+full planted-uncertainty inventory (per the checklist above) and deeply-graded divergence analysis.
+The rest are **"light"**: one planted item, rubric-graded. The alternation is invisible to students —
+every cycle has the same shape from their chair — but it halves the fussiest authoring and
+concentrates deep grading where it pays. Heavy slots should include the problems whose divergence
+teaches the most: the first classifier (P4), evaluation (P5), and clustering (P11) are obvious
+candidates.
 
 ### Rule 3a — verify reachability by running it
 
@@ -106,7 +108,7 @@ nobody can find and instructor hints that fire every time. Worked inventories wi
 ## Open decisions
 
 The deliverable bundle is fixed: `design.md` · `spec.md` · `test_*.py` · `impl.py` · `notes.md`,
-identical every week; the process record is a section of `notes.md`
+identical every cycle; the process record is a section of `notes.md`
 ([`course-structure.md`](course-structure.md) §5).
 
 **Still open under [issue #5](https://github.com/bu-bioinfo/bf550/issues/5):** a grading rubric per
@@ -119,11 +121,11 @@ Authoring templates live in [`internal/templates/`](templates/):
 
 | Template | Use |
 |---|---|
-| [`assignment-template.md`](templates/assignment-template.md) | TILT problem template. **One file per problem, spanning both weeks** — released in two parts (design week, then build week). |
+| [`assignment-template.md`](templates/assignment-template.md) | TILT problem template. **One file per problem, spanning both cycles** — released in two parts (design cycle, then build cycle). |
 | [`checkin-quiz-template.md`](templates/checkin-quiz-template.md) | The **No-AI code-reading** check-in (AIAS 1). |
 
 > **Two different things are called "check-in" and they must not be confused.** The
-> code-reading check-in above is a graded No-AI assessment. The **Monday reading check-in**
+> code-reading check-in above is a graded No-AI assessment. The **reading check-in that opens each Design session**
 > (`course-structure.md` §8) is a low-stakes, near-ungraded prompt whose job is to tell the
 > instructor live which part of the reading did not land. **A template for the reading check-in
 > does not exist yet** and is needed before the term.

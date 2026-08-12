@@ -2,11 +2,11 @@
 BF550 assignment template — TILT (Transparent Assignment: Purpose / Task / Criteria).
 Copy this file for each problem. Fill every section; delete the HTML comments.
 
-STRUCTURE: each problem spans two weeks (see ../course-structure.md).
-  Week N   — students design it. Only the PROBLEM STATEMENT is released.
-  Week N+1 — our materials unseal; students do the divergence analysis and
-             produce whichever artifact the strip stars.
-Write ONE file per problem covering both weeks; release it in two parts.
+STRUCTURE: each problem spans two cycles (see ../course-structure.md).
+  Cycle N   — students design it. Only the PROBLEM STATEMENT is released.
+  Cycle N+1 — our materials unseal (in the Build session); students do the
+              divergence analysis and produce whichever artifact the strip stars.
+Write ONE file per problem covering both cycles; release it in two parts.
 
 Use the strip + seat label. Do not use exercise-type letters.
 -->
@@ -14,18 +14,18 @@ Use the strip + seat label. Do not use exercise-type letters.
 | | |
 |---|---|
 | **Problem** | _N_ |
-| **Design week / Build week** | _N_ / _N+1_ |
+| **Design cycle / Build cycle** | _N_ / _N+1_ |
 | **Starred artifact** | _CODE (Implementer) · TESTS (Verifier) · SPEC (Reverse engineer)_ |
 | **AIAS level** | _design: 2 (AI Planning) · build: 4 (Full AI)_ |
 | **Biological anchor** | _e.g. rRNA classification — phrased as a QUESTION, not a task (author rule 1)_ |
 | **Est. time** | _design ~30–40 min out of class; build in studio_ |
-| **Due** | _design: Sun of week N · build: end of week N+1_ |
+| **Due** | _design: before cycle N+1's Build session · build: end of cycle N+1_ |
 
 ```
-Week N        DESIGN      SPEC      TESTS      CODE
+Cycle N       DESIGN      SPEC      TESTS      CODE
              ★ YOURS    ▨ sealed  ▨ sealed   ▨ sealed
 
-Week N+1      DESIGN      SPEC      TESTS      CODE
+Cycle N+1     DESIGN      SPEC      TESTS      CODE
             (committed)   ...       ...        ...        <!-- star the withheld one -->
 ```
 
