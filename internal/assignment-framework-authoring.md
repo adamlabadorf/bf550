@@ -78,9 +78,11 @@ The **absence** variety is only available when the student authors the code (Imp
 be the strongest form: the undocumented decision is one the student produced themselves, so there is
 nobody else to defer to and nothing to take on faith.
 
-**Per-problem checklist:** at least one item most students should find, at least one that rewards a
-depth branch, and **at least one that a strong design would have caught** — that last is what keeps
-*"where was your design better?"* from being a rhetorical question.
+**Per-problem checklist:** at least one item most students should find, at least one that rewards
+deeper digging (a derivation, a profiling pass, or a real-data check — these become depth-branch
+prompts if [`future-depth-branches.md`](future-depth-branches.md) is reintroduced), and **at least
+one that a strong design would have caught** — that last is what keeps *"where was your design
+better?"* from being a rhetorical question.
 
 ### Rule 3b — heavy and light problems
 

@@ -73,7 +73,8 @@
 | Topic sequencing | **Three acts organized by "what is unknown?"** — regression to wk 7, trees to wk 9 post-midterm, clustering one week, t-SNE/UMAP a demo ([course-structure §4](course-structure.md#4-the-pipeline-calendar)) |
 | Final assessment | **Act III exam, Monday of week 12** (wks 9–11, no-AI code reading, 15%) + midterm wk 8 (15%); **nothing in finals period** — weeks 12–13 belong to the project. Weights now 30/10/15/15/30/5, superseding [#2](https://github.com/bu-bioinfo/bf550/issues/2) |
 | Design-stage AI level | **AIAS 2** (published on the front page as "AI for brainstorming only") |
-| Load shedding | Depth = **6 per term** (≥1 per branch, rotational share-outs); `log.md` merged into `notes.md`; graded check-ins biweekly; Monday reading check-in is ungraded telemetry; Friday runs as two blocks; published re-entry rule (missed design → hindsight critique) |
+| Load shedding | `log.md` merged into `notes.md`; graded check-ins biweekly; Monday reading check-in is ungraded telemetry; Friday runs as two blocks; published re-entry rule (missed design → hindsight critique) |
+| Depth branches | **Deferred to a future offering** — complexity cut for the first run; full design + reintroduction checklist in [future-depth-branches.md](future-depth-branches.md), tracked as a GitHub enhancement issue |
 | Tutor delivery & textbook content | The textbook contains **no graded assignments by design**, so nothing needs sealing. The tutor ships as a **portable skill** students install; no visibility tiers ([textbook-ai-design §1](textbook-ai-design.md#1-the-founding-constraint-no-assignments-in-the-textbook)) |
 
 Student-facing pages deliberately omit these notes; they live here and in the issues.

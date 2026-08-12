@@ -7,7 +7,8 @@
 > | Companion | Covers |
 > |---|---|
 > | [`course-design-rationale.md`](course-design-rationale.md) | Why the course makes the code-literacy bet |
-> | [`ml-pedagogy-design.md`](ml-pedagogy-design.md) | The probabilistic frame, notation literacy, depth branches, week-by-week ML reframes |
+> | [`ml-pedagogy-design.md`](ml-pedagogy-design.md) | The probabilistic frame, notation literacy, week-by-week ML reframes |
+> | [`future-depth-branches.md`](future-depth-branches.md) | Depth branches — designed, deferred to a future offering |
 > | [`textbook-ai-design.md`](textbook-ai-design.md) | The AI-forward textbook and its tutor skill |
 > | [`assignment-framework-authoring.md`](assignment-framework-authoring.md) | Rules for writing exercises |
 > | [`computational-thinking-basis.md`](computational-thinking-basis.md) | What we mean by computational thinking; the literature grounding for the four design steps |
@@ -63,7 +64,7 @@ Every week from 2 through 12 is identical in shape:
 |---|---|---|---|
 | **Mon** | Teach topic *N* | Reading check-in (5) → teaching (75, interleaved) → **launch design *N*** (10) → wrap (5) | — |
 | **Wed** | Studio | *incubating* | **Materials unseal** + read (15) → divergence analysis (30) → produce the missing piece (55) → wrap (5) |
-| **Fri** | Break the model | *(block 2 includes the design clinic)* | **Block 1** (~50): generalize + critique clinic · **Block 2** (~50): depth share-out + design clinic |
+| **Fri** | Break the model | *(block 2 is the design clinic)* | **Block 1** (~50): generalize + critique clinic · **Block 2** (~50): divergence share-out + design clinic |
 | **Sun** | | **design *N* committed** | |
 
 Design *N* is launched Monday, incubates all week with a supervised Friday clinic, and commits
@@ -81,10 +82,11 @@ Fri  50 [generalize + critique clinic] + 50 [share-out + design clinic] + 5 wrap
 ```
 
 **Friday is two blocks, not four activities.** Each block still functions at reduced
-attendance, and the share-out is rotational: the ~6 students who did a depth section that week
-present. The **Monday reading check-in is telemetry, not assessment** — a short ungraded form
-whose job is telling the instructor where to spend the session; the *graded* code-reading
-check-ins are biweekly and separate.
+attendance. The share-out surfaces divergence findings — "three groups thought the objective was
+X, the materials assumed Y; who is right?" — sampled across the room, not exhaustive. The
+**Monday reading check-in is telemetry, not assessment** — a short ungraded form whose job is
+telling the instructor where to spend the session; the *graded* code-reading check-ins are
+biweekly and separate.
 
 **No Wednesday teach block is needed** — studio work is on last week's topic, already taught, so the
 full session goes to the work. Content delivery lands at **~60 min/week explicit plus ~35 min of
@@ -164,12 +166,11 @@ the term).
 
 ## 5. What the student actually has to learn
 
-Two things:
+One thing:
 
 1. **Every problem gets designed one week and built the next.**
-2. **You pick a depth branch** — math, compute, or bio.
 
-Everything else is a *view* of the first one. The strip, the seat names, the file bundle, and the
+Everything else is a *view* of it. The strip, the seat names, the file bundle, and the
 model card are four descriptions of a single fact — *which piece is yours this week* — and must be
 taught as one thing. Presenting them as four systems is the main way this structure becomes hard to
 follow.
@@ -200,14 +201,14 @@ Week N+1      DESIGN      SPEC      TESTS      CODE
 |---|---|---|
 | `design.md` | The design | Week *N*, committed Sunday |
 | `spec.md`, `test_*.py`, `impl.py` | The four artifacts — given or authored per the strip | Week *N+1* |
-| `notes.md` | Divergence analysis, the reflective product for the starred box, the process record (failures and what they taught), and — six times a term — a `## Depth` section | Week *N+1* |
+| `notes.md` | Divergence analysis, the reflective product for the starred box, and the process record (failures and what they taught) | Week *N+1* |
 
 One design file, the starred artifact, one reflective file. There is no separate log.
 
-**Depth sections are six per term, student-chosen weeks, at least one per branch** — not
-weekly. This halves recurring load, keeps the lateral-depth machinery, and makes the Friday
-share-out rotational (the week's depth-writers present; everyone presents roughly twice a
-term).
+**Depth branches are deferred to a future offering** — the full design is preserved in
+[`future-depth-branches.md`](future-depth-branches.md). Year one's differentiation story: the
+design stage and the divergence analysis have no ceiling, and the textbook's ungraded practice
+problems provide unstructured depth.
 
 **"Model card" is internal vocabulary only.** Students see `design.md` and the four questions;
 the term never appears in student-facing material. The end-of-term "stack" survives as
@@ -262,7 +263,6 @@ weights in issue #2, which predate the Act III exam.)
 | **Design (week *N*)** | Credit for committing on time. **Not graded on quality** — stated on every assignment, because being safe to be wrong is what makes the task usable by students with the least background. |
 | **Divergence analysis** | Graded in depth on the ~6 heavy problems (see authoring doc), rubric-checked otherwise. |
 | **The starred artifact** | Per the seat: hand-calculated test values, or a reimplementable spec plus gap analysis, or annotated code plus the account of what the agent decided. |
-| **Depth** | Six per term, at least one per branch, in `notes.md`. Lateral, not tiered. |
 | **Exams** | Midterm (wk 8, Acts I–II) and Act III exam (wk 12 Mon, wks 9–11), both no-AI code reading, 15% each. |
 | **Re-entry rule** | A missed design converts to a *hindsight critique* — different prompt, same credit, no pretense the seal held. One missed week costs one week, never more. Published to students. |
 
@@ -307,7 +307,7 @@ including the tutor-skill layer, is in [`textbook-ai-design.md`](textbook-ai-des
    Candidate: *down to the point where each component is a question you could look up a method for.*
    ([`computational-thinking-basis.md`](computational-thinking-basis.md) §8)
 2. **How Bayesian?** Leaning: McElreath's pedagogy and generative framing, not his inference
-   machinery. Grid approximation for genuine-posterior cases; full Bayes as a depth branch.
+   machinery. Grid approximation for genuine-posterior cases; full Bayes as optional enrichment.
 3. **How much productive uncertainty per problem**, and per-problem disclosure (policy disclosure
    at term start is settled).
 4. **Two problems in flight** is the stagger's real cost. Fallback if load proves too high: design

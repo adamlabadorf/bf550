@@ -103,24 +103,10 @@ You'll have a provided coding agent and a textbook tutor, and every assignment s
   both see your *unaided* skill actually growing — so nobody discovers a gap for the first
   time during an exam.
 
-## Going deeper, your way
-
-Six times during the term (your choice of weeks, at least one from each), you'll add a
-**depth section** to your build-week write-up:
-
-- **Math** — derive why the estimator is what it is
-- **Compute** — make it fast, robust, or scalable
-- **Bio** — find the assumption real data violates, and what it costs
-
-These are *different directions*, not different difficulty levels. The Friday sessions where
-depth work gets shared exist so that the room ends up knowing what each direction found. Pick
-by curiosity, not by what sounds impressive.
-
 ## What you hand in, and what it's worth
 
 Every problem, the same shape: your committed `design.md`, the artifact your seat produces,
-and one `notes.md` holding your divergence analysis, your annotations or analysis, and (six
-times a term) your depth section.
+and one `notes.md` holding your divergence analysis and your annotations or analysis.
 
 | | Weight | AI level |
 |---|---:|---|

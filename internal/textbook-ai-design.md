@@ -59,8 +59,8 @@ A generic agent already knows decision trees. Four things it cannot know, in rou
    rather than competing with it, and so it can **cite sections back** — see §6.
 3. **What each practice problem is for.** A problem probing a specific misconception should be
    guided toward, not solved around.
-4. **This course's conventions.** The story → code → notation rule, the depth branches, the
-   design-then-implement stagger, the vocabulary. Cheap to include; makes it feel like this course's
+4. **This course's conventions.** The story → code → notation rule, the design-then-implement
+   stagger, the seats, the vocabulary. Cheap to include; makes it feel like this course's
    tutor rather than a chatbot bolted on.
 
 ## 4. Architecture
@@ -81,7 +81,7 @@ bf550-textbook-skill/
     toc.md              # chapters, sections, stable anchors, week index
     concepts.md         # concept → defining section, prerequisites, misconceptions
     problems.md         # practice problems → what each one probes
-    conventions.md      # course idiom: story→code→notation, depth branches, the strip
+    conventions.md      # course idiom: story→code→notation, the strip, the seats
 ```
 
 **Progressive disclosure matters here.** `SKILL.md` stays small — what the book is, how it is
