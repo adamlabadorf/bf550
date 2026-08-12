@@ -12,36 +12,52 @@ clear AI-use level so you always know what's expected.
 
 ## What you'll be graded on
 
-There is **no final exam** — the synthesis project is the course's culminating assessment.
+The synthesis project is the course's culminating assessment, and **there is no exam during
+finals period** — the last two weeks of the course belong to your project.
 
 | Component | What it measures | AI level | Weight |
 |---|---|:--:|--:|
-| Weekly labs (design → spec → test → impl) | applied ML + code literacy + agent use | 4 | 35% |
-| Weekly check-in quizzes (code reading) | reading and explaining code | 1 | 10% |
-| Written midterm (code reading) | code comprehension under exam conditions | 1 | 20% |
+| Weekly problems (design weeks + build weeks) | problem framing + applied ML + code literacy + agent use | 2 / 4 | 30% |
+| Check-in quizzes (biweekly, code reading) | reading and explaining code | 1 | 10% |
+| Written midterm — week 8 (code reading) | Acts I–II, under exam conditions | 1 | 15% |
+| Act III exam — week 12, Monday (code reading) | weeks 9–11, under exam conditions | 1 | 15% |
 | Synthesis project (design + spec + tests + impl) | end-to-end judgment on a real problem | 4 | 30% |
-| Participation | engagement in lab and lecture | — | 5% |
+| Participation (Fridays count) | engagement in studio and share-outs | — | 5% |
 
-### Weekly check-in quizzes
+### Weekly problems
 
-Short and low-stakes. You're given a code snippet and asked to describe what it does — its
-behavior, its edge cases, and (later in the term) its design intent. These are direct
-practice for the midterm, and they're **AI level 1 (no AI)** because the whole point is your
-own reading.
+Each problem spans two weeks. The **design week** is graded for committing on time — being
+wrong in a design is expected and productive, and it's safe to be. The **build week** is graded
+on your divergence analysis and the artifact your seat produces: hand-calculated test values,
+a reimplementable specification, or annotated code with an honest account of what your agent
+decided for you. If you miss a week, the design converts to a hindsight-critique variant with
+the same credit — one missed week costs one week, never more.
 
-### Written midterm
+### Check-in quizzes
 
-A **closed-book, no-AI code-reading exam (level 1)**: you'll read provided snippets and
-describe their behavior, recover their intent, and spot edge cases or bugs — the same skill
-the check-ins rehearse, assessed all at once.
+Short, low-stakes, every other week. You're given a code snippet and asked to describe what it
+does — its behavior, its edge cases, and (later in the term) its design intent. These are
+direct practice for both exams, and they're **AI level 1 (no AI)** because the whole point is
+your own reading. Watch your own trajectory on these: it's the most honest signal you'll get
+about whether your unaided skills are growing alongside your agent-assisted work.
+
+### The two exams
+
+Each act of the course closes with a **closed-book, no-AI code-reading exam (level 1)**: read
+provided snippets, describe their behavior, recover their intent, spot edge cases and bugs —
+the same skill the check-ins rehearse, assessed all at once.
+
+- **Midterm (week 8):** Acts I and II — estimation through regression.
+- **Act III exam (week 12, Monday):** trees, dimensionality reduction, and clustering
+  (weeks 9–11). Week 12's frontiers material is not examined.
 
 ### Synthesis project
 
-The capstone, and the course's **culminating assessment in place of a final exam**: produce
-a complete **design, specification, tests, and implementation** for a real method on a real
-molecular-biology problem, with every design decision justified mathematically or
-biologically. It's **AI level 4** — use the agent freely; your design, tests, verification,
-and critique are what's graded.
+The capstone and the course's **culminating assessment**: produce a complete **design,
+specification, tests, and implementation** for a real method on a real molecular-biology
+problem, with every design decision justified mathematically or biologically. Its design is
+your week-12 design slot; weeks 12–13 of studio are for building it. It's **AI level 4** — use
+the agent freely; your design, tests, verification, and critique are what's graded.
 
 ## AI use levels
 
@@ -50,15 +66,15 @@ assignment names a level so the expectations are explicit:
 
 | Level | Name | What it means for you |
 |------:|------|---|
-| 1 | No AI | Work on your own — check-in quizzes and the midterm. |
+| 1 | No AI | Work on your own — check-in quizzes and the two exams. |
 | 2 | AI Planning | Use AI to brainstorm or outline; develop the ideas yourself. |
 | 3 | AI Collaboration | AI helps draft; you critically evaluate and revise its output. |
 | 4 | Full AI | Use the agent throughout; you direct it, verify it, and own the result. |
 | 5 | AI Exploration | Open-ended, creative use. |
 
-**Most labs and the project are level 4.** Using a coding agent there is expected, not a
-shortcut — what's graded is your design, specification, hand-calculated tests, and critique,
-the parts an agent can't produce for you.
+**Design weeks are level 2; build weeks and the project are level 4.** Using a coding agent
+at level 4 is expected, not a shortcut — what's graded is your design, specification,
+hand-calculated tests, and critique, the parts an agent can't produce for you.
 
 ## Academic integrity in an AI-positive course
 
@@ -67,5 +83,5 @@ the parts an agent can't produce for you.
   annotation that doesn't match the code, "hand-calculated" test values you didn't actually
   work out, or a critique that misreads the implementation. These show up naturally, because
   the deliverables require you to demonstrate that you understand.
-- The level-1 check-ins and midterm give an AI-free picture of your own code literacy
+- The level-1 check-ins and exams give an AI-free picture of your own code literacy
   alongside your agent-assisted work.

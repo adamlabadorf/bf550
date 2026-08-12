@@ -66,7 +66,7 @@ bf550-textbook/
   pyproject.toml         # pinned environment
   uv.lock
   chapters/
-    01-*.qmd … 13-*.qmd  # one chapter per course week (see outline doc)
+    01-*.qmd … 12-*.qmd  # one chapter per teaching week (see outline)
   appendices/
     notation-decoder.qmd # grows all term; every symbol links back to first use
     toolbox.qmd          # the method menu as it accumulates
@@ -202,24 +202,25 @@ non-negotiables are already set by the course design:
 The detailed outline is the next artifact to produce together, one chapter at a time:
 **sections → concepts → notation introduced → the worked-design problem → practice problems with
 objectives.** Chapter titles below are the frame to fill in, mapped to the course schedule
-(clustering shown merged per the pending topic-compression decision — splitting back to two is
-cheap if that decision goes the other way):
+(clustering merged and t-SNE/UMAP demo-ized, per the settled calendar):
 
-| Ch | Week | Working title | Worked-design problem (analogous, not the lab) |
-|---:|---:|---|---|
-| 1 | 1 | Questions, computations, and reading code | Reverse complement (already the week-1 demo) |
-| 2 | 2 | Randomness you can run | Coin-flip → read-count sampling |
-| 3 | 3 | Bayes, counting, and estimation | Codon-usage species classifier (adjacent to k-mer/rRNA) |
-| 4 | 4 | Generative classifiers: Naive Bayes | Promoter-motif presence classifier |
-| 5 | 5 | Did it actually work? Evaluation & generalization | Evaluating the ch. 3 classifier honestly |
-| 6 | 6 | Drawing the boundary: logistic regression | Variant effect from conservation scores |
-| 7 | 7 | Trees and forests: the honest outlier | Biomarker panel from expression |
-| 8 | 8 | Choosing a method (consolidation) | Cross-cutting method-selection walkthrough |
-| 9 | 9 | Fewer dimensions, same story: PCA | Batch-effect discovery in expression data |
-| 10 | 10 | Are there groups here? Mixtures & clustering | Cell-type discovery, GMM → k-means |
-| 11 | 11 | Validating structure you cannot label | Cluster stability on scRNA-seq |
-| 12 | 12 | Regression and regularization as priors | Dosage–response prediction |
-| 13 | 13 | The same machinery, stacked: a look at neural nets | — (frontiers chapter, lighter) |
+Chapters follow the act structure of the course calendar (`course-structure.md` §4) —
+**twelve chapters**, one per teaching week; week 13 introduces no new content.
+
+| Ch | Week | Act | Working title | Worked-design problem (analogous, not the week's problem) |
+|---:|---:|:--:|---|---|
+| 1 | 1 | I | Questions, computations, and reading code | Reverse complement |
+| 2 | 2 | I | Randomness you can run | Coin-flip → read-count sampling |
+| 3 | 3 | I | Bayes, counting, and estimation | Codon-usage species classifier |
+| 4 | 4 | II | Generative classifiers: Naive Bayes | Promoter-motif presence classifier |
+| 5 | 5 | II | Did it actually work? Evaluation & generalization | Evaluating the ch. 3 classifier honestly |
+| 6 | 6 | II | Drawing the boundary: logistic regression | Variant effect from conservation scores |
+| 7 | 7 | II | Regression, and regularization as a prior | Dosage–response prediction |
+| 8 | 8 | II | Choosing a method | Cross-cutting method-selection walkthrough |
+| 9 | 9 | III | Trees and forests: the honest outlier | Biomarker panel from expression |
+| 10 | 10 | III | Fewer dimensions, same story: PCA | Batch-effect discovery in expression data |
+| 11 | 11 | III | Are there groups here? Mixtures, clustering, and validating *k* | Cell-type discovery, GMM → k-means |
+| 12 | 12 | III | The same machinery, stacked: a look at neural nets | — (frontiers chapter, lighter; exam-exempt) |
 
 Appendices: **Notation decoder** (generated), **The toolbox** (method menu as it accumulates,
 feeding D3), possibly **Python idioms used in this book** (one page, not a Python course).

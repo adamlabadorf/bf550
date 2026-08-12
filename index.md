@@ -2,124 +2,141 @@
 link-citations: true
 ---
 
-> **CURRENTLY UNDER CONSTRUCTION.** This site is being bootstrapped. Content,
-> schedule, and policies are drafts — see the planning docs in the
+> **UNDER CONSTRUCTION.** This site is being bootstrapped. Content, schedule, and
+> policies are drafts — see the planning docs in the
 > [GitHub repository](https://github.com/bu-bioinfo/bf550) and the open
 > [discussion issues](https://github.com/bu-bioinfo/bf550/issues).
 
-**Semester:** Fall (this year)
+**Semester:** Fall (this year) · **Meeting time:** Mon/Wed/Fri, 105 minutes each _(times TBD)_ · **Location:** _TBD_
 
-**Meeting time:** Two 75-minute lectures + one 1–2 hour lab per week _(days/times TBD)_
+**Prerequisites:** some prior programming experience (any language) and introductory molecular
+biology. A wide range of programming and math backgrounds is expected — the course is designed
+for it, as you're about to read.
 
-**Location:** _TBD_
+## Why this course is built the way it is
 
-## Contents
+Two things are true at once. Machine learning has become the working language of modern
+biology — and AI can now write competent code from a plain-English description. Some courses
+respond to that second fact by banning AI. We do the opposite: **we assume it, provide it, and
+build the course around the skills it cannot do for you.**
 
-- [Course Objectives](#course-objectives)
-- [Course Description](#course-description)
-- [What Makes This Course Different](#what-makes-this-course-different)
-- [Prerequisites](#prerequisites)
-- [Required Software](#required-software)
-- [AI Use in This Course](#ai-use-in-this-course)
-- [Assessment](#assessment)
-- [Course Schedule](#course-schedule)
+Here is what an AI cannot do for you. It cannot decide what question your data can actually
+answer. It cannot decide what "correct" means for a problem you care about. It cannot tell you
+whether the confident-looking answer it just produced is wrong. Those three skills — framing a
+problem, defining correctness, and catching failure — are what this course teaches, using
+machine learning on real biological data as the material.
 
-## Course Objectives
+You will read far more code than you write. That is deliberate. You come into this program with
+wildly different programming backgrounds, and we are not going to pretend otherwise. Reading
+code — saying precisely what it does, recovering what it was *meant* to do, judging whether it
+should be trusted — is a skill almost none of you have practiced, regardless of background. It
+levels the field, and in the age of AI-generated code, it is *the* skill.
 
-- Build **intuition for the major classes of machine-learning algorithms** —
-  supervised vs. unsupervised, classification, clustering, feature-importance /
-  tree-based methods, and dimensionality reduction — and learn **how to choose** the
-  right method for a biological problem.
-- Develop **code literacy**: the ability to *read and understand* code — its behavior,
-  its specification, and its design — rather than to author it from scratch.
-- Learn to **direct and verify generative-AI coding agents**: decompose a problem into
-  design → specification → tests before generating code, then verify that generated code
-  does what was intended.
-- Apply all of the above to real **molecular-biology and genomics** problems.
+The same goes for math. Some of you have a lot; some very little. Every idea in this course
+arrives in the same order: first as a **story** about how data comes to exist, then as **code**
+you can run and poke, and only then as **notation** — the formula, presented as a compressed
+summary of something you have already played with. If you can read Python, you can learn to
+read math. Formulas are never the entrance fee here; they are the souvenir.
 
-See the full [learning objectives]({{ site.baseurl }}/learning-objectives/).
+## The weekly rhythm
 
-## Course Description
+Every problem in this course lives for two weeks, and you work on it twice.
 
-BF550 is an applied introduction to statistics and machine learning for life scientists.
-It emphasizes *judgment* — choosing the right method, posing the right problem to a
-computational tool, and verifying the answer — over from-scratch programming or
-mathematical theory. Work is grounded in real molecular-biology and genomics problems
-(e.g. rRNA read classification, single-cell RNA-seq clustering).
+**Week one: you design.** You get a biological question — a real one, like *"which of these
+sequencing reads are ribosomal RNA, and how confident can you be about any single call?"* — and
+nothing else. No starter code, no instructions. Over the week, you write down your approach:
+What process produced this data? What would have to be computed or estimated? What would the
+right method need to be able to do? And — the question that separates scientists from
+software — *how would your approach lie to you?* You commit your design by Sunday night. It is
+graded only for being on time. **Being wrong in a design is not just acceptable, it is the
+point**, and you will see why on Wednesday.
 
-## What Makes This Course Different
+**Week two: you compare and build.** Our materials for that problem unseal: a specification, a
+test suite, and an implementation — minus one piece, which is yours to produce. Before you
+build anything, you write a short **divergence analysis**: where did our approach differ from
+the one you committed to? What did we handle that you didn't think of? And — a question we mean
+sincerely — *where was your design better than ours?* Our materials are written by people with
+opinions and deadlines. Some weeks they contain choices you should argue with. Occasionally
+they contain a genuine mistake. Finding those earns credit. Deferring to us because we're the
+instructors earns nothing.
 
-- **Code literacy over code authorship.** In the age of coding agents, the primary coding
-  objective is to *read, specify, test, and critique* code — not to type it from a blank
-  page. This levels a classroom with a wide range of incoming programming skill.
-- **Coding agents are provided and expected.** Most assignments are
-  [AIAS](https://aiassessmentscale.com/) **Level 4**: use the agent freely; your design,
-  specifications, tests, and critique are what is graded.
-- **Transparent assignments.** Every assignment states its **Purpose, Task, and Criteria**
-  up front, following [TILT](https://www.tilthighered.com/resources).
+Which piece we withhold varies, and the assignment header always shows it:
 
-Assignments use a **design → spec → test → implementation** framework with four exercise
-types (A–D); see the
-[assignment framework]({{ site.baseurl }}/assignments/).
+```
+Design week      DESIGN      SPEC      TESTS      CODE
+                ★ YOURS    ▨ sealed  ▨ sealed   ▨ sealed
 
-## Prerequisites
+Build week       DESIGN      SPEC      TESTS      CODE
+              (committed)    given     given    ★ YOURS
+```
 
-Some prior programming experience (any modern language) and introductory
-biology/molecular biology. A wide range of programming backgrounds is expected and
-explicitly accommodated by the course design.
+Where the star lands, you have a seat: **Implementer** (make it work, and be able to explain
+every line), **Verifier** (prove it works, with expected values you calculated by hand), or
+**Reverse engineer** (recover the specification nobody wrote down, and find what the tests fail
+to pin down).
 
-## Required Software
+**The week itself runs Monday/Wednesday/Friday, 105 minutes each.** Monday: a short check-in on
+the reading, then we work with the ideas you read about — this course is flipped, and the
+textbook is where you meet material first. Wednesday: studio — materials unseal, you compare
+and build, with instructors and TAs in the room. Friday: we break things. We take the method
+you just built and make it fail — violated assumptions, leaked data, overconfident scores —
+because knowing *how a method lies* is the difference between using it and being used by it.
+Fridays are also where designs and discoveries get compared across the room.
 
-Students are **provided coding-agent capabilities** _(specific tool TBD)_ and use Python.
-Details and setup will be provided in Week 1.
+The week-by-week topics and problems are on the [schedule]({{ site.baseurl }}/schedule/).
 
-## AI Use in This Course
+## Using AI
 
-This course uses the **AI Assessment Scale (AIAS)** (Perkins, Furze, Roe & MacVaugh, 2024)
-to make AI policy transparent and consistent. Each component carries an explicit level:
+You'll have a provided coding agent and a textbook tutor, and every assignment states its
+[AI level](https://aiassessmentscale.com/) plainly:
 
-| Level | Name | What it means here |
-|---|---|---|
-| 1 | **No AI** | Closed-book code-reading (check-in quizzes, written midterm) |
-| 2 | **AI Planning** | AI for brainstorming/outlining; ideas developed independently |
-| 3 | **AI Collaboration** | AI drafts/feedback; student critically evaluates & modifies |
-| 4 | **Full AI** | Agent generates code throughout; student directs, annotates, verifies |
-| 5 | **AI Exploration** | Open-ended, co-designed creative use |
+- **Design weeks — AI for brainstorming only.** The design must be your thinking. This is the
+  one place the course asks you to work mostly unaided, because it is the one skill that dies
+  if you delegate it.
+- **Build weeks — full AI, encouraged.** Let the agent write code. What we grade is what agents
+  can't fake: your hand-calculated values, your annotations, your account of what the agent
+  silently decided on your behalf.
+- **Check-ins and the two exams — no AI.** Short code-reading exercises, every other week,
+  closed-book, plus a midterm (week 8) and an Act III exam (week 12). These exist for your
+  benefit as much as ours: research on novices using AI finds that the students who struggle
+  most are often the ones most convinced they're doing fine. The check-ins are how you and we
+  both see your *unaided* skill actually growing — so nobody discovers a gap for the first
+  time during an exam.
 
-Most labs and the synthesis project are **Level 4**. What protects the learning goal is
-not restricting the tool but requiring the design, specification, hand-calculated tests,
-and critique — the artifacts an agent cannot author on your behalf. Full policy:
-[Assessment & AI Policy]({{ site.baseurl }}/assessment/).
+## Going deeper, your way
 
-## Assessment
+Six times during the term (your choice of weeks, at least one from each), you'll add a
+**depth section** to your build-week write-up:
 
-There is **no final exam** — the synthesis project is the culminating assessment.
+- **Math** — derive why the estimator is what it is
+- **Compute** — make it fast, robust, or scalable
+- **Bio** — find the assumption real data violates, and what it costs
 
-| Component | Measures | AIAS | Weight |
-|---|---|:--:|--:|
-| Weekly labs (design → spec → test → impl) | applied ML + code literacy + agent use | 4 | 35% |
-| Weekly check-in quizzes (code reading) | local code comprehension | 1 | 10% |
-| Written midterm (code reading) | code comprehension under exam conditions | 1 | 20% |
-| Synthesis project | end-to-end judgment on a real problem | 4 | 30% |
-| Participation | — | — | 5% |
+These are *different directions*, not different difficulty levels. The Friday sessions where
+depth work gets shared exist so that the room ends up knowing what each direction found. Pick
+by curiosity, not by what sounds impressive.
 
-## Course Schedule
+## What you hand in, and what it's worth
 
-> *Schedule is subject to change; biological topics and exact dates will be finalized before the term begins.*
+Every problem, the same shape: your committed `design.md`, the artifact your seat produces,
+and one `notes.md` holding your divergence analysis, your annotations or analysis, and (six
+times a term) your depth section.
 
-| Wk | Lecture theme | ML/stats focus | Biological anchor (candidate) |
-|---:|---|---|---|
-| [1]({{ site.baseurl }}/lectures/week-01/) | Course intro & code literacy | What ML is/isn't; design→spec→test→impl; agents; AIAS | GC-content sliding window |
-| [2]({{ site.baseurl }}/lectures/week-02/) | Applied statistics foundations | Distributions, estimation, hypothesis testing | RNA-seq count data, multiple testing |
-| [3]({{ site.baseurl }}/lectures/week-03/) | Probability for ML | Bayes, MLE, Laplace smoothing | k-mer frequencies |
-| [4]({{ site.baseurl }}/lectures/week-04/) | Classification I: Naive Bayes | Generative classifiers; priors; likelihood; holding out data to test a model | **rRNA read classification (RDP)** |
-| [5]({{ site.baseurl }}/lectures/week-05/) | Evaluation & generalization | Precision/recall, ROC/AUC; overfitting, bias–variance; train/validation/test, cross-validation; data leakage | Evaluating the rRNA classifier honestly |
-| [6]({{ site.baseurl }}/lectures/week-06/) | Classification II: logistic regression | Logistic regression, decision boundaries; applying cross-validation & threshold choice | Variant pathogenicity / gene classification |
-| [7]({{ site.baseurl }}/lectures/week-07/) | Interpretable & tree-based methods | Decision trees, random forests, feature importance; bias–variance revisited; leakage in feature selection | Biomarker / feature selection |
-| [8]({{ site.baseurl }}/lectures/week-08/) | Consolidation + **midterm** | Review of classification & the generalization toolkit | (review week) |
-| [9]({{ site.baseurl }}/lectures/week-09/) | Dimensionality reduction | PCA; t-SNE / UMAP intuition; leakage when fitting on all the data | scRNA-seq embedding |
-| [10]({{ site.baseurl }}/lectures/week-10/) | Clustering I | k-means, hierarchical; distance metrics | **scRNA-seq cell clustering** |
-| [11]({{ site.baseurl }}/lectures/week-11/) | Clustering II | Density-based, choosing *k*, validation without peeking at labels | Cell-type discovery / markers |
-| [12]({{ site.baseurl }}/lectures/week-12/) | Regression & regularization | Linear & regularized regression; cross-validation for the regularization path | Expression prediction / dosage |
-| [13]({{ site.baseurl }}/lectures/week-13/) | Synthesis & frontiers | Intro to neural nets/DL; limits, ethics | Synthesis project presentations |
+| | Weight | AI level |
+|---|---:|---|
+| Weekly problems (designs + builds) | 30% | Design: planning only · Build: full |
+| Check-in quizzes (biweekly, code reading) | 10% | None |
+| Written midterm (week 8) | 15% | None |
+| Act III exam (week 12) | 15% | None |
+| Synthesis project | 30% | Full, with your design as the spine |
+| Participation (Fridays count) | 5% | — |
 
+The synthesis project is the course in miniature and the culminating assessment — **there is no
+exam during finals period**: a complete design → specification → tests → implementation for a
+real method on a real biological problem, every decision defended. Its design is your week-12
+design slot, and the last two weeks of the course belong to building it. By then you'll have
+done the design move eleven times. It will feel like the most natural thing in the world.
+
+**If you miss a week** — it happens — the design converts to a hindsight-critique variant with
+the same credit, and you rejoin the pipeline the following Monday. One missed week costs one
+week, never more. Ask early.

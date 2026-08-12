@@ -50,7 +50,7 @@ _Concrete steps and deliverables. Be explicit. Example for a Reverse-engineer (S
 **Deliverables (file list):**
 - `spec.md`
 - gap analysis in `notes.md` _(weighted most heavily for the Reverse-engineer seat)_
-- _…plus `log.md`, and the artifact your strip stars (`impl.py` + annotation, or `test_*.py`)._
+- _…plus the artifact your strip stars (`impl.py` + annotation, or `test_*.py`). The process record (failures and what they taught) is a section of `notes.md` — there is no separate log file._
 
 **Allowed tools / AI use:** _state the AIAS level and what it permits here, explicitly._
 

@@ -5,59 +5,68 @@ toc: true
 toc_sticky: true
 ---
 
-Each week has **two 75-minute lectures** and **one 1–2 hour lab**. Most weeks include a short
-**check-in quiz** (read a code snippet, describe what it does) and a **lab** built on the
-[design → spec → test → implementation framework](https://bu-bioinfo.github.io/bf550/assignments/).
+The course meets **Monday, Wednesday, and Friday for 105 minutes each**. Monday is where we
+work with the week's reading; Wednesday is studio; Friday is where we break things. The
+[front page]({{ site.baseurl }}/) explains the weekly rhythm in full.
 
-The course builds from statistical foundations to a first realistic classifier (Naive
-Bayes), then immediately establishes the core of honest machine learning — overfitting and
-the bias–variance tradeoff, train/validation/test splits, cross-validation, data leakage,
-and model selection. Those ideas are introduced early and then recur as a light running
-theme through the rest of the supervised methods, unsupervised learning, clustering, and
-regression, before the course finishes with a synthesis project.
+**One thing to know before reading the table: every problem lives for two weeks.** You design
+your own approach to it one week, and build against our materials the next. So in any given
+week you are *designing* this week's problem and *building* last week's — the build topic
+always trails the teaching by one week. That's deliberate: you implement ideas after they've
+had a week to settle, not the day you meet them.
 
-> *Schedule is subject to change. Biological topics and exact week boundaries will be
-> finalized before the term begins.*
+## The arc: what is unknown?
 
-| Wk | Lecture theme | ML/stats focus | Biological application | Lab type | Check-in |
-|---:|---|---|---|:--:|:--:|
-| 1 | Course intro & code literacy | What ML is/isn't; design→spec→test→impl; coding agents; AI levels; toolchain setup | Warm-up: GC-content sliding window | A | — |
-| 2 | Applied statistics foundations | Distributions, sampling, estimation, hypothesis testing intuition | Count data (RNA-seq counts), multiple testing | A | ✓ |
-| 3 | Probability for ML | Bayes' theorem, conditional probability, MLE, Laplace smoothing | k-mer frequencies in sequences | B | ✓ |
-| 4 | Classification I: Naive Bayes | Generative classifiers; class priors; likelihood; **holding out data to test a model** | rRNA read classification | B | ✓ |
-| 5 | Evaluation & generalization | Precision/recall, ROC/AUC, confusion matrices; **overfitting/underfitting, bias–variance; train/validation/test splits; cross-validation; data leakage** | Evaluating the rRNA classifier honestly | C | ✓ |
-| 6 | Classification II: logistic regression | Logistic regression, decision boundaries; *applying* cross-validation & threshold choice | Variant pathogenicity / gene classification | C | ✓ |
-| 7 | Interpretable & tree-based methods | Decision trees, random forests, **feature importance**; bias–variance *revisited* via tree depth; leakage in feature selection | Biomarker / feature selection from expression | D | ✓ |
-| 8 | Consolidation + **midterm** | Review of classification & the generalization toolkit; **written code-reading midterm** | (review week) | D | midterm |
-| 9 | Dimensionality reduction | PCA; t-SNE / UMAP intuition; when/why to reduce; leakage when fitting on all the data | scRNA-seq embedding & visualization | C | ✓ |
-| 10 | Clustering I | k-means, hierarchical clustering; distance metrics | scRNA-seq cell clustering | D | ✓ |
-| 11 | Clustering II | Density-based clustering, choosing *k*, cluster validation without peeking at labels | Cell-type discovery / marker genes | D | ✓ |
-| 12 | Regression & regularization | Linear & regularized regression; cross-validation for the regularization path — model selection revisited | Expression prediction / dosage response | C | ✓ |
-| 13 | Synthesis & frontiers | High-level intro to neural nets/deep learning; limits, ethics, AI in research; project wrap | Synthesis project presentations | — | — |
+The course runs in three acts, organized by a single escalating question — *what is unknown,
+and how would you know your answer is right?*
 
-> **A recurring theme, not a one-time topic.** Overfitting, cross-validation, data leakage,
-> and model selection apply to *every* method we cover, so they are introduced early (week 5)
-> rather than saved for the end, and then revisited whenever a new method gives us a fresh way
-> to get them wrong. Expect them to show up lightly throughout the term — woven into labs and
-> check-ins — rather than as a rigid per-week rubric.
+- **Act I — the unknown is a number** (weeks 1–3). Count it, estimate it, put an honest error
+  bar on it. *Knowing you're right:* a standard error.
+- **Act II — the unknown is an answer you have examples of** (weeks 4–8). Supervised learning:
+  generative models, evaluation, discriminative models, regression. *Knowing you're right:*
+  held-out data. Closes with the midterm.
+- **Act III — nobody gives you the answer** (weeks 9–12). Prediction without a probability
+  model, then structure with no labels at all. *Knowing you're right:* there is no ground
+  truth — stability, internal validation, and skepticism are all you have. Closes with the
+  Act III exam, after which the term belongs to your synthesis project.
 
-## What to expect each week
+> *Schedule is subject to change. Exact dates and check-in weeks will be finalized before the
+> term begins.*
 
-Labs rotate through four exercise types so that, over the term, you practice every part of
-code literacy — implementing, testing, specifying, and critiquing. Early labs lean on the
-parts that get you oriented; later labs build up to full engineering judgment:
+## Week by week
 
-- **Type A — Spec + Tests → Code:** you produce an implementation and account for how it works.
-- **Type B — Spec + Code → Tests:** you write tests with hand-calculated expected values.
-- **Type C — Code + Tests → Spec:** you read code closely and recover what it's meant to do.
-- **Type D — All three → Critique:** you evaluate correctness, efficiency, and design.
+| Wk | Act | Monday's topic | You design (this week) | You build (from last week) |
+|---:|:--:|---|---|---|
+| 1 | I | How this course works; reading code | *Where does the GC content of this genome change — and how do you avoid pointing a collaborator at an artifact?* | — (Wednesday is toolchain setup) |
+| 2 | I | Estimation & uncertainty: sampling, error bars, multiple tests | *Are these genes really differentially expressed?* | GC content |
+| 3 | I | Bayes' theorem; estimating probabilities from counts | *What species did this sequence come from?* | Differential expression |
+| 4 | II | Naive Bayes: classification as a generative story | *Which reads are rRNA, and how confident can you be about any single call?* | Species of origin |
+| 5 | II | Evaluation: overfitting, cross-validation, leakage, calibration | *Does the rRNA classifier actually work?* | rRNA classification |
+| 6 | II | Logistic regression: modeling the boundary directly | *Is this variant pathogenic?* | Classifier evaluation |
+| 7 | II | Linear regression & regularization | *Can expression predict dose response?* | Variant pathogenicity |
+| 8 | II | Consolidation + **written midterm** (no AI) | *Given a fresh biological question: choose a method and defend the choice* | Dose–response (light week) |
+| 9 | III | Trees & random forests: prediction without the probability story | *Which genes mark treatment response?* | Method selection |
+| 10 | III | Dimensionality reduction: PCA (t-SNE/UMAP as demo) | *What structure hides in this expression matrix?* | Biomarkers |
+| 11 | III | Clustering: mixture models → k-means; validating *k* | *Do these cells form distinct types — and how many?* | Matrix structure |
+| 12 | III | **Act III exam** (Mon, no AI) · frontiers: neural nets as the same machinery, stacked (Fri) | **Your synthesis project** | Cell types |
+| 13 | — | Synthesis project studio | — | Your project |
 
-See the [assignment framework](https://bu-bioinfo.github.io/bf550/assignments/) for what each
-type involves.
+## The two exams
 
-## Synthesis project
+Each act of the course closes with a short, closed-book, **no-AI** code-reading exam — the
+same skill the biweekly check-ins rehearse, assessed all at once:
 
-The course finishes with a project where you produce a complete **design + specification +
-tests + implementation** for a real method on a real molecular-biology problem (for example,
-a Naive Bayes rRNA classifier or a single-cell RNA-seq clustering pipeline). Every design
-decision should have a clear mathematical or biological justification.
+- **Midterm (week 8):** Acts I & II — estimation through regression, the probabilistic family.
+- **Act III exam (week 12, Monday):** weeks 9–11 — trees, dimensionality reduction,
+  clustering. Week 12's frontiers material is *not* on it.
+
+**There is no exam during finals period.** After the Act III exam on Monday of week 12, the
+rest of the term — and your remaining energy — belongs to the synthesis project.
+
+## The synthesis project
+
+The course in miniature, and the culminating assessment: a complete **design → specification
+→ tests → implementation** for a real method on a real molecular-biology problem, with every
+design decision justified mathematically or biologically. Its design *is* your week-12 design
+slot — the same move you'll have made eleven times by then — and weeks 12–13 of studio time
+are yours to build it, with instructors and TAs in the room.

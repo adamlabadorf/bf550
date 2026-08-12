@@ -165,14 +165,14 @@ frame changes the content materially, highest value first:
 
 | Wk | Current topic | Reframe | Why it earns its place |
 |---:|---|---|---|
-| 10–11 | Clustering | **k-means as the hard-assignment limit of a Gaussian mixture** | GMM is what makes k-means make *sense* (why spherical? why does it fail on elongated clusters?). EM's intuition — guess assignments, update parameters, repeat — needs zero calculus. Biggest single upgrade available. |
+| 11 | Clustering | **k-means as the hard-assignment limit of a Gaussian mixture** | GMM is what makes k-means make *sense* (why spherical? why does it fail on elongated clusters?). EM's intuition — guess assignments, update parameters, repeat — needs zero calculus. Biggest single upgrade available. |
 | 4 → 6 | Naive Bayes → logistic regression | **The generative/discriminative pivot**, taught back to back | Naive Bayes literally generates a read from a class; logistic regression models `p(y\|x)` directly. Same problem, two philosophies. PRML 4.1–4.3; the best conceptual moment in the course. |
 | 3 | Probability for ML | Add **grid approximation** (Rethinking ch. 2) | Highest-leverage single technique for this audience: a posterior becomes a `for` loop over candidate parameter values, no calculus, and the prior→posterior update is *watchable*. Five lines of readable code unlock the word "posterior" for the term. |
-| 12 | Regression & regularization | **Regularization is a prior** — ridge = Gaussian, lasso = Laplace | Closes a loop Week 3 already opens ("add a pseudocount *is* assume a mild prior"). Third appearance of one idea. |
+| 7 | Regression & regularization | **Regularization is a prior** — ridge = Gaussian, lasso = Laplace | Closes the week-3 smoothing loop ("add a pseudocount *is* assume a mild prior") four weeks later, adjacent to logistic regression so the linear family is contiguous. |
 | 5 | Evaluation | A classifier emits a **distribution**; thresholding is a separate decision-theoretic step (PRML 1.5) | Earns **calibration**, usually skipped, and exactly the right criticism of variant-pathogenicity scores. |
-| 9 | Dimensionality reduction | **Probabilistic PCA as the intuition** (latent-variable story), even if computed via SVD | Makes PCA a model with assumptions rather than a rotation recipe. |
-| 7 | Trees & forests | The **honest outlier**: what you gain and lose when you drop the probability model | Naming the exception strengthens the frame instead of hiding a gap. Loses calibrated uncertainty; gains interpretability and non-linearity for free. |
-| 13 | Neural nets | The same likelihood machinery, stacked | Continuity rather than novelty. |
+| 10 | Dimensionality reduction | **Probabilistic PCA as the intuition** (latent-variable story), even if computed via SVD | Makes PCA a model with assumptions rather than a rotation recipe. |
+| 9 | Trees & forests | The **honest outlier**: what you gain and lose when you drop the probability model | Naming the exception strengthens the frame instead of hiding a gap. Loses calibrated uncertainty; gains interpretability and non-linearity for free. |
+| 12 | Neural nets | The same likelihood machinery, stacked | Continuity rather than novelty. |
 
 ### The through-line worth naming: uncertainty
 

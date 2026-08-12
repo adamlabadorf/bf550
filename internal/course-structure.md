@@ -14,7 +14,8 @@
 > | [`textbook-implementation.md`](textbook-implementation.md) | How the textbook gets built: toolchain, chapter anatomy, CI, co-design workflow |
 > | [`archive/`](archive/) | Earlier drafts, retained only for the verified problem statements and planted-defect inventories still to be ported forward (§9) |
 >
-> **Status:** agreed direction; nothing student-facing has been updated yet (§9).
+> **Status:** agreed direction. The front page, schedule, and assessment pages are published;
+> remaining student-facing propagation is tracked in §9.
 
 ---
 
@@ -62,7 +63,7 @@ Every week from 2 through 12 is identical in shape:
 |---|---|---|---|
 | **Mon** | Teach topic *N* | Reading check-in (5) → teaching (75, interleaved) → **launch design *N*** (10) → wrap (5) | — |
 | **Wed** | Studio | *incubating* | **Materials unseal** + read (15) → divergence analysis (30) → produce the missing piece (55) → wrap (5) |
-| **Fri** | Break the model | **Design clinic** (25) — supervised work + peer read-through | Generalize (15) → critique clinic (35) → depth share-out (25) → wrap (5) |
+| **Fri** | Break the model | *(block 2 includes the design clinic)* | **Block 1** (~50): generalize + critique clinic · **Block 2** (~50): depth share-out + design clinic |
 | **Sun** | | **design *N* committed** | |
 
 Design *N* is launched Monday, incubates all week with a supervised Friday clinic, and commits
@@ -76,8 +77,14 @@ All three fit 105 minutes:
 ```
 Mon   5 check-in + 75 teach/activity + 10 design launch +  5 wrap  = 95  (10 slack)
 Wed  15 unseal+read + 30 divergence + 55 produce      +  5 wrap  = 105
-Fri  15 generalize + 35 critique + 25 share-out + 25 design clinic + 5 wrap = 105
+Fri  50 [generalize + critique clinic] + 50 [share-out + design clinic] + 5 wrap = 105
 ```
+
+**Friday is two blocks, not four activities.** Each block still functions at reduced
+attendance, and the share-out is rotational: the ~6 students who did a depth section that week
+present. The **Monday reading check-in is telemetry, not assessment** — a short ungraded form
+whose job is telling the instructor where to spend the session; the *graded* code-reading
+check-ins are biweekly and separate.
 
 **No Wednesday teach block is needed** — studio work is on last week's topic, already taught, so the
 full session goes to the work. Content delivery lands at **~60 min/week explicit plus ~35 min of
@@ -85,18 +92,53 @@ content-by-demonstration** in the critique clinic, with the textbook (§8) carry
 
 ## 4. The pipeline calendar
 
-```
-Wk  1   design D1                                    ← pipeline fills
-Wk  2   design D2   |  implement P1
-Wk  3   design D3   |  implement P2
- ...
-Wk  8   design D8   |  implement P7      ← midterm week, see below
- ...
-Wk 12   design D12  |  implement P11
-Wk 13               |  implement P12     ← pipeline drains, project ramps
-```
+The topic order is organized by the course's own D2 question — **what is unknown?** — in three
+acts, with the parallel D4 escalation (*how would you know you're right?*) getting harder each
+act: a standard error → held-out data → no ground truth at all.
 
-Twelve designs, twelve implementations, one problem per week.
+| Wk | Act | Topic | Design (this week) | Build (last week's) |
+|---:|:--:|---|---|---|
+| 1 | I | Course intro; reading code | P1 GC content | — (Wed = toolchain setup) |
+| 2 | I | Estimation & uncertainty | P2 differential expression | P1 |
+| 3 | I | Bayes; probabilities from counts | P3 species of origin | P2 |
+| 4 | II | Naive Bayes (generative) | P4 rRNA classification | P3 |
+| 5 | II | Evaluation, CV, leakage, calibration | P5 evaluate the classifier | P4 |
+| 6 | II | Logistic regression (discriminative pivot) | P6 variant pathogenicity | P5 |
+| 7 | II | Linear regression & regularization | P7 dose–response | P6 |
+| 8 | II | Consolidation + **midterm** | P8 method selection | P7 (**light build**) |
+| 9 | III | Trees & forests (the honest outlier) | P9 biomarkers | P8 |
+| 10 | III | PCA (t-SNE/UMAP as demo) | P10 matrix structure | P9 |
+| 11 | III | Clustering: GMM → k-means, validating *k* | P11 cell types | P10 |
+| 12 | III | **Act III exam** (Mon) · frontiers/NN (Fri) | **Synthesis project** | P11 |
+| 13 | — | Project studio | — | project |
+
+**Eleven weekly problems; the synthesis project is the twelfth design.** The pipeline drains
+*into* the project rather than alongside it — one less problem to author, and the project's
+design uses the identical move students have made eleven times.
+
+Sequencing choices that carry weight:
+
+- **Regression sits at week 7, adjacent to logistic regression** — the linear/probabilistic
+  family is contiguous, and regularization-as-a-prior closes the week-3 smoothing loop while it
+  is fresh.
+- **Trees sit at week 9, after the midterm.** The midterm then examines a coherent unit (the
+  probabilistic supervised family, estimation → regression) from which trees — the method that
+  drops the probability story — was always a category error; and the post-midterm week gets
+  fresh, intuitive material exactly when a course otherwise sags. Trees also open Act III
+  thematically: the first safety net removed.
+- **Clustering is one week** (GMM → k-means as one idea), and **t-SNE/UMAP is a demo** inside
+  the PCA week, not a treatment.
+
+### The two exams
+
+Each act closes with a secured, no-AI, code-reading exam. **Midterm, week 8**: Acts I–II.
+**Act III exam, Monday of week 12**: weeks 9–11 only — frontiers material is exam-exempt,
+which keeps week 12's teaching honest as a light session. **Nothing is examined in finals
+period**; after Monday of week 12 the term belongs to the project.
+
+Week 12's shape: Mon = Act III exam (~75 min) + project design launch (~30) · Wed = studio,
+P11 build · Fri = frontiers demo + project design clinic. Week 13: all three sessions are
+project studio.
 
 **Week 1 is design-only, and that is what makes setup week work.** There is no P0 to implement, so
 **Wednesday's studio in week 1 is free for toolchain setup and course orientation** — git, the repo,
@@ -108,13 +150,17 @@ can spare a session for this; the pipeline filling provides one.
 > stuck, accept the week-1 design by any means (email, paper) rather than let the toolchain gate the
 > first design — it is credit-for-committing, and the point is the habit, not the mechanism.
 
-**Week 13 is implementation-only**, winding down as the synthesis project ramps up.
-
 **Week 8 does not stall the pipeline.** The midterm/consolidation week keeps its design slot, and
 its design task is a **cross-cutting method-selection problem**: given a biological question, choose
-among everything covered in the first half and justify it. That is the highest-value design task in
-the course, it doubles as midterm preparation, and it converts the one calendar disruption into an
-asset rather than a hole.
+among everything covered in the first half and justify it. It doubles as midterm preparation, and
+P7's build that week is deliberately light (linear regression is the most hand-calculable build of
+the term).
+
+> **Class size is a planning parameter: 50–60 students** (not student-facing). Consequences:
+> Friday share-outs must be rotational (~6 presenters/week works at any size); design clinics
+> pair-based; grading is TA-staffed (~20 hr/TA/week, with agentic assistance under
+> consideration); and **project presentations in any traditional format do not fit** — see
+> `open-decisions.md` for the format question.
 
 ## 5. What the student actually has to learn
 
@@ -152,10 +198,20 @@ Week N+1      DESIGN      SPEC      TESTS      CODE
 
 | File | Contents | When |
 |---|---|---|
-| `design.md` | The design / model card | Week *N*, committed Sunday |
+| `design.md` | The design | Week *N*, committed Sunday |
 | `spec.md`, `test_*.py`, `impl.py` | The four artifacts — given or authored per the strip | Week *N+1* |
-| `notes.md` | Divergence analysis, the reflective product for the starred box, then a `## Depth` section | Week *N+1* |
-| `log.md` | Process record — failures and what they taught | Week *N+1* |
+| `notes.md` | Divergence analysis, the reflective product for the starred box, the process record (failures and what they taught), and — six times a term — a `## Depth` section | Week *N+1* |
+
+One design file, the starred artifact, one reflective file. There is no separate log.
+
+**Depth sections are six per term, student-chosen weeks, at least one per branch** — not
+weekly. This halves recurring load, keeps the lateral-depth machinery, and makes the Friday
+share-out rotational (the week's depth-writers present; everyone presents roughly twice a
+term).
+
+**"Model card" is internal vocabulary only.** Students see `design.md` and the four questions;
+the term never appears in student-facing material. The end-of-term "stack" survives as
+*compile your designs* — the on-ramp to the synthesis project.
 
 ## 6. Scaffolding the design task
 
@@ -196,12 +252,22 @@ selection as the menu fills.
 
 ## 7. Grading posture
 
+**Weights: weekly problems 30 · check-ins 10 · midterm 15 · Act III exam 15 · synthesis
+project 30 · participation 5.** Two secured exams, one per act boundary; the project stays at
+30% so the incentive structure and the course's stated philosophy agree. (Supersedes the
+weights in issue #2, which predate the Act III exam.)
+
 | | |
 |---|---|
-| **Design (week *N*)** | Credit for committing on time. **Not graded on quality** — and this must be stated on the assignment, because being safe to be wrong is what makes the task usable by students with the least background. |
-| **Divergence analysis** | Graded in depth on 3–4 weeks, spot-checked otherwise. Twelve deeply-graded designs will not survive the semester. |
-| **The starred artifact** | Per the seat: hand-calculated test values, or a reimplementable spec plus gap analysis, or annotated code plus failure log. |
-| **Depth branch** | One section in `notes.md`. Lateral, not tiered. |
+| **Design (week *N*)** | Credit for committing on time. **Not graded on quality** — stated on every assignment, because being safe to be wrong is what makes the task usable by students with the least background. |
+| **Divergence analysis** | Graded in depth on the ~6 heavy problems (see authoring doc), rubric-checked otherwise. |
+| **The starred artifact** | Per the seat: hand-calculated test values, or a reimplementable spec plus gap analysis, or annotated code plus the account of what the agent decided. |
+| **Depth** | Six per term, at least one per branch, in `notes.md`. Lateral, not tiered. |
+| **Exams** | Midterm (wk 8, Acts I–II) and Act III exam (wk 12 Mon, wks 9–11), both no-AI code reading, 15% each. |
+| **Re-entry rule** | A missed design converts to a *hindsight critique* — different prompt, same credit, no pretense the seal held. One missed week costs one week, never more. Published to students. |
+
+Grading is TA-staffed (~20 hr/week per TA), with agentic grading assistance under
+consideration — if adopted, it needs its own policy note before the term.
 
 AI levels differ by stage — **design at AIAS 2, week *N+1* work at AIAS 4** (open: see §9). The
 split is the cleanest statement of the course's ethos: *think first, unaided; then use the agent
@@ -239,26 +305,27 @@ including the tutor-skill layer, is in [`textbook-ai-design.md`](textbook-ai-des
 
 1. **Decomposition stopping rule** — D2 needs a rule students can apply for how far down to go.
    Candidate: *down to the point where each component is a question you could look up a method for.*
-   ([`computational-thinking-basis.md`](computational-thinking-basis.md) §7)
+   ([`computational-thinking-basis.md`](computational-thinking-basis.md) §8)
 2. **How Bayesian?** Leaning: McElreath's pedagogy and generative framing, not his inference
    machinery. Grid approximation for genuine-posterior cases; full Bayes as a depth branch.
-3. **AIAS level for the design stage** — 2 or 1.
-4. **Simulation's scope** — see `ml-pedagogy-design.md`; the leaning is to concentrate it in
-   weeks 2–4 and keep it as a Friday diagnostic rather than a weekly ritual.
-5. **Topic compression** — merge Clustering I+II; compress t-SNE/UMAP to a demo.
-6. **How much productive uncertainty per problem, and whether to disclose the policy.**
-7. **Two problems in flight** is the stagger's real cost. Fallback if load proves too high: design
-   every *other* week (six instead of twelve), at the price of the clean steady state.
+3. **How much productive uncertainty per problem**, and per-problem disclosure (policy disclosure
+   at term start is settled).
+4. **Two problems in flight** is the stagger's real cost. Fallback if load proves too high: design
+   every *other* week, at the price of the clean steady state.
+5. **Synthesis project format at 50–60 students** — traditional presentations do not fit;
+   candidate formats in `open-decisions.md`.
+
+Settled since earlier drafts of this list: design stage is **AIAS 2**; simulation front-loads
+weeks 2–4 + Friday diagnostic; clustering is one week and t-SNE/UMAP a demo (both baked into the
+§4 calendar).
 
 **Pending propagation to student-facing pages** — none of this has been written up for students:
 
 | What | Where |
 |---|---|
-| Contact format: **3 × 105-min MWF**, not 2 × 75 + lab | `README.md`, `docs/course-design.md`, `docs/schedule.md`, `docs/syllabus.md` |
-| The **staggered pipeline** and the lab-trails-lecture-by-one-week rule | `docs/schedule.md`, `docs/course-design.md` |
-| The **strip** as the one canonical representation; letters A–D retired | `docs/assignment-framework.md`, `_labs/` |
-| The **bundle**, and the design/divergence/depth deliverables | `docs/assignment-framework.md` |
-| **Reading carries first exposure** at ~2 hr/week, and students must be told | `docs/syllabus.md`, `docs/course-design.md` |
-| Biological anchors rewritten as **questions, not tasks** | `docs/schedule.md`, and [issue #1](https://github.com/bu-bioinfo/bf550/issues/1) |
-| Per-stage AI levels | `docs/assessment-and-ai-policy.md` |
-| **v2 example labs** — port the verified problem statements and planted-uncertainty inventories from [`archive/examples-v1/`](archive/examples-v1/) into the staggered shape | new `internal/examples/` |
+| ~~Front page~~ · ~~schedule~~ · ~~assessment policy~~ | `index.md`, `docs/schedule.md`, `docs/assessment-and-ai-policy.md` | **Done** — rhythm, acts calendar, weights, exams, re-entry rule, per-stage AI levels all published |
+| Contact format + rhythm on the remaining pages | `README.md`, `docs/course-design.md`, `docs/syllabus.md` | Still say 2 × 75 + lab and "weekly labs" |
+| The **strip**; letters A–D retired; the bundle | `docs/assignment-framework.md`, `_labs/` | Full rewrite needed |
+| `_lectures/week-*.md` topics | all 13 files | Still ordered by the old sequence |
+| **Reading carries first exposure** at ~2 hr/week, stated to students | `docs/syllabus.md`, `docs/course-design.md` | |
+| **v2 example problems** — port verified statements + planted-uncertainty inventories from [`archive/examples-v1/`](archive/examples-v1/) into the staggered shape | new `internal/examples/` | |
